@@ -5,29 +5,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>A Post with Images &#8211; OSM Seattle</title>
-<meta name="description" content="Examples and code for displaying images in posts.">
-<meta name="keywords" content="sample post, images, test">
+<title>Duplicate addresses in Seattle &#8211; OSM Seattle</title>
+<meta name="description" content="">
+<meta name="keywords" content="osm">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://localhost:4000/images/">
-<meta name="twitter:title" content="A Post with Images">
-<meta name="twitter:description" content="Examples and code for displaying images in posts.">
+<meta name="twitter:title" content="Duplicate addresses in Seattle">
+<meta name="twitter:description" content="Playing with all things OSM">
 <meta name="twitter:creator" content="@osm_seattle">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A Post with Images">
-<meta property="og:description" content="Examples and code for displaying images in posts.">
-<meta property="og:url" content="http://localhost:4000/articles/sample-post-images/">
+<meta property="og:title" content="Duplicate addresses in Seattle">
+<meta property="og:description" content="Playing with all things OSM">
+<meta property="og:url" content="http://localhost:4000/articles/duplicate-addresses-in-seattle/">
 <meta property="og:site_name" content="OSM Seattle">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/articles/sample-post-images/">
+<link rel="canonical" href="http://localhost:4000/articles/duplicate-addresses-in-seattle/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="OSM Seattle Feed">
 <link rel="author" href="glassblower?rel=author">
 
@@ -110,60 +110,38 @@
   </div>
   <article>
     <div class="headline-wrap">
-      <h1>A Post with Images</h1>
+      <h1>Duplicate addresses in Seattle</h1>
       <h2></h2>
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use <code>figure</code> with the appropriate <code>class</code>. Each instance of <code>figure</code> is auto-numbered and displayed in the caption.</p>
+      <h1 id="duplicate-addresses-in-seattle">Duplicate Addresses in Seattle</h1>
 
-<h3 id="figures-for-images-or-video">Figures (for images or video)</h3>
+<p>Fredrick pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. </p>
 
-<h4 id="one-up">One Up</h4>
+<p>The overpass query run on overpass-turbo.eu</p>
 
-<figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg" /></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
-</figure>
+<pre><code>&lt;osm-script output="json" timeout="900" element-limit="1073741824"&gt;
+  &lt;id-query  into="area"/&gt;
+  &lt;!-- gather results --&gt;
+  &lt;union&gt;
+    &lt;query type="node"&gt;
+      &lt;has-kv k="addr:housenumber" /&gt;
+      &lt;has-kv k="addr:city" v="Seattle" /&gt;
+      &lt;!-- &lt;has-kv k="source" v="King County GIS" /&gt; --&gt;
+      &lt;area-query from="area"/&gt;
+    &lt;/query&gt;
+  &lt;/union&gt;
+  &lt;!-- print results --&gt;
+  &lt;print mode="body"/&gt;
+  &lt;recurse type="down"/&gt;
+  &lt;print mode="skeleton" order="quadtile"/&gt;
+&lt;/osm-script&gt;
+</code></pre>
 
-<h4 id="two-up">Two Up</h4>
+<p>Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. </p>
 
-<p>Apply the <code>half</code> class like so to display two images side by side that share the same caption.</p>
+<p>If you want to help, head over to my <a href="http://gist.githup.com/cliffordsnow">gist</a> and select Duplicate Addresses in Seattle. Open up JOSM, then click on an uncheck item in the list. When complete, just check the item. </p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;half&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/images/image-filename-1.jpg&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/images/image-filename-2.jpg&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;figcaption&gt;</span>Caption describing these two images.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span>
-</code></pre></div>
-
-<p>And you&#8217;ll get something that looks like this:</p>
-
-<figure class="half">
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" /></a>
-	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" /></a>
-	<figcaption>Two images.</figcaption>
-</figure>
-
-<h4 id="three-up">Three Up</h4>
-
-<p>Apply the <code>third</code> class like so to display three images side by side that share the same caption.</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;third&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/images/image-filename-1.jpg&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/images/image-filename-2.jpg&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/images/image-filename-3.jpg&quot;</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;figcaption&gt;</span>Caption describing these three images.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span>
-</code></pre></div>
-
-<p>And you&#8217;ll get something that looks like this:</p>
-
-<figure class="third">
-	<img src="http://placehold.it/600x300.jpg" />
-	<img src="http://placehold.it/600x300.jpg" />
-	<img src="http://placehold.it/600x300.jpg" />
-	<figcaption>Three images.</figcaption>
-</figure>
 
       <hr />
       <footer role="contentinfo">
@@ -180,7 +158,7 @@
 
 
         </div>
-        <p class="byline"><strong>A Post with Images</strong> was published on <time datetime="2013-05-22T00:00:00-07:00">May 22, 2013</time> by <a href="http://localhost:4000/about" title="About clifford Snow">clifford Snow</a>.</p>
+        <p class="byline"><strong>Duplicate addresses in Seattle</strong> was published on <time datetime="2014-02-10T00:00:00-08:00">February 10, 2014</time> by <a href="http://localhost:4000/about" title="About clifford Snow">clifford Snow</a>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   </article>
@@ -190,16 +168,6 @@
   <div class="related-articles">
   <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/posts/">View all posts</a>)</small></h4>
     <ul>
-    
-      
-      
-        
-          
-        
-      
-      
-      <li><a href="http://localhost:4000/articles/duplicate-addresses-in-seattle/" title="Duplicate addresses in Seattle">Duplicate addresses in Seattle</a></li>
-      
     
       
       
@@ -219,6 +187,16 @@
       
       
       <li><a href="http://localhost:4000/articles/readability-feature-post/" title="Post with Large Feature Image and Text">Post with Large Feature Image and Text</a></li>
+      
+    
+      
+      
+        
+          
+        
+      
+      
+      <li><a href="http://localhost:4000/articles/sample-post-images/" title="A Post with Images">A Post with Images</a></li>
       
     
     </ul>
