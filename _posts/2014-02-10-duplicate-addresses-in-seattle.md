@@ -29,5 +29,5 @@ The overpass query run on overpass-turbo.eu
 
 Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. 
 
-If you want to help, head over to my [gist](http://gist.githup.com/cliffordsnow) and select Duplicate Addresses in Seattle. Open up JOSM, then click on an uncheck item in the list. When complete, just check the item. 
+If you want to help, head over to my [gist](http://gist.github.com/cliffordsnow) and select Duplicate Addresses in Seattle. Open up JOSM, then click on an uncheck item in the list. When complete, just check the item. 
 
