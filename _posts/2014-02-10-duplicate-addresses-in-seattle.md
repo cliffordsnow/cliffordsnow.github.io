@@ -10,6 +10,7 @@ It was pointed out that Seattle has a number of duplicate addresses in OSM. Runn
 The overpass query run on overpass-turbo.eu
 
 {% highlight XML linenos %}
+{% raw %}
     <osm-script output="json" timeout="900" element-limit="1073741824">
       <id-query {{nominatimArea:Seattle}} into="area"/>
       <!-- gather results -->

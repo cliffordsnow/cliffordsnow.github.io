@@ -114,29 +114,27 @@
       <h2></h2>
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <h1 id="duplicate-addresses-in-seattle">Duplicate Addresses in Seattle</h1>
-
-<p>Fredrick pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. </p>
+      <p>It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. </p>
 
 <p>The overpass query run on overpass-turbo.eu</p>
 
-<pre><code>&lt;osm-script output="json" timeout="900" element-limit="1073741824"&gt;
-  &lt;id-query  into="area"/&gt;
-  &lt;!-- gather results --&gt;
-  &lt;union&gt;
-    &lt;query type="node"&gt;
-      &lt;has-kv k="addr:housenumber" /&gt;
-      &lt;has-kv k="addr:city" v="Seattle" /&gt;
-      &lt;!-- &lt;has-kv k="source" v="King County GIS" /&gt; --&gt;
-      &lt;area-query from="area"/&gt;
-    &lt;/query&gt;
-  &lt;/union&gt;
-  &lt;!-- print results --&gt;
-  &lt;print mode="body"/&gt;
-  &lt;recurse type="down"/&gt;
-  &lt;print mode="skeleton" order="quadtile"/&gt;
-&lt;/osm-script&gt;
-</code></pre>
+<div class="highlight"><pre><code class="xml"><span class="lineno"> 1</span>     <span class="nt">&lt;osm-script</span> <span class="na">output=</span><span class="s">&quot;json&quot;</span> <span class="na">timeout=</span><span class="s">&quot;900&quot;</span> <span class="na">element-limit=</span><span class="s">&quot;1073741824&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span>       <span class="nt">&lt;id-query</span> <span class="err">{{nominatimArea:Seattle}}</span> <span class="na">into=</span><span class="s">&quot;area&quot;</span><span class="nt">/&gt;</span>
+<span class="lineno"> 3</span>       <span class="c">&lt;!-- gather results --&gt;</span>
+<span class="lineno"> 4</span>       <span class="nt">&lt;union&gt;</span>
+<span class="lineno"> 5</span>         <span class="nt">&lt;query</span> <span class="na">type=</span><span class="s">&quot;node&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>           <span class="nt">&lt;has-kv</span> <span class="na">k=</span><span class="s">&quot;addr:housenumber&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 7</span>           <span class="nt">&lt;has-kv</span> <span class="na">k=</span><span class="s">&quot;addr:city&quot;</span> <span class="na">v=</span><span class="s">&quot;Seattle&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 8</span>           <span class="c">&lt;!-- &lt;has-kv k=&quot;source&quot; v=&quot;King County GIS&quot; /&gt; --&gt;</span>
+<span class="lineno"> 9</span>           <span class="nt">&lt;area-query</span> <span class="na">from=</span><span class="s">&quot;area&quot;</span><span class="nt">/&gt;</span>
+<span class="lineno">10</span>         <span class="nt">&lt;/query&gt;</span>
+<span class="lineno">11</span>       <span class="nt">&lt;/union&gt;</span>
+<span class="lineno">12</span>       <span class="c">&lt;!-- print results --&gt;</span>
+<span class="lineno">13</span>       <span class="nt">&lt;print</span> <span class="na">mode=</span><span class="s">&quot;body&quot;</span><span class="nt">/&gt;</span>
+<span class="lineno">14</span>       <span class="nt">&lt;recurse</span> <span class="na">type=</span><span class="s">&quot;down&quot;</span><span class="nt">/&gt;</span>
+<span class="lineno">15</span>       <span class="nt">&lt;print</span> <span class="na">mode=</span><span class="s">&quot;skeleton&quot;</span> <span class="na">order=</span><span class="s">&quot;quadtile&quot;</span><span class="nt">/&gt;</span>
+<span class="lineno">16</span>     <span class="nt">&lt;/osm-script&gt;</span>
+</code></pre></div>
 
 <p>Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. </p>
 

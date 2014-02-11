@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-02-10T16:43:08-08:00</updated>
+<updated>2014-02-10T17:24:07-08:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -25,29 +25,27 @@
     <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
-  <content type="html">&lt;h1 id=&quot;duplicate-addresses-in-seattle&quot;&gt;Duplicate Addresses in Seattle&lt;/h1&gt;
-
-&lt;p&gt;Fredrick pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
+  <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; element-limit=&quot;1073741824&quot;&amp;gt;
-  &amp;lt;id-query  into=&quot;area&quot;/&amp;gt;
-  &amp;lt;!-- gather results --&amp;gt;
-  &amp;lt;union&amp;gt;
-    &amp;lt;query type=&quot;node&quot;&amp;gt;
-      &amp;lt;has-kv k=&quot;addr:housenumber&quot; /&amp;gt;
-      &amp;lt;has-kv k=&quot;addr:city&quot; v=&quot;Seattle&quot; /&amp;gt;
-      &amp;lt;!-- &amp;lt;has-kv k=&quot;source&quot; v=&quot;King County GIS&quot; /&amp;gt; --&amp;gt;
-      &amp;lt;area-query from=&quot;area&quot;/&amp;gt;
-    &amp;lt;/query&amp;gt;
-  &amp;lt;/union&amp;gt;
-  &amp;lt;!-- print results --&amp;gt;
-  &amp;lt;print mode=&quot;body&quot;/&amp;gt;
-  &amp;lt;recurse type=&quot;down&quot;/&amp;gt;
-  &amp;lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&amp;gt;
-&amp;lt;/osm-script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;&amp;lt;query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;addr:housenumber&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;addr:city&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Seattle&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;           &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;has-kv k=&amp;quot;source&amp;quot; v=&amp;quot;King County GIS&amp;quot; /&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;area-query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;&amp;lt;/query&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;/union&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- print results --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;down&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;skeleton&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;quadtile&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. &lt;/p&gt;
 
