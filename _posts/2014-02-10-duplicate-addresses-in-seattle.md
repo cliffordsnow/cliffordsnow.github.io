@@ -36,21 +36,6 @@ If you want to help, the list below has duplicates. Open up JOSM, then click on 
 
 ### Duplicate addresses
 
- 247. [ 103 Bellevue Avenue East                 ](http://127.0.0.1:8111/load_and_zoom?left=-122.327452315284&right=-122.325655684716&top=47.6192412168399&bottom=47.6180301761473&select=node2158768425 )
- 248. [ 103 Bellevue Avenue East                 ](http://127.0.0.1:8111/load_and_zoom?left=-122.328169215284&right=-122.326372584716&top=47.6193142159945&bottom=47.6181031769928&select=node2158768426 )
- 249. [ 1605 East Olive Way                      ](http://127.0.0.1:8111/load_and_zoom?left=-122.325811615284&right=-122.324014984716&top=47.6194810140627&bottom=47.6182699789246&select=node2158768623 )
- 250. [ 1605 East Olive Way                      ](http://127.0.0.1:8111/load_and_zoom?left=-122.325663215284&right=-122.323866584716&top=47.6196191124633&bottom=47.618408080524&select=node2158768624 )
- 251. [ 1723 Harvard Avenue                      ](http://127.0.0.1:8111/load_and_zoom?left=-122.323247415284&right=-122.321450784716&top=47.6175518364051&bottom=47.616340756582&select=node2158768797 )
- 252. [ 1723 Harvard Avenue                      ](http://127.0.0.1:8111/load_and_zoom?left=-122.323430315284&right=-122.321633684716&top=47.6176081357532&bottom=47.6163970572341&select=node2158768798 )
- 253. [ 423 East Pike Street                     ](http://127.0.0.1:8111/load_and_zoom?left=-122.326817315284&right=-122.325020684716&top=47.6150995648048&bottom=47.6138884281824&select=node2158768897 )
- 254. [ 506 East Howell Street                   ](http://127.0.0.1:8111/load_and_zoom?left=-122.325712415284&right=-122.323915784716&top=47.6186347238639&bottom=47.6174236691233&select=node2158768909 )
- 255. [ 506 East Howell Street                   ](http://127.0.0.1:8111/load_and_zoom?left=-122.325958615284&right=-122.324161984716&top=47.6186450237447&bottom=47.6174339692426&select=node2158768910 )
- 256. [ 517 East Pike Street                     ](http://127.0.0.1:8111/load_and_zoom?left=-122.325599915284&right=-122.323803284716&top=47.6148371678435&bottom=47.6136260251436&select=node2158768922 )
- 257. [ 601 Summit Avenue East                   ](http://127.0.0.1:8111/load_and_zoom?left=-122.326434715284&right=-122.324638084716&top=47.625061349431&bottom=47.6238504435563&select=node2158772342 )
- 258. [ 601 Summit Avenue East                   ](http://127.0.0.1:8111/load_and_zoom?left=-122.326454915284&right=-122.324658284716&top=47.6250265498341&bottom=47.6238156431532&select=node2158772348 )
- 259. [ 757 Bellevue Avenue East                 ](http://127.0.0.1:8111/load_and_zoom?left=-122.328012615284&right=-122.326215984716&top=47.6272169244636&bottom=47.6260060685239&select=node2158772490 )
- 260. [ 757 Bellevue Avenue East                 ](http://127.0.0.1:8111/load_and_zoom?left=-122.327769215284&right=-122.325972584716&top=47.6273969223787&bottom=47.6261860706088&select=node2158772491 )
- 261. [ 1013 East Pike Street                    ](http://127.0.0.1:8111/load_and_zoom?left=-122.319623415284&right=-122.317826784716&top=47.614586270749&bottom=47.6133751222381&select=node2159222950 )
  262. [ 1201 Boylston Avenue                     ](http://127.0.0.1:8111/load_and_zoom?left=-122.324630615284&right=-122.322833984716&top=47.6130236888445&bottom=47.6118125041426&select=node2159322794 )
  263. [ 1201 Boylston Avenue                     ](http://127.0.0.1:8111/load_and_zoom?left=-122.324798415284&right=-122.323001784716&top=47.6131588872788&bottom=47.6119477057083&select=node2159322795 )
  264. [ 423 East Pike Street                     ](http://127.0.0.1:8111/load_and_zoom?left=-122.326637015284&right=-122.324840384716&top=47.6144658721433&bottom=47.6132547208438&select=node2159323026 )
