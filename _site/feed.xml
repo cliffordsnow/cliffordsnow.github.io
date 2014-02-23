@@ -3,26 +3,63 @@
 <title type="text">OSM Seattle</title>
 <subtitle type="text">OpenStreetMap</subtitle>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://osm_seattle.snowandsnow.us/feed.xml" />
-<link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us" />
-<updated>2014-02-23T08:20:18-08:00</updated>
-<id>http://osm_seattle.snowandsnow.us/</id>
+<link rel="self" type="application/atom+xml" href="/feed.xml" />
+<link rel="alternate" type="text/html" href="" />
+<updated>2014-02-23T12:53:33-08:00</updated>
+<id>/</id>
 <author>
   <name>Clifford Snow</name>
-  <uri>http://osm_seattle.snowandsnow.us/</uri>
+  <uri>/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
 
 
 <entry>
+  <title type="html"><![CDATA[Fixing Duplicates in OSM]]></title>
+  <link rel="alternate" type="text/html" href="/articles/Duplicate-Address-Cause/" />
+  <id>/articles/Duplicate-Address-Cause</id>
+  <published>2014-02-23T00:00:00-08:00</published>
+  <updated>2014-02-23T00:00:00-08:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri></uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;p&gt;The problem of duplicates addresses for King County can be categorized into two catogories.&lt;/p&gt;
+
+&lt;h2 id=&quot;user-added-addresses-without-checking-for-existing-address-points&quot;&gt;User added addresses without checking for existing address points&lt;/h2&gt;
+&lt;p&gt;It is easy to add a new Point of Interest and miss seeing the address node. Addresses display as simple nodes in iD and JOSM. While JOSM can be customized using map paint styles to display the full address, the feature is not enable by default.&lt;/p&gt;
+
+&lt;p&gt;The JOSM image below show an address node with default paint style displayed. The address node is displayed with the house number and a unique icon. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/josm_address.png&quot; alt=&quot;JOSM&quot; title=&quot;JOSM&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;iD on the otherhand only gives a icon of a node
+&lt;img src=&quot;/assets/iD_address.png&quot; alt=&quot;iD&quot; title=&quot;iD&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;potential-fixes&quot;&gt;Potential Fixes&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JOSM - Add an duplicate address check to the validator. Editors also need to be made aware of the problem. Since address nodes are visiable, making users aware of map paint styles should help. &lt;/li&gt;
+  &lt;li&gt;iD - First the address node should have a unique icon style to help users spot them. When selected, the user interface should allow the editor to easily add POIs. Additionlly, a means to merge POIs with address nodes is needed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;duplicates-imported-from-source&quot;&gt;Duplicates imported from source&lt;/h2&gt;
+&lt;p&gt;The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[Duplicate Addresses In Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="/duplicate-addresses-in-seattle/" />
+  <id>/duplicate-addresses-in-seattle</id>
   <published>2014-02-16T00:00:00-08:00</published>
   <updated>2014-02-16T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri></uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">
@@ -1239,19 +1276,19 @@
   &lt;li&gt;&lt;a href=&quot;http://127.0.0.1:8111/load_and_zoom?left=-122.3073618&amp;amp;right=-122.3033618&amp;amp;top=47.6939931&amp;amp;bottom=47.6899931&amp;amp;select=node2302037231&quot;&gt; 2200 Northeast 88th Street               &lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle/&quot;&gt;Duplicate Addresses In Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/duplicate-addresses-in-seattle/&quot;&gt;Duplicate Addresses In Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on February 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate Addresses In Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="/duplicate-addresses-in-seattle/" />
+  <id>/duplicate-addresses-in-seattle</id>
   <published>2014-02-15T00:00:00-08:00</published>
   <updated>2014-02-15T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri></uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;ol&gt;
@@ -2737,19 +2774,19 @@
   &lt;li&gt;&lt;a href=&quot;http://127.0.0.1:8111/load_and_zoom?left=-0.00199722312971121&amp;amp;right=-0.000200592561472167&amp;amp;top=0.00132628517822853&amp;amp;bottom=-0.000470345389893905&amp;amp;select=node2670883310&quot;&gt; 2351 Fairview Avenue East                &lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle/&quot;&gt;Duplicate Addresses In Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 15, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/duplicate-addresses-in-seattle/&quot;&gt;Duplicate Addresses In Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on February 15, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="/articles/duplicate-addresses-in-seattle/" />
+  <id>/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-14T00:00:00-08:00</published>
   <updated>2014-02-14T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri></uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
@@ -2781,19 +2818,19 @@
 &lt;h3 id=&quot;duplicate-addresses&quot;&gt;Duplicate addresses&lt;/h3&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="/articles/duplicate-addresses-in-seattle/" />
+  <id>/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-10T00:00:00-08:00</published>
   <updated>2014-02-10T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri></uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
@@ -2821,19 +2858,19 @@
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. &lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Syntax Highlighting Post]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/code-highlighting-post/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/code-highlighting-post</id>
+  <link rel="alternate" type="text/html" href="/articles/code-highlighting-post/" />
+  <id>/articles/code-highlighting-post</id>
   <published>2013-08-16T00:00:00-07:00</published>
   <updated>2013-08-16T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri></uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Syntax_highlighting&quot;&gt;Syntax highlighting&lt;/a&gt; is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.&lt;/p&gt;
@@ -2932,19 +2969,19 @@
 end
 &lt;/code&gt;&lt;/pre&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on August 16, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on August 16, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Post with Large Feature Image and Text]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/readability-feature-post/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/readability-feature-post</id>
+  <link rel="alternate" type="text/html" href="/articles/readability-feature-post/" />
+  <id>/articles/readability-feature-post</id>
   <published>2013-05-23T00:00:00-07:00</published>
   <updated>2013-05-23T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri></uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;This is a sample post with a large feature image&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; up top and tons of text. Odio ad blue bottle vinyl, 90&amp;#8217;s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney&amp;#8217;s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
@@ -2996,19 +3033,19 @@ end
   &lt;/ol&gt;
 &lt;/div&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on May 23, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on May 23, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Testing Readability with a Bunch of Text]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/readability-post/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/readability-post</id>
+  <link rel="alternate" type="text/html" href="/articles/readability-post/" />
+  <id>/articles/readability-post</id>
   <published>2012-05-22T00:00:00-07:00</published>
   <updated>2012-05-22T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri></uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90&amp;#8217;s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney&amp;#8217;s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
@@ -3052,7 +3089,7 @@ end
 
 &lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on May 22, 2012.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;&quot;&gt;OSM Seattle&lt;/a&gt; on May 22, 2012.&lt;/p&gt;</content>
 </entry>
 
 </feed>

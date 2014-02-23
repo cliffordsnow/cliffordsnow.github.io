@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://osm_seattle.snowandsnow.us</loc>
+        <loc></loc>
     </url>
     
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle/</loc>
+        <loc>/articles/Duplicate-Address-Cause/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/duplicate-addresses-in-seattle/</loc>
+        <loc>/duplicate-addresses-in-seattle/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>/duplicate-addresses-in-seattle/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>/articles/duplicate-addresses-in-seattle/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/code-highlighting-post/</loc>
+        <loc>/articles/duplicate-addresses-in-seattle/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/readability-feature-post/</loc>
+        <loc>/articles/code-highlighting-post/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/readability-post/</loc>
+        <loc>/articles/readability-feature-post/</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/readability-post/</loc>
     </url>
     
 </urlset>
