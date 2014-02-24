@@ -26,7 +26,7 @@ iD on the otherhand only gives a icon of a node
 Potential Fixes
 ----
 * JOSM - Add an duplicate address check to the validator. Editors also need to be made aware of the problem. Since address nodes are visiable, making users aware of map paint styles should help. 
-* iD - First the address node should have a unique icon style to help users spot them. When selected, the user interface should allow the editor to easily add POIs. Additionlly, a means to merge POIs with address nodes is needed.
+* iD - First the address node should have a unique icon style to help users spot them. This is an open ticket on [github.](https://github.com/openstreetmap/iD/issues/1524) When selected, the user interface should allow the editor to easily add POIs. Additionlly, a means to merge POIs with address nodes is needed. See ticket on [github.](https://github.com/openstreetmap/iD/issues/2137)
 
 Duplicates imported from source
 --

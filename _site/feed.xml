@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2014-02-23T12:53:33-08:00</updated>
+<updated>2014-02-23T13:10:50-08:00</updated>
 <id>/</id>
 <author>
   <name>Clifford Snow</name>
@@ -40,7 +40,7 @@
 &lt;h2 id=&quot;potential-fixes&quot;&gt;Potential Fixes&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;JOSM - Add an duplicate address check to the validator. Editors also need to be made aware of the problem. Since address nodes are visiable, making users aware of map paint styles should help. &lt;/li&gt;
-  &lt;li&gt;iD - First the address node should have a unique icon style to help users spot them. When selected, the user interface should allow the editor to easily add POIs. Additionlly, a means to merge POIs with address nodes is needed.&lt;/li&gt;
+  &lt;li&gt;iD - First the address node should have a unique icon style to help users spot them. This is an open ticket on &lt;a href=&quot;https://github.com/openstreetmap/iD/issues/1524&quot;&gt;github.&lt;/a&gt; When selected, the user interface should allow the editor to easily add POIs. Additionlly, a means to merge POIs with address nodes is needed. See ticket on &lt;a href=&quot;https://github.com/openstreetmap/iD/issues/2137&quot;&gt;github.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;duplicates-imported-from-source&quot;&gt;Duplicates imported from source&lt;/h2&gt;
