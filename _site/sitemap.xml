@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://osm_seattle.snowandsnow.us</loc>
+        <loc>http://loclhost:4000</loc>
     </url>
     
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/</loc>
+        <loc>http://loclhost:4000/articles/JOSM-HTTPS-Feature/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>http://loclhost:4000/articles/Duplicate-Address-Cause/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>http://loclhost:4000/articles/duplicate-addresses-in-seattle/</loc>
+    </url>
+    
+    <url>
+        <loc>http://loclhost:4000/articles/duplicate-addresses-in-seattle/</loc>
     </url>
     
 </urlset>

@@ -3,26 +3,53 @@
 <title type="text">OSM Seattle</title>
 <subtitle type="text">OpenStreetMap</subtitle>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://osm_seattle.snowandsnow.us/feed.xml" />
-<link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us" />
-<updated>2014-02-24T22:19:09-08:00</updated>
-<id>http://osm_seattle.snowandsnow.us/</id>
+<link rel="self" type="application/atom+xml" href="http://loclhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://loclhost:4000" />
+<updated>2014-03-16T12:05:09-07:00</updated>
+<id>http://loclhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
-  <uri>http://osm_seattle.snowandsnow.us/</uri>
+  <uri>http://loclhost:4000/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
 
 
 <entry>
+  <title type="html"><![CDATA[JSOM Allows HTTPS]]></title>
+  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/JOSM-HTTPS-Feature/" />
+  <id>http://loclhost:4000/articles/JOSM-HTTPS-Feature</id>
+  <published>2014-03-16T00:00:00-07:00</published>
+  <updated>2014-03-16T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://loclhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;thank-you-developers&quot;&gt;Thank you developers&lt;/h2&gt;
+
+&lt;p&gt;Version of 6891 of JOSM now allows for HTTPS access. &lt;/p&gt;
+
+&lt;h2 id=&quot;config&quot;&gt;Config&lt;/h2&gt;
+&lt;p&gt;To configure open preference, select connections settings, the second icon down. Unselect use the default OSM server URL (http://api.openstreetmap.org/api)
+Add the following custom URL:
+https://api.openstreetmap.org/api&lt;/p&gt;
+
+&lt;p&gt;![image] (/assets/josm_https.png)&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[Fixing Duplicates in OSM]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause</id>
+  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/Duplicate-Address-Cause/" />
+  <id>http://loclhost:4000/articles/Duplicate-Address-Cause</id>
   <published>2014-02-23T00:00:00-08:00</published>
   <updated>2014-02-23T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://loclhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;The problem of duplicates addresses for King County can be categorized into two catogories.&lt;/p&gt;
@@ -47,19 +74,19 @@
 &lt;p&gt;The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/duplicate-addresses-in-seattle/" />
+  <id>http://loclhost:4000/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-14T00:00:00-08:00</published>
   <updated>2014-02-14T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://loclhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
@@ -91,19 +118,19 @@
 &lt;h3 id=&quot;duplicate-addresses&quot;&gt;Duplicate addresses&lt;/h3&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/duplicate-addresses-in-seattle/" />
+  <id>http://loclhost:4000/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-10T00:00:00-08:00</published>
   <updated>2014-02-10T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://loclhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
@@ -131,7 +158,7 @@
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. &lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

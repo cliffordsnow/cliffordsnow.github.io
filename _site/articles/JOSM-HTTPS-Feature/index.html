@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Fixing Duplicates in OSM &#8211; OSM Seattle</title>
-<meta name="description" content="It is way too easy to create duplicate addresses in OSM with existing editor">
-<meta name="keywords" content="address, duplicates, iD, JOSM">
+<title>JSOM Allows HTTPS &#8211; OSM Seattle</title>
+<meta name="description" content="You can now protect your password over the internet">
+<meta name="keywords" content="securityJOSM">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://loclhost:4000/images/duplicates.png">
+<meta name="twitter:image" content="http://loclhost:4000/images/josm.jpg">
 
-<meta name="twitter:title" content="Fixing Duplicates in OSM">
-<meta name="twitter:description" content="It is way too easy to create duplicate addresses in OSM with existing editor">
+<meta name="twitter:title" content="JSOM Allows HTTPS">
+<meta name="twitter:description" content="You can now protect your password over the internet">
 <meta name="twitter:creator" content="@osm_seattle">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fixing Duplicates in OSM">
-<meta property="og:description" content="It is way too easy to create duplicate addresses in OSM with existing editor">
-<meta property="og:url" content="http://loclhost:4000/articles/Duplicate-Address-Cause/">
+<meta property="og:title" content="JSOM Allows HTTPS">
+<meta property="og:description" content="You can now protect your password over the internet">
+<meta property="og:url" content="http://loclhost:4000/articles/JOSM-HTTPS-Feature/">
 <meta property="og:site_name" content="OSM Seattle">
 
 
 
 
 
-<link rel="canonical" href="http://loclhost:4000/articles/Duplicate-Address-Cause/">
+<link rel="canonical" href="http://loclhost:4000/articles/JOSM-HTTPS-Feature/">
 <link href="http://loclhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="OSM Seattle Feed">
 <link rel="author" href="https://plus.google.com/101103612980566933205?rel=author">
 
@@ -94,8 +94,8 @@
 </div><!-- /.navigation-wrapper -->
 
 <div class="image-wrap">
-  <img src="http://loclhost:4000/images/duplicates.png" alt="Fixing Duplicates in OSM feature image">
-  <span class="image-credit">Photo Credit: <a href="">Photo courtesy of USDA Natural Resources Conservation Service.</a></span>
+  <img src="http://loclhost:4000/images/josm.jpg" alt="JSOM Allows HTTPS feature image">
+  <span class="image-credit">Photo Credit: <a href="">clifford Snow</a></span>
 </div><!-- /.image-wrap -->
 
 <div id="main" role="main">
@@ -114,30 +114,20 @@
   </div>
   <article>
     <div class="headline-wrap">
-      <h1>Fixing Duplicates in OSM</h1>
-      <h2>Causes and Fixes</h2>
+      <h1>JSOM Allows HTTPS</h1>
+      <h2>JOSM</h2>
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>The problem of duplicates addresses for King County can be categorized into two catogories.</p>
+      <h2 id="thank-you-developers">Thank you developers</h2>
 
-<h2 id="user-added-addresses-without-checking-for-existing-address-points">User added addresses without checking for existing address points</h2>
-<p>It is easy to add a new Point of Interest and miss seeing the address node. Addresses display as simple nodes in iD and JOSM. While JOSM can be customized using map paint styles to display the full address, the feature is not enable by default.</p>
+<p>Version of 6891 of JOSM now allows for HTTPS access. </p>
 
-<p>The JOSM image below show an address node with default paint style displayed. The address node is displayed with the house number and a unique icon. </p>
+<h2 id="config">Config</h2>
+<p>To configure open preference, select connections settings, the second icon down. Unselect use the default OSM server URL (http://api.openstreetmap.org/api)
+Add the following custom URL:
+https://api.openstreetmap.org/api</p>
 
-<p><img src="/assets/josm_address.png" alt="JOSM" title="JOSM" /></p>
-
-<p>iD on the otherhand only gives a icon of a node
-<img src="/assets/iD_address.png" alt="iD" title="iD" /></p>
-
-<h2 id="potential-fixes">Potential Fixes</h2>
-<ul>
-  <li>JOSM - Add an duplicate address check to the validator. Editors also need to be made aware of the problem. Since address nodes are visiable, making users aware of map paint styles should help. </li>
-  <li>iD - First the address node should have a unique icon style to help users spot them. This is an open ticket on <a href="https://github.com/openstreetmap/iD/issues/1524">github.</a> When selected, the user interface should allow the editor to easily add POIs. Additionlly, a means to merge POIs with address nodes is needed. See ticket on <a href="https://github.com/openstreetmap/iD/issues/2137">github.</a></li>
-</ul>
-
-<h2 id="duplicates-imported-from-source">Duplicates imported from source</h2>
-<p>The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.</p>
+<p>![image] (/assets/josm_https.png)</p>
 
 
       <hr />
@@ -155,7 +145,7 @@
 
 
         </div>
-        <p class="byline"><strong>Fixing Duplicates in OSM</strong> was published on <time datetime="2014-02-23T00:00:00-08:00">February 23, 2014</time> by <a href="http://loclhost:4000/about" title="About Clifford Snow">Clifford Snow</a>.</p>
+        <p class="byline"><strong>JSOM Allows HTTPS</strong> was published on <time datetime="2014-03-16T00:00:00-07:00">March 16, 2014</time> by <a href="http://loclhost:4000/about" title="About Clifford Snow">Clifford Snow</a>.</p>
       </footer>
     </div><!-- /.article-wrap -->
 
@@ -188,7 +178,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
       
       
-      <li><a href="http://loclhost:4000/articles/JOSM-HTTPS-Feature/" title="JSOM Allows HTTPS">JSOM Allows HTTPS</a></li>
+      <li><a href="http://loclhost:4000/articles/Duplicate-Address-Cause/" title="Fixing Duplicates in OSM">Fixing Duplicates in OSM</a></li>
       
     
       
