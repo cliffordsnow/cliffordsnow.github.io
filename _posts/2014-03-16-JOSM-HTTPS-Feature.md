@@ -21,7 +21,7 @@ To configure open preference, select connections settings, the second icon down.
 Add the following custom URL:
 https://api.openstreetmap.org/api
 
-![HTTPS] ({{site_url}}/assets/josm_https.png "HTTPS in JOSM")
+![HTTPS]({{site_url}}/assets/josm_https.png "HTTPS in JOSM")
 
 
 
