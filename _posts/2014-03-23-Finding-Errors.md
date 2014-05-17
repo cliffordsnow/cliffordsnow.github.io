@@ -28,9 +28,9 @@ Download OSM Data
 ----
 [Overpass-Turbo](http://overpass-turbo.eu) has an easy method to obtain current data. Modify and run the fullowing script:
 
-```
-     <osm-script output="json" timeout="900" 
-element-limit="1073741824">
+<!-- language: lang-js -->
+    <osm-script output="json" timeout="900" 
+	element-limit="1073741824">
     <id-query {{nominatimArea:"Skagit County"}}             into="area"/>
     <!-- gather results -->
     <union>
@@ -52,7 +52,7 @@ element-limit="1073741824">
     <recurse type="down"/>
     <print mode="skeleton" order="quadtile"/>
     </osm-script>
-```
+
 
 Remember, change the nominatim search area from "Skagit County" to your county.
 
@@ -88,11 +88,11 @@ Comparing OSM data to County Data
 ---
 Time for some good old sql right joins to find missing roads. 
 
-```
-SELECT s.gid, s.geom, s.fullname AS "Name"
-FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
-WHERE o.gid IS NULL
-```
+<!-- language: lang-sql -->
+	SELECT s.gid, s.geom, s.fullname AS "Name"
+	FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
+	WHERE o.gid IS NULL
+
 
 ![Missing]({{site_url}}/assets/missing.png)
 
@@ -112,9 +112,9 @@ Their are two methods of creating the shapefile. From QGIS, select the missing r
 
 The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:
 
-```
-pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
-```
+<!-- language: lang-bash -->
+	pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
+
 
 ##### Create .OSM
 

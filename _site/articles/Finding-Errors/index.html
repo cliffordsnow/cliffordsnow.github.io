@@ -136,31 +136,31 @@ This tutorial will provide you with one means of finding differences. The follow
 <h2 id="download-osm-data">Download OSM Data</h2>
 <p><a href="http://overpass-turbo.eu">Overpass-Turbo</a> has an easy method to obtain current data. Modify and run the fullowing script:</p>
 
-<p><code>
-     &lt;osm-script output="json" timeout="900" 
+<!-- language: lang-js -->
+<pre><code>&lt;osm-script output="json" timeout="900" 
 element-limit="1073741824"&gt;
-    &lt;id-query              into="area"/&gt;
-    &lt;!-- gather results --&gt;
-    &lt;union&gt;
-     	&lt;query type="node"&gt;
-      		&lt;has-kv k="highway"/&gt;
-      		&lt;area-query from="area"/&gt;
-        &lt;/query&gt;
-        &lt;query type="way"&gt;
-            &lt;has-kv k="highway" /&gt;
-            &lt;area-query from="area"/&gt;
-        &lt;/query&gt;
-    	&lt;query type="relation"&gt;
-      		&lt;has-kv k="highway"/&gt;
-      		&lt;area-query from="area"/&gt;
-    	&lt;/query&gt;      
-    &lt;/union&gt;
-    &lt;!-- print results --&gt;
-    &lt;print mode="body"/&gt;
-    &lt;recurse type="down"/&gt;
-    &lt;print mode="skeleton" order="quadtile"/&gt;
-    &lt;/osm-script&gt;
-</code></p>
+&lt;id-query              into="area"/&gt;
+&lt;!-- gather results --&gt;
+&lt;union&gt;
+ 	&lt;query type="node"&gt;
+  		&lt;has-kv k="highway"/&gt;
+  		&lt;area-query from="area"/&gt;
+    &lt;/query&gt;
+    &lt;query type="way"&gt;
+        &lt;has-kv k="highway" /&gt;
+        &lt;area-query from="area"/&gt;
+    &lt;/query&gt;
+	&lt;query type="relation"&gt;
+  		&lt;has-kv k="highway"/&gt;
+  		&lt;area-query from="area"/&gt;
+	&lt;/query&gt;      
+&lt;/union&gt;
+&lt;!-- print results --&gt;
+&lt;print mode="body"/&gt;
+&lt;recurse type="down"/&gt;
+&lt;print mode="skeleton" order="quadtile"/&gt;
+&lt;/osm-script&gt;
+</code></pre>
 
 <p>Remember, change the nominatim search area from &#8220;Skagit County&#8221; to your county.</p>
 
@@ -192,11 +192,11 @@ element-limit="1073741824"&gt;
 <h2 id="comparing-osm-data-to-county-data">Comparing OSM data to County Data</h2>
 <p>Time for some good old sql right joins to find missing roads. </p>
 
-<p><code>
-SELECT s.gid, s.geom, s.fullname AS "Name"
+<!-- language: lang-sql -->
+<pre><code>SELECT s.gid, s.geom, s.fullname AS "Name"
 FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
 WHERE o.gid IS NULL
-</code></p>
+</code></pre>
 
 <p><img src="/assets/missing.png" alt="Missing" /></p>
 
@@ -218,9 +218,9 @@ WHERE o.gid IS NULL
 
 <p>The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:</p>
 
-<p><code>
-pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
-</code></p>
+<!-- language: lang-bash -->
+<pre><code>pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
+</code></pre>
 
 <h5 id="create-osm">Create .OSM</h5>
 

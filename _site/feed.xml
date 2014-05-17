@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-17T15:28:29-07:00</updated>
+<updated>2014-05-17T16:34:19-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -64,31 +64,31 @@ This tutorial will provide you with one means of finding differences. The follow
 &lt;h2 id=&quot;download-osm-data&quot;&gt;Download OSM Data&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass-Turbo&lt;/a&gt; has an easy method to obtain current data. Modify and run the fullowing script:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-     &amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 
+&lt;!-- language: lang-js --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 
 element-limit=&quot;1073741824&quot;&amp;gt;
-    &amp;lt;id-query              into=&quot;area&quot;/&amp;gt;
-    &amp;lt;!-- gather results --&amp;gt;
-    &amp;lt;union&amp;gt;
-     	&amp;lt;query type=&quot;node&quot;&amp;gt;
-      		&amp;lt;has-kv k=&quot;highway&quot;/&amp;gt;
-      		&amp;lt;area-query from=&quot;area&quot;/&amp;gt;
-        &amp;lt;/query&amp;gt;
-        &amp;lt;query type=&quot;way&quot;&amp;gt;
-            &amp;lt;has-kv k=&quot;highway&quot; /&amp;gt;
-            &amp;lt;area-query from=&quot;area&quot;/&amp;gt;
-        &amp;lt;/query&amp;gt;
-    	&amp;lt;query type=&quot;relation&quot;&amp;gt;
-      		&amp;lt;has-kv k=&quot;highway&quot;/&amp;gt;
-      		&amp;lt;area-query from=&quot;area&quot;/&amp;gt;
-    	&amp;lt;/query&amp;gt;      
-    &amp;lt;/union&amp;gt;
-    &amp;lt;!-- print results --&amp;gt;
-    &amp;lt;print mode=&quot;body&quot;/&amp;gt;
-    &amp;lt;recurse type=&quot;down&quot;/&amp;gt;
-    &amp;lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&amp;gt;
-    &amp;lt;/osm-script&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
+&amp;lt;id-query              into=&quot;area&quot;/&amp;gt;
+&amp;lt;!-- gather results --&amp;gt;
+&amp;lt;union&amp;gt;
+ 	&amp;lt;query type=&quot;node&quot;&amp;gt;
+  		&amp;lt;has-kv k=&quot;highway&quot;/&amp;gt;
+  		&amp;lt;area-query from=&quot;area&quot;/&amp;gt;
+    &amp;lt;/query&amp;gt;
+    &amp;lt;query type=&quot;way&quot;&amp;gt;
+        &amp;lt;has-kv k=&quot;highway&quot; /&amp;gt;
+        &amp;lt;area-query from=&quot;area&quot;/&amp;gt;
+    &amp;lt;/query&amp;gt;
+	&amp;lt;query type=&quot;relation&quot;&amp;gt;
+  		&amp;lt;has-kv k=&quot;highway&quot;/&amp;gt;
+  		&amp;lt;area-query from=&quot;area&quot;/&amp;gt;
+	&amp;lt;/query&amp;gt;      
+&amp;lt;/union&amp;gt;
+&amp;lt;!-- print results --&amp;gt;
+&amp;lt;print mode=&quot;body&quot;/&amp;gt;
+&amp;lt;recurse type=&quot;down&quot;/&amp;gt;
+&amp;lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&amp;gt;
+&amp;lt;/osm-script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Remember, change the nominatim search area from &amp;#8220;Skagit County&amp;#8221; to your county.&lt;/p&gt;
 
@@ -120,11 +120,11 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &lt;h2 id=&quot;comparing-osm-data-to-county-data&quot;&gt;Comparing OSM data to County Data&lt;/h2&gt;
 &lt;p&gt;Time for some good old sql right joins to find missing roads. &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
+&lt;!-- language: lang-sql --&gt;
+&lt;pre&gt;&lt;code&gt;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
 FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
 WHERE o.gid IS NULL
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/missing.png&quot; alt=&quot;Missing&quot; /&gt;&lt;/p&gt;
 
@@ -146,9 +146,9 @@ WHERE o.gid IS NULL
 
 &lt;p&gt;The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
-&lt;/code&gt;&lt;/p&gt;
+&lt;!-- language: lang-bash --&gt;
+&lt;pre&gt;&lt;code&gt;pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h5 id=&quot;create-osm&quot;&gt;Create .OSM&lt;/h5&gt;
 
