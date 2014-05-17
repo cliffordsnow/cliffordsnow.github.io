@@ -3,26 +3,133 @@
 <title type="text">OSM Seattle</title>
 <subtitle type="text">OpenStreetMap</subtitle>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://loclhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://loclhost:4000" />
-<updated>2014-03-16T12:05:09-07:00</updated>
-<id>http://loclhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2014-05-16T19:56:51-07:00</updated>
+<id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
-  <uri>http://loclhost:4000/</uri>
+  <uri>http://localhost:4000/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
 
 
 <entry>
+  <title type="html"><![CDATA[Too Many Airports]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Too-Many-Airports/" />
+  <id>http://localhost:4000/articles/Too-Many-Airports</id>
+  <published>2014-05-16T00:00:00-07:00</published>
+  <updated>2014-05-16T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://localhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;p&gt;According to a group of R/C model airplane enthusiasts, model airplanes shouldn&amp;#8217;t be flown within three miles of an airport. Turns out
+we have a bunch of sites that the FCC considers an airport. My representation is based on the center of the airport. The FAA would probably measure the limit from the outer edge of the airport.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/cliffordsnow/7d3a514f164f17b50fa7.js&quot;&gt;&lt;/script&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Too-Many-Airports/&quot;&gt;Too Many Airports&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 16, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Finding Differences in Roads]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Finding-Errors/" />
+  <id>http://localhost:4000/articles/Finding-Errors</id>
+  <published>2014-03-23T00:00:00-07:00</published>
+  <updated>2014-03-23T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://localhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;p&gt;Finding differences between OpenStreetMap and county road data is hard if done manually. Fortunately, Open Source Software tools eases the process.
+This tutorial will provide you with one means of finding differences. The following software is needed:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.qgis.org&quot;&gt;QGIS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://&quot;&gt;PostGIS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.pgadmin.org/&quot;&gt;PGAdmin3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;pgShapeLoader&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/pnorman/ogr2osm&quot;&gt;org2osm.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. &lt;a href=&quot;http://www.boundlessgeo.com&quot;&gt;Boundless&lt;/a&gt; Open Geo Suite is the perfect solution to install PostGIS and related tools. &lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County&amp;#8217;s road names are spelled out instead of abrevated as most road data is presented. Skagit County&amp;#8217;s GIS data is open and freely available. Since most road data comes abrevated, you&amp;#8217;ll need to expand the road names to compare with OSM data. Postgresql funtions to expand road names can be found in my &lt;a href=&quot;https://github.com/clifford/sql&quot;&gt;github repository.&lt;/a&gt; Most likely you will need to modify the function for your data.&lt;/p&gt;
+
+&lt;h2 id=&quot;download-osm-data&quot;&gt;Download OSM Data&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass-Turbo&lt;/a&gt; has an easy method to obtain current data. Modify and run the fullowing script:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+     &amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 
+element-limit=&quot;1073741824&quot;&amp;gt;
+    &amp;lt;id-query              into=&quot;area&quot;/&amp;gt;
+    &amp;lt;!-- gather results --&amp;gt;
+    &amp;lt;union&amp;gt;
+     	&amp;lt;query type=&quot;node&quot;&amp;gt;
+      		&amp;lt;has-kv k=&quot;highway&quot;/&amp;gt;
+      		&amp;lt;area-query from=&quot;area&quot;/&amp;gt;
+        &amp;lt;/query&amp;gt;
+        &amp;lt;query type=&quot;way&quot;&amp;gt;
+            &amp;lt;has-kv k=&quot;highway&quot; /&amp;gt;
+            &amp;lt;area-query from=&quot;area&quot;/&amp;gt;
+        &amp;lt;/query&amp;gt;
+    	&amp;lt;query type=&quot;relation&quot;&amp;gt;
+      		&amp;lt;has-kv k=&quot;highway&quot;/&amp;gt;
+      		&amp;lt;area-query from=&quot;area&quot;/&amp;gt;
+    	&amp;lt;/query&amp;gt;      
+    &amp;lt;/union&amp;gt;
+    &amp;lt;!-- print results --&amp;gt;
+    &amp;lt;print mode=&quot;body&quot;/&amp;gt;
+    &amp;lt;recurse type=&quot;down&quot;/&amp;gt;
+    &amp;lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&amp;gt;
+    &amp;lt;/osm-script&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Remember, change the nominatim search area from &amp;#8220;Skagit County&amp;#8221; to your county.&lt;/p&gt;
+
+&lt;p&gt;Once the query is complete, select Export from the menu. Select GeoJSON for the data type. It will take a few minutes before the download starts. Once complete move the file export.geojson to the data directory of your counties data. &lt;/p&gt;
+
+&lt;h2 id=&quot;qgis&quot;&gt;QGIS&lt;/h2&gt;
+&lt;p&gt;Open the geojson vector file &lt;img src=&quot;/assets/vector_icon.png&quot; alt=&quot;vector icon&quot; /&gt; in QGIS. Select the LineString feature. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/qgis_geojson_import.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select the OpenStreetMap in OpenLayers plugins menu item. Once open, drag the export to the top position, otherwise the OSM layer will obscure the geojson data. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/qgis_layers.png&quot; alt=&quot;QGIS Layers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The last step with QGIS is to select the county roads using the Select Features by Rectangle tool. &lt;img src=&quot;/assets/rectangle_selection_icon.png&quot; alt=&quot;Rectangle Selection&quot; /&gt;  and save the layer as a vector file, in the Vector menu. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/qgis_save_vector.png&quot; alt=&quot;Save Vector Layer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/qgis_save_vector_file.png&quot; alt=&quot;Vector File&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;import-into-postgis&quot;&gt;Import into PostGIS&lt;/h2&gt;
+&lt;p&gt;Use pgShapeFile to import the saved shapefiles into PostGIS. &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/josm_https.png&quot; alt=&quot;HTTPS&quot; title=&quot;HTTPS in JOSM&quot; /&gt;&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[JSOM Allows HTTPS]]></title>
-  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/JOSM-HTTPS-Feature/" />
-  <id>http://loclhost:4000/articles/JOSM-HTTPS-Feature</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/JOSM-HTTPS-Feature/" />
+  <id>http://localhost:4000/articles/JOSM-HTTPS-Feature</id>
   <published>2014-03-16T00:00:00-07:00</published>
   <updated>2014-03-16T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://loclhost:4000</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h2 id=&quot;thank-you-developers&quot;&gt;Thank you developers&lt;/h2&gt;
@@ -34,22 +141,22 @@
 Add the following custom URL:
 https://api.openstreetmap.org/api&lt;/p&gt;
 
-&lt;p&gt;![image] (/assets/josm_https.png)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/josm_https.png&quot; alt=&quot;HTTPS&quot; title=&quot;HTTPS in JOSM&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Fixing Duplicates in OSM]]></title>
-  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/Duplicate-Address-Cause/" />
-  <id>http://loclhost:4000/articles/Duplicate-Address-Cause</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Duplicate-Address-Cause/" />
+  <id>http://localhost:4000/articles/Duplicate-Address-Cause</id>
   <published>2014-02-23T00:00:00-08:00</published>
   <updated>2014-02-23T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://loclhost:4000</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;The problem of duplicates addresses for King County can be categorized into two catogories.&lt;/p&gt;
@@ -74,19 +181,19 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/duplicate-addresses-in-seattle/" />
-  <id>http://loclhost:4000/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/duplicate-addresses-in-seattle/" />
+  <id>http://localhost:4000/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-14T00:00:00-08:00</published>
   <updated>2014-02-14T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://loclhost:4000</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
@@ -118,19 +225,19 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;h3 id=&quot;duplicate-addresses&quot;&gt;Duplicate addresses&lt;/h3&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://loclhost:4000/articles/duplicate-addresses-in-seattle/" />
-  <id>http://loclhost:4000/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/duplicate-addresses-in-seattle/" />
+  <id>http://localhost:4000/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-10T00:00:00-08:00</published>
   <updated>2014-02-10T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://loclhost:4000</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
@@ -158,7 +265,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. &lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://loclhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://loclhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>JSOM Allows HTTPS &#8211; OSM Seattle</title>
-<meta name="description" content="You can now protect your password over the internet">
-<meta name="keywords" content="securityJOSM">
+<title>Finding Differences in Roads &#8211; OSM Seattle</title>
+<meta name="description" content="Using Open Source Tools to Find Differences in Road Data">
+<meta name="keywords" content="QGIS;PostGIS;Overpass">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:4000/images/josm.jpg">
+<meta name="twitter:image" content="http://localhost:4000/images/missing.png">
 
-<meta name="twitter:title" content="JSOM Allows HTTPS">
-<meta name="twitter:description" content="You can now protect your password over the internet">
+<meta name="twitter:title" content="Finding Differences in Roads">
+<meta name="twitter:description" content="Using Open Source Tools to Find Differences in Road Data">
 <meta name="twitter:creator" content="@osm_seattle">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSOM Allows HTTPS">
-<meta property="og:description" content="You can now protect your password over the internet">
-<meta property="og:url" content="http://localhost:4000/articles/JOSM-HTTPS-Feature/">
+<meta property="og:title" content="Finding Differences in Roads">
+<meta property="og:description" content="Using Open Source Tools to Find Differences in Road Data">
+<meta property="og:url" content="http://localhost:4000/articles/Finding-Errors/">
 <meta property="og:site_name" content="OSM Seattle">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/articles/JOSM-HTTPS-Feature/">
+<link rel="canonical" href="http://localhost:4000/articles/Finding-Errors/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="OSM Seattle Feed">
 <link rel="author" href="https://plus.google.com/101103612980566933205?rel=author">
 
@@ -94,8 +94,8 @@
 </div><!-- /.navigation-wrapper -->
 
 <div class="image-wrap">
-  <img src="http://localhost:4000/images/josm.jpg" alt="JSOM Allows HTTPS feature image">
-  <span class="image-credit">Photo Credit: <a href="">clifford Snow</a></span>
+  <img src="http://localhost:4000/images/missing.png" alt="Finding Differences in Roads feature image">
+  <span class="image-credit">Photo Credit: <a href="">OpenStreetMap Contributors and Clifford Snow</a></span>
 </div><!-- /.image-wrap -->
 
 <div id="main" role="main">
@@ -114,18 +114,77 @@
   </div>
   <article>
     <div class="headline-wrap">
-      <h1>JSOM Allows HTTPS</h1>
-      <h2>JOSM</h2>
+      <h1>Finding Differences in Roads</h1>
+      <h2></h2>
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <h2 id="thank-you-developers">Thank you developers</h2>
+      <p>Finding differences between OpenStreetMap and county road data is hard if done manually. Fortunately, Open Source Software tools eases the process.
+This tutorial will provide you with one means of finding differences. The following software is needed:</p>
 
-<p>Version of 6891 of JOSM now allows for HTTPS access. </p>
+<ul>
+  <li><a href="http://www.qgis.org">QGIS</a></li>
+  <li><a href="http://">PostGIS</a></li>
+  <li><a href="http://www.pgadmin.org/">PGAdmin3</a></li>
+  <li>pgShapeLoader</li>
+  <li><a href="https://github.com/pnorman/ogr2osm">org2osm.py</a></li>
+</ul>
 
-<h2 id="config">Config</h2>
-<p>To configure open preference, select connections settings, the second icon down. Unselect use the default OSM server URL (http://api.openstreetmap.org/api)
-Add the following custom URL:
-https://api.openstreetmap.org/api</p>
+<p>QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. <a href="http://www.boundlessgeo.com">Boundless</a> Open Geo Suite is the perfect solution to install PostGIS and related tools. </p>
+
+<p>I&#8217;m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County&#8217;s road names are spelled out instead of abrevated as most road data is presented. Skagit County&#8217;s GIS data is open and freely available. Since most road data comes abrevated, you&#8217;ll need to expand the road names to compare with OSM data. Postgresql funtions to expand road names can be found in my <a href="https://github.com/clifford/sql">github repository.</a> Most likely you will need to modify the function for your data.</p>
+
+<h2 id="download-osm-data">Download OSM Data</h2>
+<p><a href="http://overpass-turbo.eu">Overpass-Turbo</a> has an easy method to obtain current data. Modify and run the fullowing script:</p>
+
+<p><code>
+     &lt;osm-script output="json" timeout="900" 
+element-limit="1073741824"&gt;
+    &lt;id-query              into="area"/&gt;
+    &lt;!-- gather results --&gt;
+    &lt;union&gt;
+     	&lt;query type="node"&gt;
+      		&lt;has-kv k="highway"/&gt;
+      		&lt;area-query from="area"/&gt;
+        &lt;/query&gt;
+        &lt;query type="way"&gt;
+            &lt;has-kv k="highway" /&gt;
+            &lt;area-query from="area"/&gt;
+        &lt;/query&gt;
+    	&lt;query type="relation"&gt;
+      		&lt;has-kv k="highway"/&gt;
+      		&lt;area-query from="area"/&gt;
+    	&lt;/query&gt;      
+    &lt;/union&gt;
+    &lt;!-- print results --&gt;
+    &lt;print mode="body"/&gt;
+    &lt;recurse type="down"/&gt;
+    &lt;print mode="skeleton" order="quadtile"/&gt;
+    &lt;/osm-script&gt;
+</code></p>
+
+<p>Remember, change the nominatim search area from &#8220;Skagit County&#8221; to your county.</p>
+
+<p>Once the query is complete, select Export from the menu. Select GeoJSON for the data type. It will take a few minutes before the download starts. Once complete move the file export.geojson to the data directory of your counties data. </p>
+
+<h2 id="qgis">QGIS</h2>
+<p>Open the geojson vector file <img src="/assets/vector_icon.png" alt="vector icon" /> in QGIS. Select the LineString feature. </p>
+
+<p><img src="/assets/qgis_geojson_import.png" alt="image" /></p>
+
+<p>Select the OpenStreetMap in OpenLayers plugins menu item. Once open, drag the export to the top position, otherwise the OSM layer will obscure the geojson data. </p>
+
+<p><img src="/assets/qgis_layers.png" alt="QGIS Layers" /></p>
+
+<p>The last step with QGIS is to select the county roads using the Select Features by Rectangle tool. <img src="/assets/rectangle_selection_icon.png" alt="Rectangle Selection" />  and save the layer as a vector file, in the Vector menu. </p>
+
+<p><img src="/assets/qgis_save_vector.png" alt="Save Vector Layer" /></p>
+
+<p><img src="/assets/qgis_save_vector_file.png" alt="Vector File" /></p>
+
+<h2 id="import-into-postgis">Import into PostGIS</h2>
+<p>Use pgShapeFile to import the saved shapefiles into PostGIS. </p>
+
+<hr />
 
 <p><img src="/assets/josm_https.png" alt="HTTPS" title="HTTPS in JOSM" /></p>
 
@@ -145,7 +204,7 @@ https://api.openstreetmap.org/api</p>
 
 
         </div>
-        <p class="byline"><strong>JSOM Allows HTTPS</strong> was published on <time datetime="2014-03-16T00:00:00-07:00">March 16, 2014</time> by <a href="http://localhost:4000/about" title="About Clifford Snow">Clifford Snow</a>.</p>
+        <p class="byline"><strong>Finding Differences in Roads</strong> was published on <time datetime="2014-03-23T00:00:00-07:00">March 23, 2014</time> by <a href="http://localhost:4000/about" title="About Clifford Snow">Clifford Snow</a>.</p>
       </footer>
     </div><!-- /.article-wrap -->
 
@@ -188,7 +247,7 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
       
       
-      <li><a href="http://localhost:4000/articles/Finding-Errors/" title="Finding Differences in Roads">Finding Differences in Roads</a></li>
+      <li><a href="http://localhost:4000/articles/JOSM-HTTPS-Feature/" title="JSOM Allows HTTPS">JSOM Allows HTTPS</a></li>
       
     
       
