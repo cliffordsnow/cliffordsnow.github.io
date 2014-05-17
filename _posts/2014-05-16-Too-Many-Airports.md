@@ -7,7 +7,6 @@ category: articles
 tags: [QGIS;github;drone]
 image:
   feature: texture-feature-04.jpg
-  credit: OpenStreetMap Contributors and Clifford Snow
 ---
 
 According to a group of R/C model airplane enthusiasts, model airplanes shouldn't be flown within three miles of an airport. Turns out
