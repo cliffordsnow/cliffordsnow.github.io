@@ -112,16 +112,25 @@ Their are two methods of creating the shapefile. From QGIS, select the missing r
 
 The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:
 
-'''
+```
 pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
-'''
+```
 
 ##### Create .OSM
 
-Unfinished...
+To create an .osm file, [ogr2osm.py](https://github.com/pnorman/ogr2osm) is needed along with a translations file. Since I'm not importing the data, only a simple translations file is needed. In this case I opted to skip the translation file completely. To run ogr2osm.py use:
+
+`python ogr2osm.py [-t translation.py] shapefile.shp`
 
 
-![HTTPS]({{site_url}}/assets/josm_https.png "HTTPS in JOSM")
+Load Missing Layer in JOSM
+---
+
+![JOSM with Missing Layer]({{site_url}}/assets/josm_missing.png)
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-16T23:22:06-07:00</updated>
+<updated>2014-05-17T15:28:29-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -146,15 +146,19 @@ WHERE o.gid IS NULL
 
 &lt;p&gt;The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:&lt;/p&gt;
 
-&lt;p&gt;&amp;#8217;&amp;#8217;&amp;#8217;
-pgsql2shp -f missing mygis &amp;#8220;SELECT s.gid, s.geom, s.fullname AS &amp;#8220;Name&amp;#8221; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&amp;#8221;
-&amp;#8216;&amp;#8217;&amp;#8217;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;
+pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
+&lt;/code&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;create-osm&quot;&gt;Create .OSM&lt;/h5&gt;
 
-&lt;p&gt;Unfinished&amp;#8230;&lt;/p&gt;
+&lt;p&gt;To create an .osm file, &lt;a href=&quot;https://github.com/pnorman/ogr2osm&quot;&gt;ogr2osm.py&lt;/a&gt; is needed along with a translations file. Since I&amp;#8217;m not importing the data, only a simple translations file is needed. In this case I opted to skip the translation file completely. To run ogr2osm.py use:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/josm_https.png&quot; alt=&quot;HTTPS&quot; title=&quot;HTTPS in JOSM&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;python ogr2osm.py [-t translation.py] shapefile.shp&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;load-missing-layer-in-josm&quot;&gt;Load Missing Layer in JOSM&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/josm_missing.png&quot; alt=&quot;JOSM with Missing Layer&quot; /&gt;&lt;/p&gt;
 
 
   &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>

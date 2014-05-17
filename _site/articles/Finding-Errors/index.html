@@ -218,15 +218,19 @@ WHERE o.gid IS NULL
 
 <p>The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:</p>
 
-<p>&#8217;&#8217;&#8217;
-pgsql2shp -f missing mygis &#8220;SELECT s.gid, s.geom, s.fullname AS &#8220;Name&#8221; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&#8221;
-&#8216;&#8217;&#8217;</p>
+<p><code>
+pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
+</code></p>
 
 <h5 id="create-osm">Create .OSM</h5>
 
-<p>Unfinished&#8230;</p>
+<p>To create an .osm file, <a href="https://github.com/pnorman/ogr2osm">ogr2osm.py</a> is needed along with a translations file. Since I&#8217;m not importing the data, only a simple translations file is needed. In this case I opted to skip the translation file completely. To run ogr2osm.py use:</p>
 
-<p><img src="/assets/josm_https.png" alt="HTTPS" title="HTTPS in JOSM" /></p>
+<p><code>python ogr2osm.py [-t translation.py] shapefile.shp</code></p>
+
+<h2 id="load-missing-layer-in-josm">Load Missing Layer in JOSM</h2>
+
+<p><img src="/assets/josm_missing.png" alt="JOSM with Missing Layer" /></p>
 
 
       <hr />
