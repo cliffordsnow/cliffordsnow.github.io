@@ -76,7 +76,12 @@ The last step with QGIS is to select the county roads using the Select Features 
 
 Import into PostGIS
 ---
-Use pgShapeFile to import the saved shapefiles into PostGIS. 
+Use pgShapeFile to import the saved shapefiles into PostGIS. Set connections settings. Set the Username, password, Server Host and Database.
+
+![Connection Settings]({{site_url}}/assets/connection.png)
+
+Add the shapefile and import into PostGIS. Make sure to set the srid, in this case 4326 for WGS84. 
+![pgShapefile]({{site_url}}/assets/pgshapeloader.png)
 
 
  
