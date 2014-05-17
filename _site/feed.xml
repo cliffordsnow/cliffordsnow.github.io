@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-16T21:03:50-07:00</updated>
+<updated>2014-05-16T23:22:06-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -117,7 +117,42 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &lt;p&gt;Add the shapefile and import into PostGIS. Make sure to set the srid, in this case 4326 for WGS84. 
 &lt;img src=&quot;/assets/pgshapeloader.png&quot; alt=&quot;pgShapefile&quot; /&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;h2 id=&quot;comparing-osm-data-to-county-data&quot;&gt;Comparing OSM data to County Data&lt;/h2&gt;
+&lt;p&gt;Time for some good old sql right joins to find missing roads. &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
+FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
+WHERE o.gid IS NULL
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/missing.png&quot; alt=&quot;Missing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As viewed in QGIS with the OpenStreetMap background from OpenLayers.The portion being shown is in Sedro-Woolley. The county has the streets spelled out, for example Fourth Street while OSM has 4th Street. (The street signs have it as 4th ST.)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/QGIS_Missing.png&quot; alt=&quot;Viewed in QGIS&quot; /&gt;
+##### Convert to .osm&lt;/p&gt;
+
+&lt;p&gt;Finally to fix problems, either by correcting the road name or add in missing roads into OSM, the missing roads need to be converted into a format that JOSM can understand. The steps involved are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;convert the layer to a shapefile&lt;/li&gt;
+  &lt;li&gt;convert the shapefile into a .osm file readable by JOSM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;create-shapefile&quot;&gt;Create shapefile&lt;/h5&gt;
+
+&lt;p&gt;Their are two methods of creating the shapefile. From QGIS, select the missing roads data and save it as a shapefile. It is the same process we used above to convert the geojson file to a shapefile.&lt;/p&gt;
+
+&lt;p&gt;The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:&lt;/p&gt;
+
+&lt;p&gt;&amp;#8217;&amp;#8217;&amp;#8217;
+pgsql2shp -f missing mygis &amp;#8220;SELECT s.gid, s.geom, s.fullname AS &amp;#8220;Name&amp;#8221; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&amp;#8221;
+&amp;#8216;&amp;#8217;&amp;#8217;&lt;/p&gt;
+
+&lt;h5 id=&quot;create-osm&quot;&gt;Create .OSM&lt;/h5&gt;
+
+&lt;p&gt;Unfinished&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/josm_https.png&quot; alt=&quot;HTTPS&quot; title=&quot;HTTPS in JOSM&quot; /&gt;&lt;/p&gt;
 

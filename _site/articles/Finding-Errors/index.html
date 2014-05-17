@@ -189,7 +189,42 @@ element-limit="1073741824"&gt;
 <p>Add the shapefile and import into PostGIS. Make sure to set the srid, in this case 4326 for WGS84. 
 <img src="/assets/pgshapeloader.png" alt="pgShapefile" /></p>
 
-<hr />
+<h2 id="comparing-osm-data-to-county-data">Comparing OSM data to County Data</h2>
+<p>Time for some good old sql right joins to find missing roads. </p>
+
+<p><code>
+SELECT s.gid, s.geom, s.fullname AS "Name"
+FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
+WHERE o.gid IS NULL
+</code></p>
+
+<p><img src="/assets/missing.png" alt="Missing" /></p>
+
+<p>As viewed in QGIS with the OpenStreetMap background from OpenLayers.The portion being shown is in Sedro-Woolley. The county has the streets spelled out, for example Fourth Street while OSM has 4th Street. (The street signs have it as 4th ST.)</p>
+
+<p><img src="/assets/QGIS_Missing.png" alt="Viewed in QGIS" />
+##### Convert to .osm</p>
+
+<p>Finally to fix problems, either by correcting the road name or add in missing roads into OSM, the missing roads need to be converted into a format that JOSM can understand. The steps involved are:</p>
+
+<ul>
+  <li>convert the layer to a shapefile</li>
+  <li>convert the shapefile into a .osm file readable by JOSM</li>
+</ul>
+
+<h5 id="create-shapefile">Create shapefile</h5>
+
+<p>Their are two methods of creating the shapefile. From QGIS, select the missing roads data and save it as a shapefile. It is the same process we used above to convert the geojson file to a shapefile.</p>
+
+<p>The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:</p>
+
+<p>&#8217;&#8217;&#8217;
+pgsql2shp -f missing mygis &#8220;SELECT s.gid, s.geom, s.fullname AS &#8220;Name&#8221; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&#8221;
+&#8216;&#8217;&#8217;</p>
+
+<h5 id="create-osm">Create .OSM</h5>
+
+<p>Unfinished&#8230;</p>
 
 <p><img src="/assets/josm_https.png" alt="HTTPS" title="HTTPS in JOSM" /></p>
 

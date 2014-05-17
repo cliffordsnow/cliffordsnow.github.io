@@ -84,8 +84,41 @@ Add the shapefile and import into PostGIS. Make sure to set the srid, in this ca
 ![pgShapefile]({{site_url}}/assets/pgshapeloader.png)
 
 
- 
+Comparing OSM data to County Data 
 ---
+Time for some good old sql right joins to find missing roads. 
+
+```
+SELECT s.gid, s.geom, s.fullname AS "Name"
+FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
+WHERE o.gid IS NULL
+```
+
+![Missing]({{site_url}}/assets/missing.png)
+
+As viewed in QGIS with the OpenStreetMap background from OpenLayers.The portion being shown is in Sedro-Woolley. The county has the streets spelled out, for example Fourth Street while OSM has 4th Street. (The street signs have it as 4th ST.)
+
+![Viewed in QGIS]({{site_url}}/assets/QGIS_Missing.png)
+##### Convert to .osm
+
+Finally to fix problems, either by correcting the road name or add in missing roads into OSM, the missing roads need to be converted into a format that JOSM can understand. The steps involved are:
+
+*	convert the layer to a shapefile
+*	convert the shapefile into a .osm file readable by JOSM
+
+##### Create shapefile
+
+Their are two methods of creating the shapefile. From QGIS, select the missing roads data and save it as a shapefile. It is the same process we used above to convert the geojson file to a shapefile.
+
+The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:
+
+'''
+pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
+'''
+
+##### Create .OSM
+
+Unfinished...
 
 
 ![HTTPS]({{site_url}}/assets/josm_https.png "HTTPS in JOSM")
