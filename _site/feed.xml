@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-17T16:34:19-07:00</updated>
+<updated>2014-05-17T22:45:00-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -157,8 +157,12 @@ WHERE o.gid IS NULL
 &lt;p&gt;&lt;code&gt;python ogr2osm.py [-t translation.py] shapefile.shp&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;load-missing-layer-in-josm&quot;&gt;Load Missing Layer in JOSM&lt;/h2&gt;
+&lt;p&gt;Use JOSM to compare the county data with OSM data. Even turn on the TIGER 2013 overlay. Some missing ways will be easy, for instance, new roads or OSM roads with no name. Others will be difficult. TIGER, OSM and county data can all be different. In those cases, plan for an outing or at least leave a note asking for an in person visit. &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/josm_missing.png&quot; alt=&quot;JOSM with Missing Layer&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;future-goals&quot;&gt;Future Goals&lt;/h2&gt;
+&lt;p&gt;The next logical step would be to build tiles from the counties data to use as background images in JOSM. Similar to the TIGER 2012/13 background images. Look for a future article on how to create the tiles and use GeoServer as a WMS server.&lt;/p&gt;
 
 
   &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>

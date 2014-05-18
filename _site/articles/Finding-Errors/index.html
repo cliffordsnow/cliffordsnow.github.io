@@ -229,8 +229,12 @@ WHERE o.gid IS NULL
 <p><code>python ogr2osm.py [-t translation.py] shapefile.shp</code></p>
 
 <h2 id="load-missing-layer-in-josm">Load Missing Layer in JOSM</h2>
+<p>Use JOSM to compare the county data with OSM data. Even turn on the TIGER 2013 overlay. Some missing ways will be easy, for instance, new roads or OSM roads with no name. Others will be difficult. TIGER, OSM and county data can all be different. In those cases, plan for an outing or at least leave a note asking for an in person visit. </p>
 
 <p><img src="/assets/josm_missing.png" alt="JOSM with Missing Layer" /></p>
+
+<h2 id="future-goals">Future Goals</h2>
+<p>The next logical step would be to build tiles from the counties data to use as background images in JOSM. Similar to the TIGER 2012/13 background images. Look for a future article on how to create the tiles and use GeoServer as a WMS server.</p>
 
 
       <hr />

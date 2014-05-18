@@ -125,8 +125,15 @@ To create an .osm file, [ogr2osm.py](https://github.com/pnorman/ogr2osm) is need
 
 Load Missing Layer in JOSM
 ---
+Use JOSM to compare the county data with OSM data. Even turn on the TIGER 2013 overlay. Some missing ways will be easy, for instance, new roads or OSM roads with no name. Others will be difficult. TIGER, OSM and county data can all be different. In those cases, plan for an outing or at least leave a note asking for an in person visit. 
+
 
 ![JOSM with Missing Layer]({{site_url}}/assets/josm_missing.png)
+
+Future Goals
+---
+The next logical step would be to build tiles from the counties data to use as background images in JOSM. Similar to the TIGER 2012/13 background images. Look for a future article on how to create the tiles and use GeoServer as a WMS server.
+
 
 
 
