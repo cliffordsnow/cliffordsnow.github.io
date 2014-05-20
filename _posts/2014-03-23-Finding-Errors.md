@@ -21,12 +21,12 @@ This tutorial will provide you with one means of finding differences. The follow
 
 QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. [Boundless](http://www.boundlessgeo.com) Open Geo Suite is the perfect solution to install PostGIS and related tools. 
 
-I'm comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County's road names are spelled out instead of abrevated as most road data is presented. Skagit County's GIS data is open and freely available. Since most road data comes abrevated, you'll need to expand the road names to compare with OSM data. Postgresql funtions to expand road names can be found in my [github repository.](https://github.com/clifford/sql) Most likely you will need to modify the function for your data.
+I'm comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County's road names are spelled out instead of abbreviated as most road data is presented. Skagit County's GIS data is open and freely available. Since most road data comes abbreviated, you'll need to expand the road names to compare with OSM data. Postgresql functions to expand road names can be found in my [github repository.](https://github.com/clifford/sql) Most likely you will need to modify the function for your data.
 
 
 Download OSM Data
 ----
-[Overpass-Turbo](http://overpass-turbo.eu) has an easy method to obtain current data. Modify and run the fullowing script:
+[Overpass-Turbo](http://overpass-turbo.eu) has an easy method to obtain current data. Modify and run the following script:
 
 <!-- language: lang-js -->
     <osm-script output="json" timeout="900" 

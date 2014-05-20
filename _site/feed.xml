@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-17T22:45:00-07:00</updated>
+<updated>2014-05-19T17:26:24-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -59,10 +59,10 @@ This tutorial will provide you with one means of finding differences. The follow
 
 &lt;p&gt;QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. &lt;a href=&quot;http://www.boundlessgeo.com&quot;&gt;Boundless&lt;/a&gt; Open Geo Suite is the perfect solution to install PostGIS and related tools. &lt;/p&gt;
 
-&lt;p&gt;I&amp;#8217;m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County&amp;#8217;s road names are spelled out instead of abrevated as most road data is presented. Skagit County&amp;#8217;s GIS data is open and freely available. Since most road data comes abrevated, you&amp;#8217;ll need to expand the road names to compare with OSM data. Postgresql funtions to expand road names can be found in my &lt;a href=&quot;https://github.com/clifford/sql&quot;&gt;github repository.&lt;/a&gt; Most likely you will need to modify the function for your data.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County&amp;#8217;s road names are spelled out instead of abbreviated as most road data is presented. Skagit County&amp;#8217;s GIS data is open and freely available. Since most road data comes abbreviated, you&amp;#8217;ll need to expand the road names to compare with OSM data. Postgresql functions to expand road names can be found in my &lt;a href=&quot;https://github.com/clifford/sql&quot;&gt;github repository.&lt;/a&gt; Most likely you will need to modify the function for your data.&lt;/p&gt;
 
 &lt;h2 id=&quot;download-osm-data&quot;&gt;Download OSM Data&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass-Turbo&lt;/a&gt; has an easy method to obtain current data. Modify and run the fullowing script:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass-Turbo&lt;/a&gt; has an easy method to obtain current data. Modify and run the following script:&lt;/p&gt;
 
 &lt;!-- language: lang-js --&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 

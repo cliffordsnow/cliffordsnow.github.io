@@ -131,10 +131,10 @@ This tutorial will provide you with one means of finding differences. The follow
 
 <p>QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. <a href="http://www.boundlessgeo.com">Boundless</a> Open Geo Suite is the perfect solution to install PostGIS and related tools. </p>
 
-<p>I&#8217;m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County&#8217;s road names are spelled out instead of abrevated as most road data is presented. Skagit County&#8217;s GIS data is open and freely available. Since most road data comes abrevated, you&#8217;ll need to expand the road names to compare with OSM data. Postgresql funtions to expand road names can be found in my <a href="https://github.com/clifford/sql">github repository.</a> Most likely you will need to modify the function for your data.</p>
+<p>I&#8217;m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County&#8217;s road names are spelled out instead of abbreviated as most road data is presented. Skagit County&#8217;s GIS data is open and freely available. Since most road data comes abbreviated, you&#8217;ll need to expand the road names to compare with OSM data. Postgresql functions to expand road names can be found in my <a href="https://github.com/clifford/sql">github repository.</a> Most likely you will need to modify the function for your data.</p>
 
 <h2 id="download-osm-data">Download OSM Data</h2>
-<p><a href="http://overpass-turbo.eu">Overpass-Turbo</a> has an easy method to obtain current data. Modify and run the fullowing script:</p>
+<p><a href="http://overpass-turbo.eu">Overpass-Turbo</a> has an easy method to obtain current data. Modify and run the following script:</p>
 
 <!-- language: lang-js -->
 <pre><code>&lt;osm-script output="json" timeout="900" 
