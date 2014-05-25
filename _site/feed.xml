@@ -5,13 +5,86 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-19T17:26:24-07:00</updated>
+<updated>2014-05-25T16:38:58-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
   <uri>http://localhost:4000/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[JOSM Background Layer]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/TileStream/" />
+  <id>http://localhost:4000/articles/TileStream</id>
+  <published>2014-05-25T00:00:00-07:00</published>
+  <updated>2014-05-25T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://localhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;p&gt;Now that we can find missing roads with the plan developed in &lt;a href=&quot;/articles/Finding-Errors&quot;&gt;Finding Errors&lt;/a&gt; it is time to move on to aligning the roads.&lt;/p&gt;
+
+&lt;p&gt;Up until now, the easiest way was to convert the roads shapefile into an .osm layer for JOSM. As the image below shows, aligning roads using Bing Imagery and the .osm layer works just fine. Until you want to check road name. The .osm layer doesn&amp;#8217;t display the name or any other attribute for that matter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/josm_osm_background.png&quot; alt=&quot;JOSM with OSM Background&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using a tile background solves that problem. Looking at the image below, the road name is displayed along side for easy comparison to OSM data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/josm_tilestream_background.png&quot; alt=&quot;JOSM using Tiles in the Background&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is what is needed to create your own backgrounds for JOSM.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mapbox.com/tilemill/&quot;&gt;TileMill&lt;/a&gt; for creating tiles&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mapbox/tilestream&quot;&gt;TileStream &lt;/a&gt;for serving up the tiles&lt;/li&gt;
+  &lt;li&gt;POSTGIS connection to road data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check out TileMill &lt;a href=&quot;https://www.mapbox.com/tilemill/docs/manual/&quot;&gt;documentation&lt;/a&gt; for help installing and creating tiles. &lt;/p&gt;
+
+&lt;!-- language: lang-js --&gt;
+&lt;pre&gt;&lt;code&gt;#skagitroads {
+  		line-width:5;
+  		line-color:#00ff00;
+  		line-cap: round;
+ 	*/
+&lt;/code&gt;&lt;/pre&gt;
+
+ 	::labels[zoom &amp;gt; 13]{
+  		text-name: [fullname];
+  		text-face-name: &amp;#8216;Helvetica Bold&amp;#8217;;
+  		text-fill: #fff;
+  		text-placement: line;
+  		text-dy: 12;
+   		text-size:14;
+&lt;pre&gt;&lt;code&gt;	}
+  	}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tilestream was easy to install. My only hangup was to update Homebrew before starting. &lt;/p&gt;
+
+&lt;p&gt;TileMill&amp;#8217;s default is to save the tiles in my ~/Documents/MapBox/export folder. Move the tiles.mbtiles file to ~/Documents/MapBox/tiles. You could create a symbolic link but I just moved the files.&lt;/p&gt;
+
+&lt;p&gt;Start Tilestream
+	./index.js&lt;/p&gt;
+
+&lt;p&gt;Open localhost:8888 in your browser to verify that everything is working. Select your new tiles. Once open, click on Info to get the tile URL to paste into JOSM.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/tilestream_url.png&quot; alt=&quot;Tilestream URL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case the url is 
+	http://localhost:8888/v2/SkagitCountyRoads/{z}/{x}/{y}.png&lt;/p&gt;
+
+&lt;p&gt;Finally, enter the tile url into JOSM. Select the &lt;img src=&quot;/assets/josm_tms.png&quot; alt=&quot;TMS&quot; /&gt; icon to add your new tiles to JOSM.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/josm_add_tms.png&quot; alt=&quot;JOSM add TMS&quot; /&gt;&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/TileStream/&quot;&gt;JOSM Background Layer&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>

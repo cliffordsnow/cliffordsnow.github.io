@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Fixing Duplicates in OSM &#8211; OSM Seattle</title>
-<meta name="description" content="It is way too easy to create duplicate addresses in OSM with existing editor">
-<meta name="keywords" content="address, duplicates, iD, JOSM">
+<title>JOSM Background Layer &#8211; OSM Seattle</title>
+<meta name="description" content="Easy way to server tiles locally">
+<meta name="keywords" content="QGIS;github;drone">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:4000/images/duplicates.png">
+<meta name="twitter:image" content="http://localhost:4000/images/texture-feature-04.jpg">
 
-<meta name="twitter:title" content="Fixing Duplicates in OSM">
-<meta name="twitter:description" content="It is way too easy to create duplicate addresses in OSM with existing editor">
+<meta name="twitter:title" content="JOSM Background Layer">
+<meta name="twitter:description" content="Easy way to server tiles locally">
 <meta name="twitter:creator" content="@osm_seattle">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fixing Duplicates in OSM">
-<meta property="og:description" content="It is way too easy to create duplicate addresses in OSM with existing editor">
-<meta property="og:url" content="http://localhost:4000/articles/Duplicate-Address-Cause/">
+<meta property="og:title" content="JOSM Background Layer">
+<meta property="og:description" content="Easy way to server tiles locally">
+<meta property="og:url" content="http://localhost:4000/articles/TileStream/">
 <meta property="og:site_name" content="OSM Seattle">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/articles/Duplicate-Address-Cause/">
+<link rel="canonical" href="http://localhost:4000/articles/TileStream/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="OSM Seattle Feed">
 <link rel="author" href="https://plus.google.com/101103612980566933205?rel=author">
 
@@ -94,8 +94,8 @@
 </div><!-- /.navigation-wrapper -->
 
 <div class="image-wrap">
-  <img src="http://localhost:4000/images/duplicates.png" alt="Fixing Duplicates in OSM feature image">
-  <span class="image-credit">Photo Credit: <a href="">Photo courtesy of USDA Natural Resources Conservation Service.</a></span>
+  <img src="http://localhost:4000/images/texture-feature-04.jpg" alt="JOSM Background Layer feature image">
+  
 </div><!-- /.image-wrap -->
 
 <div id="main" role="main">
@@ -114,30 +114,66 @@
   </div>
   <article>
     <div class="headline-wrap">
-      <h1>Fixing Duplicates in OSM</h1>
-      <h2>Causes and Fixes</h2>
+      <h1>JOSM Background Layer</h1>
+      <h2></h2>
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>The problem of duplicates addresses for King County can be categorized into two catogories.</p>
+      <p>Now that we can find missing roads with the plan developed in <a href="/articles/Finding-Errors">Finding Errors</a> it is time to move on to aligning the roads.</p>
 
-<h2 id="user-added-addresses-without-checking-for-existing-address-points">User added addresses without checking for existing address points</h2>
-<p>It is easy to add a new Point of Interest and miss seeing the address node. Addresses display as simple nodes in iD and JOSM. While JOSM can be customized using map paint styles to display the full address, the feature is not enable by default.</p>
+<p>Up until now, the easiest way was to convert the roads shapefile into an .osm layer for JOSM. As the image below shows, aligning roads using Bing Imagery and the .osm layer works just fine. Until you want to check road name. The .osm layer doesn&#8217;t display the name or any other attribute for that matter.</p>
 
-<p>The JOSM image below show an address node with default paint style displayed. The address node is displayed with the house number and a unique icon. </p>
+<p><img src="/assets/josm_osm_background.png" alt="JOSM with OSM Background" /></p>
 
-<p><img src="/assets/josm_address.png" alt="JOSM" title="JOSM" /></p>
+<p>Using a tile background solves that problem. Looking at the image below, the road name is displayed along side for easy comparison to OSM data.</p>
 
-<p>iD on the otherhand only gives a icon of a node
-<img src="/assets/iD_address.png" alt="iD" title="iD" /></p>
+<p><img src="/assets/josm_tilestream_background.png" alt="JOSM using Tiles in the Background" /></p>
 
-<h2 id="potential-fixes">Potential Fixes</h2>
+<p>Here is what is needed to create your own backgrounds for JOSM.</p>
+
 <ul>
-  <li>JOSM - Add an duplicate address check to the validator. Editors also need to be made aware of the problem. Since address nodes are visiable, making users aware of map paint styles should help. </li>
-  <li>iD - First the address node should have a unique icon style to help users spot them. This is an open ticket on <a href="https://github.com/openstreetmap/iD/issues/1524">github.</a> When selected, the user interface should allow the editor to easily add POIs. Additionlly, a means to merge POIs with address nodes is needed. See ticket on <a href="https://github.com/openstreetmap/iD/issues/2137">github.</a></li>
+  <li><a href="https://www.mapbox.com/tilemill/">TileMill</a> for creating tiles</li>
+  <li><a href="https://github.com/mapbox/tilestream">TileStream </a>for serving up the tiles</li>
+  <li>POSTGIS connection to road data</li>
 </ul>
 
-<h2 id="duplicates-imported-from-source">Duplicates imported from source</h2>
-<p>The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.</p>
+<p>Check out TileMill <a href="https://www.mapbox.com/tilemill/docs/manual/">documentation</a> for help installing and creating tiles. </p>
+
+<!-- language: lang-js -->
+<pre><code>#skagitroads {
+  		line-width:5;
+  		line-color:#00ff00;
+  		line-cap: round;
+ 	*/
+</code></pre>
+
+ 	::labels[zoom &gt; 13]{
+  		text-name: [fullname];
+  		text-face-name: &#8216;Helvetica Bold&#8217;;
+  		text-fill: #fff;
+  		text-placement: line;
+  		text-dy: 12;
+   		text-size:14;
+<pre><code>	}
+  	}
+</code></pre>
+
+<p>Tilestream was easy to install. My only hangup was to update Homebrew before starting. </p>
+
+<p>TileMill&#8217;s default is to save the tiles in my ~/Documents/MapBox/export folder. Move the tiles.mbtiles file to ~/Documents/MapBox/tiles. You could create a symbolic link but I just moved the files.</p>
+
+<p>Start Tilestream
+	./index.js</p>
+
+<p>Open localhost:8888 in your browser to verify that everything is working. Select your new tiles. Once open, click on Info to get the tile URL to paste into JOSM.</p>
+
+<p><img src="/assets/tilestream_url.png" alt="Tilestream URL" /></p>
+
+<p>In this case the url is 
+	http://localhost:8888/v2/SkagitCountyRoads/{z}/{x}/{y}.png</p>
+
+<p>Finally, enter the tile url into JOSM. Select the <img src="/assets/josm_tms.png" alt="TMS" /> icon to add your new tiles to JOSM.</p>
+
+<p><img src="/assets/josm_add_tms.png" alt="JOSM add TMS" /></p>
 
 
       <hr />
@@ -155,7 +191,7 @@
 
 
         </div>
-        <p class="byline"><strong>Fixing Duplicates in OSM</strong> was published on <time datetime="2014-02-23T00:00:00-08:00">February 23, 2014</time> by <a href="http://localhost:4000/about" title="About Clifford Snow">Clifford Snow</a>.</p>
+        <p class="byline"><strong>JOSM Background Layer</strong> was published on <time datetime="2014-05-25T00:00:00-07:00">May 25, 2014</time> by <a href="http://localhost:4000/about" title="About Clifford Snow">Clifford Snow</a>.</p>
       </footer>
     </div><!-- /.article-wrap -->
 
@@ -188,16 +224,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
       
       
-      <li><a href="http://localhost:4000/articles/TileStream/" title="JOSM Background Layer">JOSM Background Layer</a></li>
-      
-    
-      
-      
-        
-          
-        
-      
-      
       <li><a href="http://localhost:4000/articles/Too-Many-Airports/" title="Too Many Airports">Too Many Airports</a></li>
       
     
@@ -209,6 +235,16 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       
       
       <li><a href="http://localhost:4000/articles/Finding-Errors/" title="Finding Differences in Roads">Finding Differences in Roads</a></li>
+      
+    
+      
+      
+        
+          
+        
+      
+      
+      <li><a href="http://localhost:4000/articles/JOSM-HTTPS-Feature/" title="JSOM Allows HTTPS">JSOM Allows HTTPS</a></li>
       
     
     </ul>
