@@ -6,7 +6,7 @@ description: "Recap of 10th Anniversary Celebration in Seattle"
 category: articles
 tags: [OSM,Presentations]
 image:
-  feature:cake.png
+  feature:cake.jpg
 ---
 
 Saturday, August 9th, Seattle celebrated OpenStreetMap 10th Anniversary. Below are links to presentations.
