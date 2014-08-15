@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenStreetMap 10th Anniversary"
-tagline: "OSM Anniversary"
+#tagline: "OSM Anniversary"
 description: "Recap of 10th Anniversary Celebration in Seattle"
 category: articles
 tags: [OSM,Presentations]
