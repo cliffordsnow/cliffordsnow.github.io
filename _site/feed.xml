@@ -3,31 +3,71 @@
 <title type="text">OSM Seattle</title>
 <subtitle type="text">OpenStreetMap</subtitle>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-25T22:57:24-07:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://osm_seattle.snowandsnow.us/feed.xml" />
+<link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us" />
+<updated>2014-08-14T18:24:57-07:00</updated>
+<id>http://osm_seattle.snowandsnow.us/</id>
 <author>
   <name>Clifford Snow</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://osm_seattle.snowandsnow.us/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
 
 
 <entry>
+  <title type="html"><![CDATA[10th Anniversary Celebration]]></title>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/10th-Anniversary-Celebration/" />
+  <id>http://osm_seattle.snowandsnow.us/10th-Anniversary-Celebration</id>
+  <published>2014-08-14T00:00:00-07:00</published>
+  <updated>2014-08-14T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;p&gt;Saturday, August 9th, Seattle celebrated OpenStreetMap 10th Anniversary. Below are links to presentations.&lt;/p&gt;
+
+&lt;p&gt;Chase Stephens &lt;em&gt;Everyday Mapping&lt;/em&gt; &lt;/p&gt;
+
+&lt;p&gt;Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Roger Andre &lt;em&gt;Using OSM to Help People See and Understand Their Data&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Pat Tressel &lt;em&gt;Humanitarian OpenStreetMap Team&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Paul McCombs &lt;em&gt;Correcting Addressing is in the Details&lt;/em&gt;
+&lt;a href=&quot;http://tikilodge.nfshost.com/gis/AddressingDetails/assets/player/KeynoteDHTMLPlayer.html#0&quot;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Martijn Exel &lt;em&gt;Quality Tools&lt;/em&gt;
+&lt;a href=&quot;http://bit.ly/osm-qa-tools-10th-anniversary&quot;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Seth Fitzsimmons &lt;em&gt;What We’ve Make Together&lt;/em&gt;
+&lt;a href=&quot;https://speakerdeck.com/mojodna/what-weve-made-together&quot;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Jared Dominguez &lt;em&gt;Georeferencing Raster Imagery&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ari Simmon &lt;em&gt;Kite/Aerial Imagery Demo on Kite Hill&lt;/em&gt;
+&lt;a href=&quot;https://www.flickr.com/photos/82133129@N00/sets/72157645906793309/&quot;&gt;Link to images&lt;/a&gt;&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/10th-Anniversary-Celebration/&quot;&gt;10th Anniversary Celebration&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[JOSM Background Layer]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/TileStream/" />
-  <id>http://localhost:4000/articles/TileStream</id>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/TileStream/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/TileStream</id>
   <published>2014-05-25T00:00:00-07:00</published>
   <updated>2014-05-25T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Now that we can find missing roads with the plan developed in &lt;a href=&quot;/articles/Finding-Errors&quot;&gt;Finding Errors&lt;/a&gt; it is time to move on to aligning the roads.&lt;/p&gt;
 
-&lt;p&gt;Up until now, the easiest way was to convert the roads shapefile into an .osm layer for JOSM. As the image below shows, aligning roads using Bing Imagery and the .osm layer works just fine. Until you want to check road name. The .osm layer doesn&amp;#8217;t display the name or any other attribute for that matter.&lt;/p&gt;
+&lt;p&gt;Up until now, the easiest way was to convert the roads shapefile into an .osm layer for JOSM. As the image below shows, aligning roads using Bing Imagery and the .osm layer works just fine. Until you want to check road name. The .osm layer doesn’t display the name or any other attribute for that matter.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/josm_osm_background.png&quot; alt=&quot;JOSM with OSM Background&quot; /&gt;&lt;/p&gt;
 
@@ -55,7 +95,7 @@
 
  	::labels[zoom &amp;gt; 13]{
   		text-name: [fullname];
-  		text-face-name: &amp;#8216;Helvetica Bold&amp;#8217;;
+  		text-face-name: ‘Helvetica Bold’;
   		text-fill: #fff;
   		text-placement: line;
   		text-dy: 12;
@@ -66,7 +106,7 @@
 
 &lt;p&gt;Tilestream was easy to install. My only hangup was to update Homebrew before starting. &lt;/p&gt;
 
-&lt;p&gt;TileMill&amp;#8217;s default is to save the tiles in my ~/Documents/MapBox/export folder. Move the tiles.mbtiles file to ~/Documents/MapBox/tiles. You could create a symbolic link but I just moved the files.&lt;/p&gt;
+&lt;p&gt;TileMill’s default is to save the tiles in my ~/Documents/MapBox/export folder. Move the tiles.mbtiles file to ~/Documents/MapBox/tiles. You could create a symbolic link but I just moved the files.&lt;/p&gt;
 
 &lt;p&gt;Start Tilestream
 	./index.js&lt;/p&gt;
@@ -83,40 +123,40 @@
 &lt;p&gt;&lt;img src=&quot;/assets/josm_add_tms.png&quot; alt=&quot;JOSM add TMS&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/TileStream/&quot;&gt;JOSM Background Layer&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/TileStream/&quot;&gt;JOSM Background Layer&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Too Many Airports]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Too-Many-Airports/" />
-  <id>http://localhost:4000/articles/Too-Many-Airports</id>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports</id>
   <published>2014-05-16T00:00:00-07:00</published>
   <updated>2014-05-16T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
-  <content type="html">&lt;p&gt;According to a group of R/C model airplane enthusiasts, model airplanes shouldn&amp;#8217;t be flown within three miles of an airport. Turns out
+  <content type="html">&lt;p&gt;According to a group of R/C model airplane enthusiasts, model airplanes shouldn’t be flown within three miles of an airport. Turns out
 we have a bunch of sites that the FCC considers an airport. My representation is based on the center of the airport. The FAA would probably measure the limit from the outer edge of the airport.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://gist.github.com/cliffordsnow/7d3a514f164f17b50fa7&quot;&gt;&lt;img src=&quot;/assets/noflyzone.png&quot; alt=&quot;No Fly Zones&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Too-Many-Airports/&quot;&gt;Too Many Airports&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/&quot;&gt;Too Many Airports&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on May 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Finding Differences in Roads]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Finding-Errors/" />
-  <id>http://localhost:4000/articles/Finding-Errors</id>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Finding-Errors/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/Finding-Errors</id>
   <published>2014-03-23T00:00:00-07:00</published>
   <updated>2014-03-23T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Finding differences between OpenStreetMap and county road data is hard if done manually. Fortunately, Open Source Software tools eases the process.
@@ -132,7 +172,7 @@ This tutorial will provide you with one means of finding differences. The follow
 
 &lt;p&gt;QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. &lt;a href=&quot;http://www.boundlessgeo.com&quot;&gt;Boundless&lt;/a&gt; Open Geo Suite is the perfect solution to install PostGIS and related tools. &lt;/p&gt;
 
-&lt;p&gt;I&amp;#8217;m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County&amp;#8217;s road names are spelled out instead of abbreviated as most road data is presented. Skagit County&amp;#8217;s GIS data is open and freely available. Since most road data comes abbreviated, you&amp;#8217;ll need to expand the road names to compare with OSM data. Postgresql functions to expand road names can be found in my &lt;a href=&quot;https://github.com/clifford/sql&quot;&gt;github repository.&lt;/a&gt; Most likely you will need to modify the function for your data.&lt;/p&gt;
+&lt;p&gt;I’m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County’s road names are spelled out instead of abbreviated as most road data is presented. Skagit County’s GIS data is open and freely available. Since most road data comes abbreviated, you’ll need to expand the road names to compare with OSM data. Postgresql functions to expand road names can be found in my &lt;a href=&quot;https://github.com/clifford/sql&quot;&gt;github repository.&lt;/a&gt; Most likely you will need to modify the function for your data.&lt;/p&gt;
 
 &lt;h2 id=&quot;download-osm-data&quot;&gt;Download OSM Data&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass-Turbo&lt;/a&gt; has an easy method to obtain current data. Modify and run the following script:&lt;/p&gt;
@@ -163,7 +203,7 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &amp;lt;/osm-script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Remember, change the nominatim search area from &amp;#8220;Skagit County&amp;#8221; to your county.&lt;/p&gt;
+&lt;p&gt;Remember, change the nominatim search area from “Skagit County” to your county.&lt;/p&gt;
 
 &lt;p&gt;Once the query is complete, select Export from the menu. Select GeoJSON for the data type. It will take a few minutes before the download starts. Once complete move the file export.geojson to the data directory of your counties data. &lt;/p&gt;
 
@@ -225,7 +265,7 @@ WHERE o.gid IS NULL
 
 &lt;h5 id=&quot;create-osm&quot;&gt;Create .OSM&lt;/h5&gt;
 
-&lt;p&gt;To create an .osm file, &lt;a href=&quot;https://github.com/pnorman/ogr2osm&quot;&gt;ogr2osm.py&lt;/a&gt; is needed along with a translations file. Since I&amp;#8217;m not importing the data, only a simple translations file is needed. In this case I opted to skip the translation file completely. To run ogr2osm.py use:&lt;/p&gt;
+&lt;p&gt;To create an .osm file, &lt;a href=&quot;https://github.com/pnorman/ogr2osm&quot;&gt;ogr2osm.py&lt;/a&gt; is needed along with a translations file. Since I’m not importing the data, only a simple translations file is needed. In this case I opted to skip the translation file completely. To run ogr2osm.py use:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;python ogr2osm.py [-t translation.py] shapefile.shp&lt;/code&gt;&lt;/p&gt;
 
@@ -238,19 +278,19 @@ WHERE o.gid IS NULL
 &lt;p&gt;The next logical step would be to build tiles from the counties data to use as background images in JOSM. Similar to the TIGER 2012/13 background images. Look for a future article on how to create the tiles and use GeoServer as a WMS server.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[JSOM Allows HTTPS]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/JOSM-HTTPS-Feature/" />
-  <id>http://localhost:4000/articles/JOSM-HTTPS-Feature</id>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature</id>
   <published>2014-03-16T00:00:00-07:00</published>
   <updated>2014-03-16T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h2 id=&quot;thank-you-developers&quot;&gt;Thank you developers&lt;/h2&gt;
@@ -265,19 +305,19 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/josm_https.png&quot; alt=&quot;HTTPS&quot; title=&quot;HTTPS in JOSM&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Fixing Duplicates in OSM]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Duplicate-Address-Cause/" />
-  <id>http://localhost:4000/articles/Duplicate-Address-Cause</id>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause</id>
   <published>2014-02-23T00:00:00-08:00</published>
   <updated>2014-02-23T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;The problem of duplicates addresses for King County can be categorized into two catogories.&lt;/p&gt;
@@ -302,26 +342,26 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/duplicate-addresses-in-seattle/" />
-  <id>http://localhost:4000/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-14T00:00:00-08:00</published>
   <updated>2014-02-14T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
@@ -336,8 +376,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;down&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;skeleton&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;quadtile&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. &lt;/p&gt;
 
@@ -346,26 +385,26 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;h3 id=&quot;duplicate-addresses&quot;&gt;Duplicate addresses&lt;/h3&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/duplicate-addresses-in-seattle/" />
-  <id>http://localhost:4000/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-10T00:00:00-08:00</published>
   <updated>2014-02-10T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated. &lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
@@ -380,13 +419,12 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;down&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;skeleton&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;quadtile&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added. &lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

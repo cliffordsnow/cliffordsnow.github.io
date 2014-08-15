@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://localhost:4000</loc>
+        <loc>http://osm_seattle.snowandsnow.us</loc>
     </url>
     
     
     <url>
-        <loc>http://localhost:4000/articles/TileStream/</loc>
+        <loc>http://osm_seattle.snowandsnow.us/10th-Anniversary-Celebration/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/Too-Many-Airports/</loc>
+        <loc>http://osm_seattle.snowandsnow.us/articles/TileStream/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/Finding-Errors/</loc>
+        <loc>http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/JOSM-HTTPS-Feature/</loc>
+        <loc>http://osm_seattle.snowandsnow.us/articles/Finding-Errors/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/Duplicate-Address-Cause/</loc>
+        <loc>http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
+    </url>
+    
+    <url>
+        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
     </url>
     
 </urlset>
