@@ -7,6 +7,7 @@ category: articles
 tags: [OSM,Presentations]
 image:
   feature:cake.jpg
+  credit: Clifford Snow CC-SA
 ---
 
 Saturday, August 9th, Seattle celebrated OpenStreetMap 10th Anniversary. Below are links to presentations.
