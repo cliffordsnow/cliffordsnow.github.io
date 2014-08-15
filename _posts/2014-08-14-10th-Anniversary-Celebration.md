@@ -17,6 +17,9 @@ Chase Stephens _Everyday Mapping_
 
 Sam Mathews _Creating Web Maps with OSM Data_
 
+Paul Norman _OpenStreetMap-Carto and the Mapper Feedback Loop_
+
+
 Roger Andre _Using OSM to Help People See and Understand Their Data_
 
 Pat Tressel _Humanitarian OpenStreetMap Team_
