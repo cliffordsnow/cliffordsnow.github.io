@@ -16,7 +16,8 @@ Saturday, August 9th, Seattle celebrated OpenStreetMap 10th Anniversary. Below a
 Chase Stephens _Everyday Mapping_ 
 [Presentation](http://seriouser.org/)
 <br>
-Sam Mathews _Creating Web Maps with OSM Data_
+<br>
+Sam Mathews _Creating Web Maps with OSM Data_<br>
 [Presentation](http://mapsam.com/osm10/)
 <img src="{{site_url}}/assets/sam_mathews.jpg" alt="Sam Mathews" height="100" width="100" style="float:left"/>
 <br>
