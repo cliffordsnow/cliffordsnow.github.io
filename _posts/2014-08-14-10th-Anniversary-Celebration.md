@@ -14,10 +14,28 @@ Saturday, August 9th, Seattle celebrated OpenStreetMap 10th Anniversary. Below a
 
 
 Chase Stephens _Everyday Mapping_ 
-
+[Presentation](http://seriouser.org/)
+<br>
 Sam Mathews _Creating Web Maps with OSM Data_
+[Presentation](http://mapsam.com/osm10/)
+<img src="{{site_url}}/assets/sam_mathews.jpg" alt="Sam Mathews" height="100" width="100" style="float:left"/>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-Paul Norman _OpenStreetMap-Carto and the Mapper Feedback Loop_
+
+Paul Norman _OpenStreetMap-Carto and the Mapper Feedback Loop_<br>
+[Presentation](http://paulnorman.ca/files/OpenStreetMap Carto.pptx)<br>
+<img src="{{site_url}}/assets/paul_norman.jpg" alt="Paul Norman - more fuzzy than norman" height="100" width="100" style="float:left"/>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 Roger Andre _Using OSM to Help People See and Understand Their Data_
