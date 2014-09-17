@@ -9,7 +9,7 @@ image:
   feature: duplicates.png
 ---
 
-Below are some duplicate addresses found in Seattle. Take a few minutes and clean some up.
+Below are some duplicate addresses found in Seattle. Take a few minutes and clean some up. Start JOSM first then click on a link to open it.
 
  
 * [6664 Corson Avenue South](http://127.0.0.1:8111/load_and_zoom?left=-122.324770&right=-122.320770&top=47.54466&bottom=47.54066&select=node=231288667)
