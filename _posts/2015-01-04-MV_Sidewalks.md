@@ -45,7 +45,7 @@ Mapping individual sidewalks in a city even as small as Mount Vernon, WA is a bi
 
 Oops
 ---
-It is easy to miss editing every street. Some are small and hard to spot. Others are lost in areas with streets tagged sidewalk=none. Once the all the tasks in the Tasking Manager are complete, use []Overpass](http://overpass-turbo.eu) and QGIS to find missed roads. 
+It is easy to miss editing every street. Some are small and hard to spot. Others are lost in areas with streets tagged sidewalk=none. Once the all the tasks in the Tasking Manager are complete, use [Overpass](http://overpass-turbo.eu) and QGIS to find missed roads. 
 
 ~~~
   /*
