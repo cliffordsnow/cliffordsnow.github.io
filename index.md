@@ -5,5 +5,5 @@ tags: [Jekyll, theme, responsive, blog, template]
 image:
   feature: Seattle.png
   credit: OpenStreetMap Contributors
-  creditlink: http://openstreetmap.org
+  creditlink: http://www.openstreetmap.org
 ---
