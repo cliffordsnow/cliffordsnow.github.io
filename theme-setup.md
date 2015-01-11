@@ -91,7 +91,7 @@ links:
   - title: Other Page
     url: /other-page/
   - title: External Page
-    url: http://mademistakes.com
+    url: https://mademistakes.com
     external: true
 {% endhighlight %}
 
