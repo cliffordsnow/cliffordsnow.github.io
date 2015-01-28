@@ -6,7 +6,7 @@ tagline: An Addicted Mapper
 tags: [osm, josm, import, mapping]
 modified: 2-10-2015
 image:
-  feature: SeahawksSuperBowlWin.png
+  feature: SeahawksSuperBowlWin2.png
   credit: OpenStreetMap Contributors
   creditlink: http://openstreetmap.org
 ---
