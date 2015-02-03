@@ -24,7 +24,7 @@ Create a Info.plist for each id you want to use. The easiest way is to run JOSM 
 
 Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.
 
-<img src="../assets/applescript.png" Applescript>
+![Applescript]({{site_url}}/assets/applescript.png "Create Script Application")
 
   
 

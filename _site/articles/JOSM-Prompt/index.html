@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Too Many Airports &#8211; OSM Seattle</title>
-<meta name="description" content="The FAA doesn't want you to fly your drone within 3 miles of an airport">
-<meta name="keywords" content="QGIS;github;drone">
+<title>Prompt for OSM User ID in JOSM:Using a Mac &#8211; OSM Seattle</title>
+<meta name="description" content="Applescript Code for a JOSM prompt">
+<meta name="keywords" content="applescript, JOSM">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://osm_seattle.snowandsnow.us/images/texture-feature-04.jpg">
+<meta name="twitter:image" content="http://osm_seattle.snowandsnow.us/images/applescript.png">
 
-<meta name="twitter:title" content="Too Many Airports">
-<meta name="twitter:description" content="The FAA doesn't want you to fly your drone within 3 miles of an airport">
+<meta name="twitter:title" content="Prompt for OSM User ID in JOSM:Using a Mac">
+<meta name="twitter:description" content="Applescript Code for a JOSM prompt">
 <meta name="twitter:creator" content="@osm_seattle">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Too Many Airports">
-<meta property="og:description" content="The FAA doesn't want you to fly your drone within 3 miles of an airport">
-<meta property="og:url" content="http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/">
+<meta property="og:title" content="Prompt for OSM User ID in JOSM:Using a Mac">
+<meta property="og:description" content="Applescript Code for a JOSM prompt">
+<meta property="og:url" content="http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt/">
 <meta property="og:site_name" content="OSM Seattle">
 
 
 
 
 
-<link rel="canonical" href="http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/">
+<link rel="canonical" href="http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt/">
 <link href="http://osm_seattle.snowandsnow.us/feed.xml" type="application/atom+xml" rel="alternate" title="OSM Seattle Feed">
 <link rel="author" href="https://plus.google.com/101103612980566933205?rel=author">
 
@@ -94,8 +94,8 @@
 </div><!-- /.navigation-wrapper -->
 
 <div class="image-wrap">
-  <img src="http://osm_seattle.snowandsnow.us/images/texture-feature-04.jpg" alt="Too Many Airports feature image">
-  
+  <img src="http://osm_seattle.snowandsnow.us/images/applescript.png" alt="Prompt for OSM User ID in JOSM:Using a Mac feature image">
+  <span class="image-credit">Photo Credit: <a href="">Brandon Titus</a></span>
 </div><!-- /.image-wrap -->
 
 <div id="main" role="main">
@@ -115,14 +115,32 @@
   </div>
   <article>
     <div class="headline-wrap">
-      <h1>Too Many Airports</h1>
+      <h1>Prompt for OSM User ID in JOSM:Using a Mac</h1>
       <h2></h2>
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>According to a group of R/C model airplane enthusiasts, model airplanes shouldn’t be flown within three miles of an airport. Turns out
-we have a bunch of sites that the FCC considers an airport. My representation is based on the center of the airport. The FAA would probably measure the limit from the outer edge of the airport.</p>
+      <h2 id="mac-osc-prompt-for-my-user-id-in-josm">Mac OSC Prompt for My User ID in JOSM</h2>
+<p>I’m doing an import of Kirkland Buildings and Addresses into OSM. I wanted an easy way to remember to use the right id</p>
 
-<p><a href="https://gist.github.com/cliffordsnow/7d3a514f164f17b50fa7"><img src="/assets/noflyzone.png" alt="No Fly Zones" /></a></p>
+<pre><code class="language-applescript">set pList to (choose from list {"UserID", "UserID_Import"} with title "Which UserId?" with prompt "Select User ID")
+if pList is false then
+	display dialog "Canceled" with icon stop
+else if pList contains "UserID" then
+	do shell script "cp /Users/cliffordsnow/Development/Info.plist.normal /Applications/JOSM.app/contents/Info.plist"
+	tell application "JOSM" to activate
+else if pList contains "UserID_Import" then
+	do shell script "cp /Users/userid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist"
+	tell application "JOSM" to activate
+end if
+</code></pre>
+<p><br /></p>
+
+<h2 id="create-infoplist">Create Info.plist</h2>
+<p>Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. </p>
+
+<p>Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.</p>
+
+<p><img src="/assets/applescript.png" alt="Applescript" title="Create Script Application" /></p>
 
 
       <hr />
@@ -141,7 +159,7 @@ we have a bunch of sites that the FCC considers an airport. My representation is
 
 
         </div>
-        <p class="byline"><strong>Too Many Airports</strong> was published on <time datetime="2014-05-16T00:00:00-07:00">May 16, 2014</time> by <a href="http://osm_seattle.snowandsnow.us/about" title="About Clifford Snow">Clifford Snow</a>.</p>
+        <p class="byline"><strong>Prompt for OSM User ID in JOSM:Using a Mac</strong> was published on <time datetime="2015-02-02T00:00:00-08:00">February 02, 2015</time> by <a href="http://osm_seattle.snowandsnow.us/about" title="About Clifford Snow">Clifford Snow</a>.</p>
       </footer>
     </div><!-- /.article-wrap -->
 
@@ -174,16 +192,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
       
       
-      <li><a href="http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt/" title="Prompt for OSM User ID in JOSM:Using a Mac">Prompt for OSM User ID in JOSM:Using a Mac</a></li>
-      
-    
-      
-      
-        
-          
-        
-      
-      
       <li><a href="http://osm_seattle.snowandsnow.us/articles/MV_Sidewalks/" title="Sidewalks of Mount Vernon Washington">Sidewalks of Mount Vernon Washington</a></li>
       
     
@@ -195,6 +203,16 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       
       
       <li><a href="http://osm_seattle.snowandsnow.us/articles/Seattle-Duplicate-Address/" title="More Seattle Duplicate Address">More Seattle Duplicate Address</a></li>
+      
+    
+      
+      
+        
+          
+        
+      
+      
+      <li><a href="http://osm_seattle.snowandsnow.us/articles/10th-Anniversary-Celebration/" title="OpenStreetMap 10th Anniversary">OpenStreetMap 10th Anniversary</a></li>
       
     
     </ul>
