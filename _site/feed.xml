@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://osm_seattle.snowandsnow.us/feed.xml" />
 <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us" />
-<updated>2015-02-03T07:48:18-08:00</updated>
+<updated>2015-02-03T08:01:44-08:00</updated>
 <id>http://osm_seattle.snowandsnow.us/</id>
 <author>
   <name>Clifford Snow</name>
@@ -26,16 +26,16 @@
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h2 id=&quot;mac-osc-prompt-for-my-user-id-in-josm&quot;&gt;Mac OSC Prompt for My User ID in JOSM&lt;/h2&gt;
-&lt;p&gt;I’m doing an import of Kirkland Buildings and Addresses into OSM. I wanted an easy way to remember to use the right id&lt;/p&gt;
+&lt;p&gt;I’m doing an import of Kirkland Buildings and Addresses into OSM. I wanted an easy way to remember to use the correct. Thanks to ToeBee for the suggestion of using unique home directory for each id. With linux a simple shell script tied to the menu item is all that is required. But Apple gives another option. Create an application script to chose the best id. Below is the script I created. Just substitute your id and directories for mine.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-applescript&quot;&gt;set pList to (choose from list {&quot;UserID&quot;, &quot;UserID_Import&quot;} with title &quot;Which UserId?&quot; with prompt &quot;Select User ID&quot;)
 if pList is false then
 	display dialog &quot;Canceled&quot; with icon stop
 else if pList contains &quot;UserID&quot; then
-	do shell script &quot;cp /Users/cliffordsnow/Development/Info.plist.normal /Applications/JOSM.app/contents/Info.plist&quot;
+	do shell script &quot;cp /Users/macid/Development/Info.plist.normal /Applications/JOSM.app/contents/Info.plist&quot;
 	tell application &quot;JOSM&quot; to activate
 else if pList contains &quot;UserID_Import&quot; then
-	do shell script &quot;cp /Users/userid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist&quot;
+	do shell script &quot;cp /Users/macid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist&quot;
 	tell application &quot;JOSM&quot; to activate
 end if
 &lt;/code&gt;&lt;/pre&gt;
@@ -44,7 +44,7 @@ end if
 &lt;h2 id=&quot;create-infoplist&quot;&gt;Create Info.plist&lt;/h2&gt;
 &lt;p&gt;Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. The only addition needed is one line of code to add a default hidden folder for settings and plugins. This line goes in the JVMOptions key.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;string&amp;gt;-Djosm.home=/Users/userid/.josm_import&amp;lt;/string&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;string&amp;gt;-Djosm.home=/Users/macid/.josm_import&amp;lt;/string&amp;gt;
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;br /&gt;
