@@ -136,9 +136,13 @@ end if
 <p><br /></p>
 
 <h2 id="create-infoplist">Create Info.plist</h2>
-<p>Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. </p>
+<p>Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. The only addition needed is one line of code to add a default hidden folder for settings and plugins. This line goes in the JVMOptions key.</p>
 
-<p>Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.</p>
+<pre><code class="language-xml">&lt;string&gt;-Djosm.home=/Users/userid/.josm_import&lt;/string&gt;
+
+</code></pre>
+<p><br />
+Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.</p>
 
 <p><img src="/assets/applescript.png" alt="Applescript" title="Create Script Application" /></p>
 

@@ -20,8 +20,13 @@ set pList to (choose from list {"UserID", "UserID_Import"} with title "Which Use
 
 Create Info.plist
 ---
-Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. 
+Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. The only addition needed is one line of code to add a default hidden folder for settings and plugins. This line goes in the JVMOptions key.
 
+~~~ xml
+<string>-Djosm.home=/Users/userid/.josm_import</string>
+
+~~~
+<br>
 Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.
 
 ![Applescript]({{site_url}}/assets/applescript.png "Create Script Application")
