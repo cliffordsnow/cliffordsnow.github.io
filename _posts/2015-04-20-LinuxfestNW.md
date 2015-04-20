@@ -27,6 +27,7 @@ project (MusicBrainz, if you're curious) and I was impressed and
 surprised how much OSM does with three basic objects that contain each
 other, free-text key-value fields, and a single derivation step (from
 raw data to a map, or to a route, or to whatever else)."
+
 ### What do you tell people when they ask you why you map?
 Ian McEwen "Because I use it! OSM is my go-to map for seeing things anywhere in the
 real world, from OsmAnd and its offline maps on my phone, to looking up
