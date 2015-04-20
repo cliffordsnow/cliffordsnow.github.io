@@ -130,7 +130,7 @@ This tutorial will provide you with one means of finding differences. The follow
   <li><a href="https://github.com/pnorman/ogr2osm">org2osm.py</a></li>
 </ul>
 
-<p>QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. <a href="http://www.boundlessgeo.com">Boundless</a> Open Geo Suite is the perfect solution to install PostGIS and related tools. </p>
+<p>QGIS, PostGIS, PGAdmin3 and pgShapeLoader installation is beyond the scope of this tutorial. <a href="http://www.boundlessgeo.com">Boundless</a> Open Geo Suite is the perfect solution to install PostGIS and related tools.</p>
 
 <p>I’m comparing Skagit County road center line shapefile data with OSM road ways. Fortunately, Skagit County’s road names are spelled out instead of abbreviated as most road data is presented. Skagit County’s GIS data is open and freely available. Since most road data comes abbreviated, you’ll need to expand the road names to compare with OSM data. Postgresql functions to expand road names can be found in my <a href="https://github.com/clifford/sql">github repository.</a> Most likely you will need to modify the function for your data.</p>
 
@@ -165,18 +165,18 @@ element-limit="1073741824"&gt;
 
 <p>Remember, change the nominatim search area from “Skagit County” to your county.</p>
 
-<p>Once the query is complete, select Export from the menu. Select GeoJSON for the data type. It will take a few minutes before the download starts. Once complete move the file export.geojson to the data directory of your counties data. </p>
+<p>Once the query is complete, select Export from the menu. Select GeoJSON for the data type. It will take a few minutes before the download starts. Once complete move the file export.geojson to the data directory of your counties data.</p>
 
 <h2 id="qgis">QGIS</h2>
-<p>Open the geojson vector file <img src="/assets/vector_icon.png" alt="vector icon" /> in QGIS. Select the LineString feature. </p>
+<p>Open the geojson vector file <img src="/assets/vector_icon.png" alt="vector icon" /> in QGIS. Select the LineString feature.</p>
 
 <p><img src="/assets/qgis_geojson_import.png" alt="image" /></p>
 
-<p>Select the OpenStreetMap in OpenLayers plugins menu item. Once open, drag the export to the top position, otherwise the OSM layer will obscure the geojson data. </p>
+<p>Select the OpenStreetMap in OpenLayers plugins menu item. Once open, drag the export to the top position, otherwise the OSM layer will obscure the geojson data.</p>
 
 <p><img src="/assets/qgis_layers.png" alt="QGIS Layers" /></p>
 
-<p>The last step with QGIS is to select the county roads using the Select Features by Rectangle tool. <img src="/assets/rectangle_selection_icon.png" alt="Rectangle Selection" />  and save the layer as a vector file, in the Vector menu. </p>
+<p>The last step with QGIS is to select the county roads using the Select Features by Rectangle tool. <img src="/assets/rectangle_selection_icon.png" alt="Rectangle Selection" />  and save the layer as a vector file, in the Vector menu.</p>
 
 <p><img src="/assets/qgis_save_vector.png" alt="Save Vector Layer" /></p>
 
@@ -191,7 +191,7 @@ element-limit="1073741824"&gt;
 <img src="/assets/pgshapeloader.png" alt="pgShapefile" /></p>
 
 <h2 id="comparing-osm-data-to-county-data">Comparing OSM data to County Data</h2>
-<p>Time for some good old sql right joins to find missing roads. </p>
+<p>Time for some good old sql right joins to find missing roads.</p>
 
 <!-- language: lang-sql -->
 <pre><code>SELECT s.gid, s.geom, s.fullname AS "Name"
@@ -230,7 +230,7 @@ WHERE o.gid IS NULL
 <p><code>python ogr2osm.py [-t translation.py] shapefile.shp</code></p>
 
 <h2 id="load-missing-layer-in-josm">Load Missing Layer in JOSM</h2>
-<p>Use JOSM to compare the county data with OSM data. Even turn on the TIGER 2013 overlay. Some missing ways will be easy, for instance, new roads or OSM roads with no name. Others will be difficult. TIGER, OSM and county data can all be different. In those cases, plan for an outing or at least leave a note asking for an in person visit. </p>
+<p>Use JOSM to compare the county data with OSM data. Even turn on the TIGER 2013 overlay. Some missing ways will be easy, for instance, new roads or OSM roads with no name. Others will be difficult. TIGER, OSM and county data can all be different. In those cases, plan for an outing or at least leave a note asking for an in person visit.</p>
 
 <p><img src="/assets/josm_missing.png" alt="JOSM with Missing Layer" /></p>
 
@@ -287,6 +287,16 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         
       
       
+      <li><a href="http://osm_seattle.snowandsnow.us/articles/LinuxfestNW/" title="Why OpenStreetMap">Why OpenStreetMap</a></li>
+      
+    
+      
+      
+        
+          
+        
+      
+      
       <li><a href="http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt/" title="Prompt for OSM User ID in JOSM:Using a Mac">Prompt for OSM User ID in JOSM:Using a Mac</a></li>
       
     
@@ -298,16 +308,6 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       
       
       <li><a href="http://osm_seattle.snowandsnow.us/articles/MV_Sidewalks/" title="Sidewalks of Mount Vernon Washington">Sidewalks of Mount Vernon Washington</a></li>
-      
-    
-      
-      
-        
-          
-        
-      
-      
-      <li><a href="http://osm_seattle.snowandsnow.us/articles/Seattle-Duplicate-Address/" title="More Seattle Duplicate Address">More Seattle Duplicate Address</a></li>
       
     
     </ul>
