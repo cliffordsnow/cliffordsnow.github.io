@@ -38,7 +38,8 @@ Secondarily, though, the reason I use it is because I believe in the
 value of open data both to serve needs that corporate establishments
 cannot or will not and to ensure growth and provider-independence."
 
-Mike Thompson "Mapping in OSM is a form of free expression (really a broad form of free speech), just like blogging, editing a Wikipedia article, or creating a video.  In the past editors a publishers decided what got mapped, now - with OpenStreetMap - we can decide."
+Mike Thompson "Mapping in OSM is a form of free expression (really a broad form of free speech), just like blogging, editing a Wikipedia article, or creating a video.  In the past editors a publishers decided what got mapped, now - with OpenStreetMap - we can decide." <br>
+
 ### What is should I absolutely not leave out of the presentation? 
 Richard Weait <br>1. "Go outside and survey your neighbourhood. There is nothing better
 that you can do for OpenStreetMap, than behave as though you are
