@@ -15,6 +15,8 @@ Recently I posted a request for help with my OSM presentation at the [Linuxfest 
 Ian McWen "I love most being able to do things and add things at broader or more
 specific scales and see the fruits of my work almost immediately -- both
 the breadth of possible participation and the quick feedback loop."
+
+Mark Bradley "That you can contribute as much or as little to the map as you want, anywhere you want, but always making the map better for everyone!"
   
 ### What about OSM surprised you most?
 Richard Weait "The amazing diversity in the interests of new contributors.  I meet
@@ -27,6 +29,8 @@ project (MusicBrainz, if you're curious) and I was impressed and
 surprised how much OSM does with three basic objects that contain each
 other, free-text key-value fields, and a single derivation step (from
 raw data to a map, or to a route, or to whatever else)."<br>
+
+Mark Bradley "That it is such a comprehensive map!  Millions of people making a volunteer map of the whole world!"
 
 ### What do you tell people when they ask you why you map?
 Ian McEwen "Because I use it! OSM is my go-to map for seeing things anywhere in the
@@ -57,3 +61,5 @@ that is, and obviously also asking people to do the same for the parts
 of the world they know and frequent is the whole goal!"
 
 Mike Thompson  "The *big problem* that OSM solves. For a Linux audience this shouldn't be difficult, but I would still state that most other map sources are not truly "free" - and say a little bit about why that is a problem.  "
+
+Mark Bradley "There are recommended practices on how to map almost everything.  Read the wiki about the features you intend to map before proceeding."
