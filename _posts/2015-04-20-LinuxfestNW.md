@@ -12,13 +12,21 @@ image:
 Recently I posted a request for help with my OSM presentation at the [Linuxfest Northwest](http://linuxfestnorthwest.org/2015) in Bellingham. Here is what I learned.
 
 ### What do you enjoy most about OpenStreetMap?
+
 Ian McWen "I love most being able to do things and add things at broader or more
 specific scales and see the fruits of my work almost immediately -- both
 the breadth of possible participation and the quick feedback loop."
 
 Mark Bradley "That you can contribute as much or as little to the map as you want, anywhere you want, but always making the map better for everyone!"
+
+David Wisbey "I am a volunteer mapper. I enjoy contributing a lot of new
+data and fixing/deleting existing data with errors. I especially
+like bringing small towns and certain special parts of cities "alive"
+(often areas are very poorly mapped; when I'm done with them,
+it's amazing)"
   
 ### What about OSM surprised you most?
+
 Richard Weait "The amazing diversity in the interests of new contributors.  I meet
 new OpenStreetMap contributors every month, and the interest that
 brings them in to meet us differ widely."
@@ -32,7 +40,10 @@ raw data to a map, or to a route, or to whatever else)."<br>
 
 Mark Bradley "That it is such a comprehensive map!  Millions of people making a volunteer map of the whole world!"
 
+David Wisbey "How colorful the rendering is (compared to Google Maps and even Mapquest)."
+
 ### What do you tell people when they ask you why you map?
+
 Ian McEwen "Because I use it! OSM is my go-to map for seeing things anywhere in the
 real world, from OsmAnd and its offline maps on my phone, to looking up
 addresses with the search/Nominatim, to figuring out routes with OsmAnd
@@ -42,9 +53,15 @@ Secondarily, though, the reason I use it is because I believe in the
 value of open data both to serve needs that corporate establishments
 cannot or will not and to ensure growth and provider-independence."
 
+David Wisbey "It's a way to continue doing the kind of work I used to do in a real, paid job,
+but is still rewarding to me, especially two years ago when I won a scholarship
+to State of the Map-US in San Francisco.
+"
+
 Mike Thompson "Mapping in OSM is a form of free expression (really a broad form of free speech), just like blogging, editing a Wikipedia article, or creating a video.  In the past editors a publishers decided what got mapped, now - with OpenStreetMap - we can decide." <br>
 
 ### What is should I absolutely not leave out of the presentation? 
+
 Richard Weait <br>1. "Go outside and survey your neighbourhood. There is nothing better
 that you can do for OpenStreetMap, than behave as though you are
 tending a shared garden."
@@ -63,3 +80,5 @@ of the world they know and frequent is the whole goal!"
 Mike Thompson  "The *big problem* that OSM solves. For a Linux audience this shouldn't be difficult, but I would still state that most other map sources are not truly "free" - and say a little bit about why that is a problem.  "
 
 Mark Bradley "There are recommended practices on how to map almost everything.  Read the wiki about the features you intend to map before proceeding."
+
+David Wisbey "How enjoyable and rewarding it can be to contribute to Openstreetmap."
