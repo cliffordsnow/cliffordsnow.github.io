@@ -19,6 +19,4 @@ if there was any GIS information available. For Whatcom County, I knew that the 
 had most of the counties data.
 
 Graphically this is the results of my inquiry. 
-<iframe width="100%" height="520" frameborder="0" 
-src="https://glassman.cartodb.com/viz/68d4aa30-97f0-11e5-92ce-0e3a376473ab/embed_map"
-allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<a href="https://glassman.cartodb.com/viz/68d4aa30-97f0-11e5-92ce-0e3a376473ab/embed_map">![Open Data]
