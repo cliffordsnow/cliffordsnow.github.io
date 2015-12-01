@@ -18,5 +18,7 @@ if there was gis data available. A typical duckduckgo.com search was *skagit cou
 if there was any GIS information available. For Whatcom County, I knew that the City of Bellingham 
 had most of the counties data.
 
-Graphically this is the results of my inquiry. 
+I hope to add a link to the licensing page for each county. Stay tuned for future updates.
+
+Graphically this is the results of my inquiry. Click on the image to open to the interactive webmap. 
 <a href="http://cdb.io/1jwgzRB">![Open Data]({{site_url}}/assets/opendata.png)
