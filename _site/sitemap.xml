@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://osm_seattle.snowandsnow.us</loc>
+        <loc>http://localhost:4000</loc>
     </url>
     
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/Mapathon/</loc>
+        <loc>http://localhost:4000/articles/Mapathon/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/Washington-Counties-with-Open-GIS-Data/</loc>
+        <loc>http://localhost:4000/articles/Washington-Counties-with-Open-GIS-Data/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/LinuxfestNW/</loc>
+        <loc>http://localhost:4000/articles/LinuxfestNW/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt/</loc>
+        <loc>http://localhost:4000/articles/JOSM-Prompt/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/MV_Sidewalks/</loc>
+        <loc>http://localhost:4000/articles/MV_Sidewalks/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/Seattle-Duplicate-Address/</loc>
+        <loc>http://localhost:4000/articles/Seattle-Duplicate-Address/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/10th-Anniversary-Celebration/</loc>
+        <loc>http://localhost:4000/articles/10th-Anniversary-Celebration/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/TileStream/</loc>
+        <loc>http://localhost:4000/articles/TileStream/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/</loc>
+        <loc>http://localhost:4000/articles/Too-Many-Airports/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/Finding-Errors/</loc>
+        <loc>http://localhost:4000/articles/Finding-Errors/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature/</loc>
+        <loc>http://localhost:4000/articles/JOSM-HTTPS-Feature/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/</loc>
+        <loc>http://localhost:4000/articles/Duplicate-Address-Cause/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>http://localhost:4000/articles/duplicate-addresses-in-seattle/</loc>
     </url>
     
     <url>
-        <loc>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/</loc>
+        <loc>http://localhost:4000/articles/duplicate-addresses-in-seattle/</loc>
     </url>
     
 </urlset>

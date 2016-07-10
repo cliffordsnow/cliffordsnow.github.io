@@ -3,26 +3,26 @@
 <title type="text">OSM Seattle</title>
 <subtitle type="text">OpenStreetMap</subtitle>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://osm_seattle.snowandsnow.us/feed.xml" />
-<link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us" />
-<updated>2016-07-10T11:07:22-07:00</updated>
-<id>http://osm_seattle.snowandsnow.us/</id>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2016-07-10T15:05:45-07:00</updated>
+<id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
-  <uri>http://osm_seattle.snowandsnow.us/</uri>
+  <uri>http://localhost:4000/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Running Missing Maps Mapathons]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Mapathon/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/Mapathon</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Mapathon/" />
+  <id>http://localhost:4000/articles/Mapathon</id>
   <published>2016-07-09T00:00:00-07:00</published>
   <updated>2016-07-09T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h3 id=&quot;getting-started---before-the-mapathon&quot;&gt;Getting Started - Before the Mapathon&lt;/h3&gt;
@@ -74,19 +74,19 @@
   &lt;li&gt;The concept of adding more instruction after people have gotten started is how we taught glassblowing. We’d spend the first 15 to 30 minutes talking safety then have people actually gather glass from the furnace. (Sounds easy, but when you open the furnace door and feel the heat of a 2000° pot of glass all you can think of is how to get away!) Once they have become comfortable they we introduce new concepts. Not only is it safer, but it’s more fun because you doing something right away. The same can apply to mapping.&lt;/li&gt;
 &lt;/ol&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Mapathon/&quot;&gt;Running Missing Maps Mapathons&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on July 09, 2016.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Mapathon/&quot;&gt;Running Missing Maps Mapathons&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on July 09, 2016.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Open GIS Data in Washington Counties]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Washington-Counties-with-Open-GIS-Data/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/Washington-Counties-with-Open-GIS-Data</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Washington-Counties-with-Open-GIS-Data/" />
+  <id>http://localhost:4000/articles/Washington-Counties-with-Open-GIS-Data</id>
   <published>2015-12-01T00:00:00-08:00</published>
   <updated>2015-12-01T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Martijn van Exel’s &lt;a href=&quot;http://www.openstreetmap.org/user/mvexel/diary/35966&quot;&gt;Missing Roads&lt;/a&gt; JOSM
@@ -105,19 +105,19 @@ had most of the counties data.&lt;/p&gt;
 &lt;p&gt;Graphically this is the results of my inquiry. Click on the image to open to the interactive webmap. 
 &lt;a href=&quot;http://cdb.io/1jwgzRB&quot;&gt;&lt;img src=&quot;/assets/opendata.png&quot; alt=&quot;Open Data&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Washington-Counties-with-Open-GIS-Data/&quot;&gt;Open GIS Data in Washington Counties&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on December 01, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Washington-Counties-with-Open-GIS-Data/&quot;&gt;Open GIS Data in Washington Counties&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on December 01, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Why OpenStreetMap]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/LinuxfestNW/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/LinuxfestNW</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/LinuxfestNW/" />
+  <id>http://localhost:4000/articles/LinuxfestNW</id>
   <published>2015-04-20T00:00:00-07:00</published>
   <updated>2015-04-20T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Recently I posted a request for help with my OSM presentation at the &lt;a href=&quot;http://linuxfestnorthwest.org/2015&quot;&gt;Linuxfest Northwest&lt;/a&gt; in Bellingham. Here is what I learned.&lt;/p&gt;
@@ -194,62 +194,64 @@ of the world they know and frequent is the whole goal!”&lt;/p&gt;
 
 &lt;p&gt;David Wisbey “How enjoyable and rewarding it can be to contribute to Openstreetmap.”&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/LinuxfestNW/&quot;&gt;Why OpenStreetMap&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on April 20, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/LinuxfestNW/&quot;&gt;Why OpenStreetMap&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on April 20, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Prompt for OSM User ID in JOSM:Using a Mac]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/JOSM-Prompt/" />
+  <id>http://localhost:4000/articles/JOSM-Prompt</id>
   <published>2015-02-02T00:00:00-08:00</published>
   <updated>2015-02-02T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h2 id=&quot;mac-osc-prompt-for-my-user-id-in-josm&quot;&gt;Mac OSC Prompt for My User ID in JOSM&lt;/h2&gt;
 &lt;p&gt;I’m doing an import of Kirkland Buildings and Addresses into OSM. I wanted an easy way to remember to use the correct. Thanks to ToeBee for the suggestion of using unique home directory for each id. With linux a simple shell script tied to the menu item is all that is required. But Apple gives another option. Create an application script to chose the best id. Below is the script I created. Just substitute your id and directories for mine.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-applescript&quot;&gt;set pList to (choose from list {&quot;UserID&quot;, &quot;UserID_Import&quot;} with title &quot;Which UserId?&quot; with prompt &quot;Select User ID&quot;)
-if pList is false then
-	display dialog &quot;Canceled&quot; with icon stop
-else if pList contains &quot;UserID&quot; then
-	do shell script &quot;cp /Users/macid/Development/Info.plist.normal /Applications/JOSM.app/contents/Info.plist&quot;
-	tell application &quot;JOSM&quot; to activate
-else if pList contains &quot;UserID_Import&quot; then
-	do shell script &quot;cp /Users/macid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist&quot;
-	tell application &quot;JOSM&quot; to activate
-end if
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-applescript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;choose from list&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID_Import&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Which UserId?&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Select User ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;display dialog&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Canceled&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ow&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;do shell script&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cp /Users/macid/Development/Info.plist.normal /Applications/JOSM.app/contents/Info.plist&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JOSM&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;activate&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ow&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID_Import&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;do shell script&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cp /Users/macid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JOSM&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;activate&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;create-infoplist&quot;&gt;Create Info.plist&lt;/h2&gt;
 &lt;p&gt;Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. The only addition needed is one line of code to add a default hidden folder for settings and plugins. This line goes in the JVMOptions key.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;string&amp;gt;-Djosm.home=/Users/macid/.josm_import&amp;lt;/string&amp;gt;
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;-Djosm.home=/Users/macid/.josm_import&lt;span class=&quot;nt&quot;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;
 Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/applescript.png&quot; alt=&quot;Applescript&quot; title=&quot;Create Script Application&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/JOSM-Prompt/&quot;&gt;Prompt for OSM User ID in JOSM:Using a Mac&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 02, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-Prompt/&quot;&gt;Prompt for OSM User ID in JOSM:Using a Mac&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 02, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Sidewalks of Mount Vernon Washington]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/MV_Sidewalks/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/MV_Sidewalks</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/MV_Sidewalks/" />
+  <id>http://localhost:4000/articles/MV_Sidewalks</id>
   <published>2015-01-04T00:00:00-08:00</published>
   <updated>2015-01-04T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h2 id=&quot;walkable-city-part-1&quot;&gt;Walkable City Part 1&lt;/h2&gt;
@@ -282,7 +284,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
 &lt;h2 id=&quot;oops&quot;&gt;Oops&lt;/h2&gt;
 &lt;p&gt;It is easy to miss editing every street. Some are small and hard to spot. Others are lost in areas with streets tagged sidewalk=none. Once the all the tasks in the Tasking Manager are complete, use &lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass&lt;/a&gt; and QGIS to find missed roads.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;  /*
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  /*
   This has been generated by the overpass-turbo wizard.
   The original search was:
   “highway=residential in &quot;Mount Vernon, Skagit County&quot;”
@@ -308,6 +310,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
   out skel qt;
 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Export results as a geojson and open in QGIS. Filter the results to eliminate all sidewalks. “sidewalk” &lt;strong&gt;is null&lt;/strong&gt;. Use OSM as a bottom layer to easily see the missed roads.&lt;/p&gt;
@@ -316,19 +319,19 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
 &lt;p&gt;Once all of the streets have been tagged it is time to display the results. We will look at that in Part 2. See you then.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/MV_Sidewalks/&quot;&gt;Sidewalks of Mount Vernon Washington&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on January 04, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/MV_Sidewalks/&quot;&gt;Sidewalks of Mount Vernon Washington&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on January 04, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[More Seattle Duplicate Address]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Seattle-Duplicate-Address/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/Seattle-Duplicate-Address</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Seattle-Duplicate-Address/" />
+  <id>http://localhost:4000/articles/Seattle-Duplicate-Address</id>
   <published>2014-08-14T00:00:00-07:00</published>
   <updated>2014-08-14T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Below are some duplicate addresses found in Seattle. Take a few minutes and clean some up. Start JOSM first then click on a link to open it.&lt;/p&gt;
@@ -5133,19 +5136,19 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
   &lt;li&gt;&lt;a href=&quot;http://127.0.0.1:8111/load_and_zoom?left=-122.326540&amp;amp;right=-122.322540&amp;amp;top=47.65152&amp;amp;bottom=47.64752&amp;amp;select=node=217598717&quot;&gt;3105 Fairview Avenue East&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Seattle-Duplicate-Address/&quot;&gt;More Seattle Duplicate Address&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Seattle-Duplicate-Address/&quot;&gt;More Seattle Duplicate Address&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[OpenStreetMap 10th Anniversary]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/10th-Anniversary-Celebration/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/10th-Anniversary-Celebration</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/10th-Anniversary-Celebration/" />
+  <id>http://localhost:4000/articles/10th-Anniversary-Celebration</id>
   <published>2014-08-14T00:00:00-07:00</published>
   <updated>2014-08-14T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Saturday, August 9th, Seattle celebrated OpenStreetMap 10th Anniversary. Below are links to presentations.&lt;/p&gt;
@@ -5199,19 +5202,19 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
 &lt;p&gt;More Pictures to follow&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/10th-Anniversary-Celebration/&quot;&gt;OpenStreetMap 10th Anniversary&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/10th-Anniversary-Celebration/&quot;&gt;OpenStreetMap 10th Anniversary&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[JOSM Background Layer]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/TileStream/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/TileStream</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/TileStream/" />
+  <id>http://localhost:4000/articles/TileStream</id>
   <published>2014-05-25T00:00:00-07:00</published>
   <updated>2014-05-25T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Now that we can find missing roads with the plan developed in &lt;a href=&quot;/articles/Finding-Errors&quot;&gt;Finding Errors&lt;/a&gt; it is time to move on to aligning the roads.&lt;/p&gt;
@@ -5235,12 +5238,13 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
 &lt;p&gt;Check out TileMill &lt;a href=&quot;https://www.mapbox.com/tilemill/docs/manual/&quot;&gt;documentation&lt;/a&gt; for help installing and creating tiles.&lt;/p&gt;
 
 &lt;!-- language: lang-js --&gt;
-&lt;pre&gt;&lt;code&gt;#skagitroads {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#skagitroads {
   		line-width:5;
   		line-color:#00ff00;
   		line-cap: round;
  	*/
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
  	::labels[zoom &amp;gt; 13]{
   		text-name: [fullname];
@@ -5249,9 +5253,10 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
   		text-placement: line;
   		text-dy: 12;
    		text-size:14;
-&lt;pre&gt;&lt;code&gt;	}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	}
   	}
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Tilestream was easy to install. My only hangup was to update Homebrew before starting.&lt;/p&gt;
 
@@ -5272,19 +5277,19 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/josm_add_tms.png&quot; alt=&quot;JOSM add TMS&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/TileStream/&quot;&gt;JOSM Background Layer&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/TileStream/&quot;&gt;JOSM Background Layer&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Too Many Airports]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Too-Many-Airports/" />
+  <id>http://localhost:4000/articles/Too-Many-Airports</id>
   <published>2014-05-16T00:00:00-07:00</published>
   <updated>2014-05-16T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;According to a group of R/C model airplane enthusiasts, model airplanes shouldn’t be flown within three miles of an airport. Turns out
@@ -5293,19 +5298,19 @@ we have a bunch of sites that the FCC considers an airport. My representation is
 &lt;p&gt;&lt;a href=&quot;https://gist.github.com/cliffordsnow/7d3a514f164f17b50fa7&quot;&gt;&lt;img src=&quot;/assets/noflyzone.png&quot; alt=&quot;No Fly Zones&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Too-Many-Airports/&quot;&gt;Too Many Airports&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on May 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Too-Many-Airports/&quot;&gt;Too Many Airports&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Finding Differences in Roads]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Finding-Errors/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/Finding-Errors</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Finding-Errors/" />
+  <id>http://localhost:4000/articles/Finding-Errors</id>
   <published>2014-03-23T00:00:00-07:00</published>
   <updated>2014-03-23T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;Finding differences between OpenStreetMap and county road data is hard if done manually. Fortunately, Open Source Software tools eases the process.
@@ -5327,7 +5332,7 @@ This tutorial will provide you with one means of finding differences. The follow
 &lt;p&gt;&lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass-Turbo&lt;/a&gt; has an easy method to obtain current data. Modify and run the following script:&lt;/p&gt;
 
 &lt;!-- language: lang-js --&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 
 element-limit=&quot;1073741824&quot;&amp;gt;
 &amp;lt;id-query              into=&quot;area&quot;/&amp;gt;
 &amp;lt;!-- gather results --&amp;gt;
@@ -5351,6 +5356,7 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &amp;lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&amp;gt;
 &amp;lt;/osm-script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Remember, change the nominatim search area from “Skagit County” to your county.&lt;/p&gt;
 
@@ -5383,10 +5389,11 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &lt;p&gt;Time for some good old sql right joins to find missing roads.&lt;/p&gt;
 
 &lt;!-- language: lang-sql --&gt;
-&lt;pre&gt;&lt;code&gt;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
 FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
 WHERE o.gid IS NULL
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/missing.png&quot; alt=&quot;Missing&quot; /&gt;&lt;/p&gt;
 
@@ -5409,14 +5416,15 @@ WHERE o.gid IS NULL
 &lt;p&gt;The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:&lt;/p&gt;
 
 &lt;!-- language: lang-bash --&gt;
-&lt;pre&gt;&lt;code&gt;pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h5 id=&quot;create-osm&quot;&gt;Create .OSM&lt;/h5&gt;
 
 &lt;p&gt;To create an .osm file, &lt;a href=&quot;https://github.com/pnorman/ogr2osm&quot;&gt;ogr2osm.py&lt;/a&gt; is needed along with a translations file. Since I’m not importing the data, only a simple translations file is needed. In this case I opted to skip the translation file completely. To run ogr2osm.py use:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;python ogr2osm.py [-t translation.py] shapefile.shp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;python ogr2osm.py [-t translation.py] shapefile.shp&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;load-missing-layer-in-josm&quot;&gt;Load Missing Layer in JOSM&lt;/h2&gt;
 &lt;p&gt;Use JOSM to compare the county data with OSM data. Even turn on the TIGER 2013 overlay. Some missing ways will be easy, for instance, new roads or OSM roads with no name. Others will be difficult. TIGER, OSM and county data can all be different. In those cases, plan for an outing or at least leave a note asking for an in person visit.&lt;/p&gt;
@@ -5427,19 +5435,19 @@ WHERE o.gid IS NULL
 &lt;p&gt;The next logical step would be to build tiles from the counties data to use as background images in JOSM. Similar to the TIGER 2012/13 background images. Look for a future article on how to create the tiles and use GeoServer as a WMS server.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[JSOM Allows HTTPS]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/JOSM-HTTPS-Feature/" />
+  <id>http://localhost:4000/articles/JOSM-HTTPS-Feature</id>
   <published>2014-03-16T00:00:00-07:00</published>
   <updated>2014-03-16T00:00:00-07:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h2 id=&quot;thank-you-developers&quot;&gt;Thank you developers&lt;/h2&gt;
@@ -5454,19 +5462,19 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/josm_https.png&quot; alt=&quot;HTTPS&quot; title=&quot;HTTPS in JOSM&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Fixing Duplicates in OSM]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Duplicate-Address-Cause/" />
+  <id>http://localhost:4000/articles/Duplicate-Address-Cause</id>
   <published>2014-02-23T00:00:00-08:00</published>
   <updated>2014-02-23T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;The problem of duplicates addresses for King County can be categorized into two catogories.&lt;/p&gt;
@@ -5491,41 +5499,57 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/duplicate-addresses-in-seattle/" />
+  <id>http://localhost:4000/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-14T00:00:00-08:00</published>
   <updated>2014-02-14T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated.&lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;&amp;lt;query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;addr:housenumber&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;addr:city&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Seattle&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;           &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;has-kv k=&amp;quot;source&amp;quot; v=&amp;quot;King County GIS&amp;quot; /&amp;gt; --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;area-query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;&amp;lt;/query&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;/union&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- print results --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;down&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;skeleton&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;quadtile&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;json&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;900&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1073741824&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;node&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;addr:housenumber&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;addr:city&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Seattle&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;has-kv k=&quot;source&quot; v=&quot;King County GIS&quot; /&amp;gt; --&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;area-query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/query&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/union&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- print results --&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;down&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;skeleton&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;quadtile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.&lt;/p&gt;
 
@@ -5534,46 +5558,62 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;h3 id=&quot;duplicate-addresses&quot;&gt;Duplicate addresses&lt;/h3&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Duplicate addresses in Seattle]]></title>
-  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/" />
-  <id>http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/duplicate-addresses-in-seattle/" />
+  <id>http://localhost:4000/articles/duplicate-addresses-in-seattle</id>
   <published>2014-02-10T00:00:00-08:00</published>
   <updated>2014-02-10T00:00:00-08:00</updated>
   <author>
     <name>Clifford Snow</name>
-    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <uri>http://localhost:4000</uri>
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;p&gt;It was pointed out that Seattle has a number of duplicate addresses in OSM. Running a query in overpass convinced me that there were more than anticipated.&lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;&amp;lt;query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;node&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;addr:housenumber&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;addr:city&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Seattle&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;           &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;has-kv k=&amp;quot;source&amp;quot; v=&amp;quot;King County GIS&amp;quot; /&amp;gt; --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;           &lt;span class=&quot;nt&quot;&gt;&amp;lt;area-query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;&amp;lt;/query&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;/union&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- print results --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;down&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;skeleton&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;quadtile&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;json&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;900&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1073741824&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;node&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;addr:housenumber&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;has-kv&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;addr:city&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Seattle&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;has-kv k=&quot;source&quot; v=&quot;King County GIS&quot; /&amp;gt; --&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;area-query&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/query&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/union&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- print results --&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;down&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;skeleton&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;quadtile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
