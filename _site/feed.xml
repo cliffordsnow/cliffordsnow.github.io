@@ -5,13 +5,108 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://osm_seattle.snowandsnow.us/feed.xml" />
 <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us" />
-<updated>2015-04-20T16:06:29-07:00</updated>
+<updated>2016-07-09T23:00:21-07:00</updated>
 <id>http://osm_seattle.snowandsnow.us/</id>
 <author>
   <name>Clifford Snow</name>
   <uri>http://osm_seattle.snowandsnow.us/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Running Missing Maps Mapathons]]></title>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Mapathon/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/Mapathon</id>
+  <published>2016-07-09T00:00:00-07:00</published>
+  <updated>2016-07-09T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;h3 id=&quot;getting-started---before-the-mapathon&quot;&gt;Getting Started - Before the Mapathon&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Missing Maps checklists are really good for the planners! It even gets down to important things easy to forget, like extension cords and power strips.&lt;/li&gt;
+  &lt;li&gt;Recommend people bring a mouse/trackball to the session. The Red Cross may want to have a bag of cheap USB mice to lend. (Who thinks of taking a mouse any more.)&lt;/li&gt;
+  &lt;li&gt;Have people sign up&lt;sup&gt;1&lt;/sup&gt; to OSM before they come. Use the standard OSM signon page. See my &lt;a href=&quot;http://www.openstreetmap.org/user/Glassman/diary/36237&quot;&gt;diary entry&lt;/a&gt; for the signup process. It’s something that needs improving, but that’s a long term project.&lt;/li&gt;
+  &lt;li&gt;Again, before they come to the event, suggest that they go add a restaurant, playground, park bench, etc. in their neighborhood.&lt;/li&gt;
+  &lt;li&gt;Task selection: Opened up to the public as late as possible. Enthusiastic editors unrelated to the mapathon can be busily completing multiple squares before the event.&lt;/li&gt;
+  &lt;li&gt;Task selection: Also, having a beginner backup task available is a good idea.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;beginning-of-mapathon&quot;&gt;Beginning of Mapathon&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Explain Missing Maps and the relationship with OpenStreetMap. We’d really appreciate it if people went away knowing that OSM isn’t just for the developing countries.&lt;/li&gt;
+  &lt;li&gt;Explain the task. People will be more diligent if they understand how it impacts others.&lt;/li&gt;
+  &lt;li&gt;Most likely the group will need to be split when they arrive. Those who edited and those who didn’t. Get the ones who’ve done an edit into Tasking Manager. Have the others do the sign up and make an edit. We’ve had pretty good luck getting people to install JOSM prior to training classes which is actually more involved than the sign up and walk through steps.&lt;/li&gt;
+  &lt;li&gt;The 1-2-3-4 MM instruction sheet also looks great for the new mapper. Focusing on it allows mappers  to go at their own pace during the event, and sending it home with them can really maintain their confidence/retention.&lt;/li&gt;
+  &lt;li&gt;Considering using the built-in tutorial to iD for big groups. it’s simple, and hands-on.&lt;/li&gt;
+  &lt;li&gt;Keeping it simple. Just getting the 1-2-3-4 basics down, and repeating them, is good enough. The temptation is to provide too much information/editing shortcuts too soon. For an editor on their first day, it’s too much.&lt;/li&gt;
+  &lt;li&gt;Task selection: Small squares (or instruct the mappers to split their squares). Being able to mark squares as ‘done’ is important.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tasks&quot;&gt;Tasks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Explain tasking manager and get people started on a task. If everyone is doing the same task, explain what they are working on, what they are expected to map and the appropriate tags. Actually do some editing. Cover concepts like orthogonalize (squaring) buildings.  (David Bittner’s CUGOS BWCA talk on modifying iD should be considered for specialized tasks)&lt;/li&gt;
+  &lt;li&gt;Task creation: Hopefully tasks requiring only drawing buildings. Even if roads need to be drawn, perhaps saving them for another task/pass at the area. Road priorities may be a little difficult to learn off the bat, and it’s really easy for conflicts to occur when people are mapping roads in adjacent squares.&lt;/li&gt;
+  &lt;li&gt;Reminding people to Save Often (perhaps having a timer, and having everyone save when it goes off?). This wouldn’t be vital, but could add to the fun, and there’s nothing worse than losing your work!&lt;/li&gt;
+  &lt;li&gt;After people have been editing for a while, take a break and explain more editing concepts&lt;sup&gt;2&lt;/sup&gt;. (Make sure to have them commit their changes first.)&lt;/li&gt;
+  &lt;li&gt;Remembering that Tasking Manager tasks timeout after two hours! If your mapathon is longer than that, you could end up with multiple people working on the same square.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;follow-up&quot;&gt;Follow Up&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Having a couple of really good, memorable before/after maps for visual aids for impact.&lt;/li&gt;
+  &lt;li&gt;Follow up contact. Again, keeping the number of emails limited and very simple, but maybe providing the before/after map for the area which shows the result of the work.&lt;/li&gt;
+  &lt;li&gt;Include links to the Tasking Manager, LearnOSM, where to go for help, etc.&lt;/li&gt;
+  &lt;li&gt;It would be good to develop a participant’s survey to better understand how well we are doing and where we need to improve.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Having people sign up and do the first edit locally can give them more confidence. They are the experts when mapping in their own neighborhood.&lt;/li&gt;
+  &lt;li&gt;The concept of adding more instruction after people have gotten started is how we taught glassblowing. We’d spend the first 15 to 30 minutes talking safety then have people actually gather glass from the furnace. (Sounds easy, but when you open the furnace door and feel the heat of a 2000° pot of glass all you can think of is how to get away!) Once they have become comfortable they we introduce new concepts. Not only is it safer, but it’s more fun because you doing something right away. The same can apply to mapping.&lt;/li&gt;
+&lt;/ol&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Mapathon/&quot;&gt;Running Missing Maps Mapathons&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on July 09, 2016.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Open GIS Data in Washington Counties]]></title>
+  <link rel="alternate" type="text/html" href="http://osm_seattle.snowandsnow.us/articles/Washington-Counties-with-Open-GIS-Data/" />
+  <id>http://osm_seattle.snowandsnow.us/articles/Washington-Counties-with-Open-GIS-Data</id>
+  <published>2015-12-01T00:00:00-08:00</published>
+  <updated>2015-12-01T00:00:00-08:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://osm_seattle.snowandsnow.us</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;p&gt;Martijn van Exel’s &lt;a href=&quot;http://www.openstreetmap.org/user/mvexel/diary/35966&quot;&gt;Missing Roads&lt;/a&gt; JOSM
+plugin uses gps tracks to identify missing roads in OpenStreetMap. Some of the tracks are from
+trucks working in farm fields. Others are from missing service roads. And some are new construction.
+If the construction is recent, the TIGER missing roads layer doesn’t help. I’ve found looking at
+the Counties road centerline data the best way to not only accurately add the new way but also give it the right name.&lt;/p&gt;
+
+&lt;p&gt;I set about creating a table with all 39 Washington State counties with the counties gis website and
+if there was gis data available. A typical duckduckgo.com search was &lt;em&gt;skagit county wa gis&lt;/em&gt;. I noted
+if there was any GIS information available. For Whatcom County, I knew that the City of Bellingham 
+had most of the counties data.&lt;/p&gt;
+
+&lt;p&gt;I hope to add a link to the licensing page for each county. Stay tuned for future updates.&lt;/p&gt;
+
+&lt;p&gt;Graphically this is the results of my inquiry. Click on the image to open to the interactive webmap. 
+&lt;a href=&quot;http://cdb.io/1jwgzRB&quot;&gt;&lt;img src=&quot;/assets/opendata.png&quot; alt=&quot;Open Data&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/Washington-Counties-with-Open-GIS-Data/&quot;&gt;Open GIS Data in Washington Counties&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on December 01, 2015.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -28,52 +123,76 @@
   <content type="html">&lt;p&gt;Recently I posted a request for help with my OSM presentation at the &lt;a href=&quot;http://linuxfestnorthwest.org/2015&quot;&gt;Linuxfest Northwest&lt;/a&gt; in Bellingham. Here is what I learned.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-do-you-enjoy-most-about-openstreetmap&quot;&gt;What do you enjoy most about OpenStreetMap?&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Ian McWen - “I love most being able to do things and add things at broader or more
+
+&lt;p&gt;Ian McWen “I love most being able to do things and add things at broader or more
 specific scales and see the fruits of my work almost immediately – both
 the breadth of possible participation and the quick feedback loop.”&lt;/p&gt;
-&lt;/blockquote&gt;
+
+&lt;p&gt;Mark Bradley “That you can contribute as much or as little to the map as you want, anywhere you want, but always making the map better for everyone!”&lt;/p&gt;
+
+&lt;p&gt;David Wisbey “I am a volunteer mapper. I enjoy contributing a lot of new
+data and fixing/deleting existing data with errors. I especially
+like bringing small towns and certain special parts of cities “alive”
+(often areas are very poorly mapped; when I’m done with them,
+it’s amazing)”&lt;/p&gt;
 
 &lt;h3 id=&quot;what-about-osm-surprised-you-most&quot;&gt;What about OSM surprised you most?&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Richard Weait - “The amazing diversity in the interests of new contributors.  I meet
+
+&lt;p&gt;Richard Weait “The amazing diversity in the interests of new contributors.  I meet
 new OpenStreetMap contributors every month, and the interest that
 brings them in to meet us differ widely.”&lt;/p&gt;
-&lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Ian McEwen - “This is nerdy, but I guess you’re talking to a linuxfest audience
+&lt;p&gt;Ian McEwen “This is nerdy, but I guess you’re talking to a linuxfest audience
 anyway: the data model. My Day Job (TM) is working on another open-data
 project (MusicBrainz, if you’re curious) and I was impressed and
 surprised how much OSM does with three basic objects that contain each
 other, free-text key-value fields, and a single derivation step (from
-raw data to a map, or to a route, or to whatever else).”
-### What do you tell people when they ask you why you map?
-Ian McEwen - “Because I use it! OSM is my go-to map for seeing things anywhere in the
+raw data to a map, or to a route, or to whatever else).”&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mark Bradley “That it is such a comprehensive map!  Millions of people making a volunteer map of the whole world!”&lt;/p&gt;
+
+&lt;p&gt;David Wisbey “How colorful the rendering is (compared to Google Maps and even Mapquest).”&lt;/p&gt;
+
+&lt;h3 id=&quot;what-do-you-tell-people-when-they-ask-you-why-you-map&quot;&gt;What do you tell people when they ask you why you map?&lt;/h3&gt;
+
+&lt;p&gt;Ian McEwen “Because I use it! OSM is my go-to map for seeing things anywhere in the
 real world, from OsmAnd and its offline maps on my phone, to looking up
 addresses with the search/Nominatim, to figuring out routes with OsmAnd
 or manually, to the very specific task of figuring out ranges for
 portals for playing Google’s augmented-reality game Ingress.
 Secondarily, though, the reason I use it is because I believe in the
 value of open data both to serve needs that corporate establishments
-cannot or will not and to ensure growth and provider-independence.”
-Mike Thompson - “Mapping in OSM is a form of free expression (really a broad form of free speech), just like blogging, editing a Wikipedia article, or creating a video.  In the past editors a publishers decided what got mapped, now - with OpenStreetMap - we can decide.”
-### What is should I absolutely not leave out of the presentation? 
-Richard Weait &lt;br /&gt;1. “Go outside and survey your neighbourhood. There is nothing better
+cannot or will not and to ensure growth and provider-independence.”&lt;/p&gt;
+
+&lt;p&gt;David Wisbey “It’s a way to continue doing the kind of work I used to do in a real, paid job,
+but is still rewarding to me, especially two years ago when I won a scholarship
+to State of the Map-US in San Francisco.
+“&lt;/p&gt;
+
+&lt;p&gt;Mike Thompson “Mapping in OSM is a form of free expression (really a broad form of free speech), just like blogging, editing a Wikipedia article, or creating a video.  In the past editors a publishers decided what got mapped, now - with OpenStreetMap - we can decide.” &lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-should-i-absolutely-not-leave-out-of-the-presentation&quot;&gt;What is should I absolutely not leave out of the presentation?&lt;/h3&gt;
+
+&lt;p&gt;Richard Weait &lt;br /&gt;1. “Go outside and survey your neighbourhood. There is nothing better
 that you can do for OpenStreetMap, than behave as though you are
 tending a shared garden.”
 &lt;br /&gt;2. Time for questions.  I have trouble with this because I like to talk. :-)
 &lt;br /&gt;3. “It’s Fun. It’s Free. You can help.”  One of the earliest tag lines
-used in the project.  True then. true now.
-Ian McEwen - “I doubt you would leave this out, but a call to action and a bit of a
+used in the project.  True then. true now.&lt;/p&gt;
+
+&lt;p&gt;Ian McEwen “I doubt you would leave this out, but a call to action and a bit of a
 demonstration: as I mention, I really love the quick feedback loop of
 editing OSM, and I think an in-presentation “open
 iD/potlatch/josm/whatever, make changes, go to the page and see, look!
 it’s there now!” would be the best way to demonstrate exactly how nice
 that is, and obviously also asking people to do the same for the parts
-of the world they know and frequent is the whole goal!”
-Mike Thompson - “The &lt;em&gt;big problem&lt;/em&gt; that OSM solves. For a Linux audience this shouldn’t be difficult, but I would still state that most other map sources are not truly “free” - and say a little bit about why that is a problem.  “&lt;/p&gt;
-&lt;/blockquote&gt;
+of the world they know and frequent is the whole goal!”&lt;/p&gt;
+
+&lt;p&gt;Mike Thompson  “The &lt;em&gt;big problem&lt;/em&gt; that OSM solves. For a Linux audience this shouldn’t be difficult, but I would still state that most other map sources are not truly “free” - and say a little bit about why that is a problem.  “&lt;/p&gt;
+
+&lt;p&gt;Mark Bradley “There are recommended practices on how to map almost everything.  Read the wiki about the features you intend to map before proceeding.”&lt;/p&gt;
+
+&lt;p&gt;David Wisbey “How enjoyable and rewarding it can be to contribute to Openstreetmap.”&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://osm_seattle.snowandsnow.us/articles/LinuxfestNW/&quot;&gt;Why OpenStreetMap&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://osm_seattle.snowandsnow.us&quot;&gt;OSM Seattle&lt;/a&gt; on April 20, 2015.&lt;/p&gt;</content>
 </entry>
@@ -5391,7 +5510,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
@@ -5406,7 +5525,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;down&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;skeleton&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;quadtile&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.&lt;/p&gt;
 
@@ -5434,7 +5553,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;json&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;900&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1073741824&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;area&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
@@ -5449,7 +5568,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;down&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;skeleton&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;quadtile&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.&lt;/p&gt;
 
