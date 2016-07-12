@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2016-07-10T15:05:45-07:00</updated>
+<updated>2016-07-11T19:15:52-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -51,7 +51,7 @@
 &lt;h3 id=&quot;tasks&quot;&gt;Tasks&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Explain tasking manager and get people started on a task. If everyone is doing the same task, explain what they are working on, what they are expected to map and the appropriate tags. Actually do some editing. Cover concepts like orthogonalize (squaring) buildings.  (David Bittner’s CUGOS BWCA talk on modifying iD should be considered for specialized tasks)&lt;/li&gt;
+  &lt;li&gt;Explain tasking manager and get people started on a task. If everyone is doing the same task, explain what they are working on, what they are expected to map and the appropriate tags. Actually do some editing. Cover concepts like orthogonalize (squaring) buildings. Mapbos has a &lt;a href=&quot;https://www.mapbox.com/blog/customizing-id/&quot;&gt;blog&lt;/a&gt; post about customizing id that for specialized use.&lt;/li&gt;
   &lt;li&gt;Task creation: Hopefully tasks requiring only drawing buildings. Even if roads need to be drawn, perhaps saving them for another task/pass at the area. Road priorities may be a little difficult to learn off the bat, and it’s really easy for conflicts to occur when people are mapping roads in adjacent squares.&lt;/li&gt;
   &lt;li&gt;Reminding people to Save Often (perhaps having a timer, and having everyone save when it goes off?). This wouldn’t be vital, but could add to the fun, and there’s nothing worse than losing your work!&lt;/li&gt;
   &lt;li&gt;After people have been editing for a while, take a break and explain more editing concepts&lt;sup&gt;2&lt;/sup&gt;. (Make sure to have them commit their changes first.)&lt;/li&gt;
