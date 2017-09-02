@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<osm version="0.6" upload="false" generator="uvmogr2osm">
+<node id="-2" lat="27.708220544" lon="-97.354264867" visible="true"/>
+<node id="-3" lat="27.708094558" lon="-97.354242248" visible="true"/>
+<node id="-4" lat="27.708064659" lon="-97.354452487" visible="true"/>
+<node id="-5" lat="27.708190645" lon="-97.354475106" visible="true"/>
+<node id="-7" lat="27.708065293" lon="-97.354808071" visible="true"/>
+<node id="-8" lat="27.708102049" lon="-97.354779327" visible="true"/>
+<node id="-9" lat="27.708074254" lon="-97.354735666" visible="true"/>
+<node id="-10" lat="27.708111179" lon="-97.354706776" visible="true"/>
+<node id="-11" lat="27.708054671" lon="-97.354618811" visible="true"/>
+<node id="-12" lat="27.707983545" lon="-97.354673547" visible="true"/>
+<node id="-13" lat="27.707956346" lon="-97.354630715" visible="true"/>
+<node id="-14" lat="27.707777124" lon="-97.354769119" visible="true"/>
+<node id="-15" lat="27.707805065" lon="-97.354813074" visible="true"/>
+<node id="-16" lat="27.707767992" lon="-97.354842093" visible="true"/>
+<node id="-17" lat="27.707824409" lon="-97.354930112" visible="true"/>
+<node id="-18" lat="27.707859343" lon="-97.354902837" visible="true"/>
+<node id="-19" lat="27.707877259" lon="-97.354930651" visible="true"/>
+<node id="-20" lat="27.707857871" lon="-97.354945735" visible="true"/>
+<node id="-21" lat="27.707948599" lon="-97.355089289" visible="true"/>
+<node id="-22" lat="27.708148409" lon="-97.354939582" visible="true"/>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="11.8200000000"/></way>
+<way id="-6" visible="true"><nd ref="-7"/><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-14"/><nd ref="-15"/><nd ref="-16"/><nd ref="-17"/><nd ref="-18"/><nd ref="-19"/><nd ref="-20"/><nd ref="-21"/><nd ref="-22"/><nd ref="-7"/><tag k="building" v="yes"/><tag k="height" v="16.2600000000"/></way>
+</osm>

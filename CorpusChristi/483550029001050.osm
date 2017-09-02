@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<osm version="0.6" upload="false" generator="uvmogr2osm">
+<node id="-2" lat="27.695324912" lon="-97.273294901" visible="true"/>
+<node id="-3" lat="27.695193903" lon="-97.27334181" visible="true"/>
+<node id="-4" lat="27.695265031" lon="-97.273592538" visible="true"/>
+<node id="-5" lat="27.695396041" lon="-97.273545629" visible="true"/>
+<node id="-7" lat="27.695385333" lon="-97.274000958" visible="true"/>
+<node id="-8" lat="27.695365071" lon="-97.273937736" visible="true"/>
+<node id="-9" lat="27.695290682" lon="-97.273967828" visible="true"/>
+<node id="-10" lat="27.695310945" lon="-97.27403105" visible="true"/>
+<node id="-12" lat="27.694964808" lon="-97.273939743" visible="true"/>
+<node id="-13" lat="27.695000453" lon="-97.27405736" visible="true"/>
+<node id="-14" lat="27.695107017" lon="-97.274016599" visible="true"/>
+<node id="-15" lat="27.695071372" lon="-97.273898982" visible="true"/>
+<node id="-17" lat="27.694788627" lon="-97.273738631" visible="true"/>
+<node id="-18" lat="27.694664652" lon="-97.273740583" visible="true"/>
+<node id="-19" lat="27.694670919" lon="-97.274243291" visible="true"/>
+<node id="-20" lat="27.694794894" lon="-97.274241339" visible="true"/>
+<node id="-22" lat="27.695543936" lon="-97.274281033" visible="true"/>
+<node id="-23" lat="27.695511846" lon="-97.274293308" visible="true"/>
+<node id="-24" lat="27.695567106" lon="-97.274475651" visible="true"/>
+<node id="-25" lat="27.695599196" lon="-97.274463376" visible="true"/>
+<node id="-27" lat="27.695525945" lon="-97.274378754" visible="true"/>
+<node id="-28" lat="27.695478445" lon="-97.274224287" visible="true"/>
+<node id="-29" lat="27.695206821" lon="-97.274322548" visible="true"/>
+<node id="-30" lat="27.695254321" lon="-97.274477016" visible="true"/>
+<node id="-32" lat="27.695434553" lon="-97.273906258" visible="true"/>
+<node id="-33" lat="27.695389274" lon="-97.27374784" visible="true"/>
+<node id="-34" lat="27.695120718" lon="-97.273844723" visible="true"/>
+<node id="-35" lat="27.695165997" lon="-97.274003141" visible="true"/>
+<node id="-37" lat="27.694699199" lon="-97.273519287" visible="true"/>
+<node id="-38" lat="27.695055524" lon="-97.273517319" visible="true"/>
+<node id="-39" lat="27.695055524" lon="-97.273398489" visible="true"/>
+<node id="-40" lat="27.694835843" lon="-97.273401171" visible="true"/>
+<node id="-41" lat="27.694833469" lon="-97.273099422" visible="true"/>
+<node id="-42" lat="27.695183059" lon="-97.273098455" visible="true"/>
+<node id="-43" lat="27.695182582" lon="-97.272988111" visible="true"/>
+<node id="-44" lat="27.69469691" lon="-97.272990793" visible="true"/>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="13.4200000000"/></way>
+<way id="-6" visible="true"><nd ref="-7"/><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-7"/><tag k="building" v="yes"/><tag k="height" v="8.5600000000"/></way>
+<way id="-11" visible="true"><nd ref="-12"/><nd ref="-13"/><nd ref="-14"/><nd ref="-15"/><nd ref="-12"/><tag k="building" v="yes"/><tag k="height" v="12.5100000000"/></way>
+<way id="-16" visible="true"><nd ref="-17"/><nd ref="-18"/><nd ref="-19"/><nd ref="-20"/><nd ref="-17"/><tag k="building" v="yes"/><tag k="height" v="16.3900000000"/></way>
+<way id="-21" visible="true"><nd ref="-22"/><nd ref="-23"/><nd ref="-24"/><nd ref="-25"/><nd ref="-22"/><tag k="building" v="yes"/><tag k="height" v="8.5700000000"/></way>
+<way id="-26" visible="true"><nd ref="-27"/><nd ref="-28"/><nd ref="-29"/><nd ref="-30"/><nd ref="-27"/><tag k="building" v="yes"/><tag k="height" v="14.0300000000"/></way>
+<way id="-31" visible="true"><nd ref="-32"/><nd ref="-33"/><nd ref="-34"/><nd ref="-35"/><nd ref="-32"/><tag k="building" v="yes"/><tag k="height" v="16.6400000000"/></way>
+<way id="-36" visible="true"><nd ref="-37"/><nd ref="-38"/><nd ref="-39"/><nd ref="-40"/><nd ref="-41"/><nd ref="-42"/><nd ref="-43"/><nd ref="-44"/><nd ref="-37"/><tag k="building" v="yes"/><tag k="height" v="12.7300000000"/></way>
+</osm>

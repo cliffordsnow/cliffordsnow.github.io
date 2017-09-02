@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<osm version="0.6" upload="false" generator="uvmogr2osm">
+<node id="-2" lat="27.793728433" lon="-97.396728014" visible="true"/>
+<node id="-3" lat="27.79372479" lon="-97.396619109" visible="true"/>
+<node id="-4" lat="27.793580366" lon="-97.396625217" visible="true"/>
+<node id="-5" lat="27.793584009" lon="-97.396734122" visible="true"/>
+<node id="-6" lat="27.79363215" lon="-97.396732086" visible="true"/>
+<node id="-7" lat="27.793635793" lon="-97.396840991" visible="true"/>
+<node id="-8" lat="27.793683934" lon="-97.396838955" visible="true"/>
+<node id="-9" lat="27.793680292" lon="-97.39673005" visible="true"/>
+<node id="-11" lat="27.793499699" lon="-97.396885988" visible="true"/>
+<node id="-12" lat="27.793497563" lon="-97.396849292" visible="true"/>
+<node id="-13" lat="27.793477979" lon="-97.396848062" visible="true"/>
+<node id="-14" lat="27.793464344" lon="-97.396542443" visible="true"/>
+<node id="-15" lat="27.793250652" lon="-97.396553019" visible="true"/>
+<node id="-16" lat="27.793267404" lon="-97.397025995" visible="true"/>
+<node id="-17" lat="27.793115191" lon="-97.397033135" visible="true"/>
+<node id="-18" lat="27.793122664" lon="-97.397213745" visible="true"/>
+<node id="-19" lat="27.793076553" lon="-97.397215525" visible="true"/>
+<node id="-20" lat="27.793089445" lon="-97.397471623" visible="true"/>
+<node id="-21" lat="27.793816687" lon="-97.397438148" visible="true"/>
+<node id="-22" lat="27.793791786" lon="-97.396872869" visible="true"/>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-7"/><nd ref="-8"/><nd ref="-9"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="15.0700000000"/></way>
+<way id="-10" visible="true"><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-14"/><nd ref="-15"/><nd ref="-16"/><nd ref="-17"/><nd ref="-18"/><nd ref="-19"/><nd ref="-20"/><nd ref="-21"/><nd ref="-22"/><nd ref="-11"/><tag k="building" v="yes"/><tag k="height" v="49.7900000000"/></way>
+</osm>

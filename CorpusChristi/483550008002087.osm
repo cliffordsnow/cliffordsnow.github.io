@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<osm version="0.6" upload="false" generator="uvmogr2osm">
+<node id="-2" lat="27.787771976" lon="-97.463718457" visible="true"/>
+<node id="-3" lat="27.787579959" lon="-97.463718457" visible="true"/>
+<node id="-4" lat="27.787579666" lon="-97.463784861" visible="true"/>
+<node id="-5" lat="27.787771684" lon="-97.46378593" visible="true"/>
+<node id="-7" lat="27.787204809" lon="-97.463159856" visible="true"/>
+<node id="-8" lat="27.787203957" lon="-97.463354466" visible="true"/>
+<node id="-9" lat="27.787373256" lon="-97.463354466" visible="true"/>
+<node id="-10" lat="27.787374108" lon="-97.463160797" visible="true"/>
+<node id="-12" lat="27.786613075" lon="-97.462906691" visible="true"/>
+<node id="-13" lat="27.78641873" lon="-97.462909487" visible="true"/>
+<node id="-14" lat="27.786418571" lon="-97.463032113" visible="true"/>
+<node id="-15" lat="27.786471723" lon="-97.463032868" visible="true"/>
+<node id="-16" lat="27.786470775" lon="-97.463346049" visible="true"/>
+<node id="-17" lat="27.786869884" lon="-97.463346687" visible="true"/>
+<node id="-18" lat="27.786871799" lon="-97.462968728" visible="true"/>
+<node id="-19" lat="27.786612435" lon="-97.462968495" visible="true"/>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="8.6700000000"/></way>
+<way id="-6" visible="true"><nd ref="-7"/><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-7"/><tag k="building" v="yes"/><tag k="height" v="13.6100000000"/></way>
+<way id="-11" visible="true"><nd ref="-12"/><nd ref="-13"/><nd ref="-14"/><nd ref="-15"/><nd ref="-16"/><nd ref="-17"/><nd ref="-18"/><nd ref="-19"/><nd ref="-12"/><tag k="building" v="yes"/><tag k="height" v="12.5100000000"/></way>
+</osm>

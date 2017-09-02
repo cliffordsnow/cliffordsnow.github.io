@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<osm version="0.6" upload="false" generator="uvmogr2osm">
+<node id="-2" lat="27.768225951" lon="-97.431867135" visible="true"/>
+<node id="-3" lat="27.768225951" lon="-97.431956932" visible="true"/>
+<node id="-4" lat="27.768537155" lon="-97.43195559" visible="true"/>
+<node id="-5" lat="27.768536856" lon="-97.431867135" visible="true"/>
+<node id="-7" lat="27.768554323" lon="-97.431628909" visible="true"/>
+<node id="-8" lat="27.768538587" lon="-97.431534804" visible="true"/>
+<node id="-9" lat="27.768274048" lon="-97.431583268" visible="true"/>
+<node id="-10" lat="27.768290044" lon="-97.431679593" visible="true"/>
+<node id="-12" lat="27.768514848" lon="-97.43169845" visible="true"/>
+<node id="-13" lat="27.768431666" lon="-97.431697328" visible="true"/>
+<node id="-14" lat="27.768430707" lon="-97.431793339" visible="true"/>
+<node id="-15" lat="27.768389116" lon="-97.431792778" visible="true"/>
+<node id="-16" lat="27.768388636" lon="-97.431840783" visible="true"/>
+<node id="-17" lat="27.76851341" lon="-97.431842467" visible="true"/>
+<node id="-19" lat="27.768066715" lon="-97.431885888" visible="true"/>
+<node id="-20" lat="27.768017055" lon="-97.431800164" visible="true"/>
+<node id="-21" lat="27.76792224" lon="-97.431869582" visible="true"/>
+<node id="-22" lat="27.767971901" lon="-97.431955307" visible="true"/>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="8.9900000000"/></way>
+<way id="-6" visible="true"><nd ref="-7"/><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-7"/><tag k="building" v="yes"/><tag k="height" v="10.9000000000"/></way>
+<way id="-11" visible="true"><nd ref="-12"/><nd ref="-13"/><nd ref="-14"/><nd ref="-15"/><nd ref="-16"/><nd ref="-17"/><nd ref="-12"/><tag k="building" v="yes"/><tag k="height" v="9.2000000000"/></way>
+<way id="-18" visible="true"><nd ref="-19"/><nd ref="-20"/><nd ref="-21"/><nd ref="-22"/><nd ref="-19"/><tag k="building" v="yes"/><tag k="height" v="10.0200000000"/></way>
+</osm>
