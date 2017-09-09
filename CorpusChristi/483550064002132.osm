@@ -29,9 +29,9 @@
 <node id="-32" lat="27.796860749" lon="-97.40150703" visible="true"/>
 <node id="-33" lat="27.796726473" lon="-97.401514271" visible="true"/>
 <node id="-34" lat="27.796729739" lon="-97.401590833" visible="true"/>
-<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-7"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="16.1500000000"/></way>
-<way id="-8" visible="true"><nd ref="-3"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-5"/><nd ref="-4"/><nd ref="-3"/><tag k="building" v="yes"/><tag k="height" v="16.1000000000"/></way>
-<way id="-14" visible="true"><nd ref="-15"/><nd ref="-16"/><nd ref="-17"/><nd ref="-18"/><nd ref="-19"/><nd ref="-20"/><nd ref="-15"/><tag k="building" v="yes"/><tag k="height" v="10.3500000000"/></way>
-<way id="-21" visible="true"><nd ref="-22"/><nd ref="-23"/><nd ref="-24"/><nd ref="-25"/><nd ref="-26"/><nd ref="-27"/><nd ref="-28"/><nd ref="-29"/><nd ref="-22"/><tag k="building" v="yes"/><tag k="height" v="10.7200000000"/></way>
-<way id="-30" visible="true"><nd ref="-31"/><nd ref="-32"/><nd ref="-33"/><nd ref="-34"/><nd ref="-31"/><tag k="building" v="yes"/><tag k="height" v="9.4000000000"/></way>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-7"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="16.15"/></way>
+<way id="-8" visible="true"><nd ref="-3"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-5"/><nd ref="-4"/><nd ref="-3"/><tag k="building" v="yes"/><tag k="height" v="16.1"/></way>
+<way id="-14" visible="true"><nd ref="-15"/><nd ref="-16"/><nd ref="-17"/><nd ref="-18"/><nd ref="-19"/><nd ref="-20"/><nd ref="-15"/><tag k="building" v="yes"/><tag k="height" v="10.35"/></way>
+<way id="-21" visible="true"><nd ref="-22"/><nd ref="-23"/><nd ref="-24"/><nd ref="-25"/><nd ref="-26"/><nd ref="-27"/><nd ref="-28"/><nd ref="-29"/><nd ref="-22"/><tag k="building" v="yes"/><tag k="height" v="10.72"/></way>
+<way id="-30" visible="true"><nd ref="-31"/><nd ref="-32"/><nd ref="-33"/><nd ref="-34"/><nd ref="-31"/><tag k="building" v="yes"/><tag k="height" v="9.4"/></way>
 </osm>

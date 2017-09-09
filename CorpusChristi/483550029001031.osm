@@ -9,6 +9,6 @@
 <node id="-9" lat="27.698630291" lon="-97.278499153" visible="true"/>
 <node id="-10" lat="27.698808404" lon="-97.279109822" visible="true"/>
 <node id="-11" lat="27.700063518" lon="-97.278646231" visible="true"/>
-<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="20.6800000000"/></way>
-<way id="-6" visible="true"><nd ref="-7"/><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-7"/><tag k="building" v="yes"/><tag k="height" v="9.8000000000"/></way>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="20.68"/></way>
+<way id="-6" visible="true"><nd ref="-7"/><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-7"/><tag k="building" v="yes"/><tag k="height" v="9.8"/></way>
 </osm>

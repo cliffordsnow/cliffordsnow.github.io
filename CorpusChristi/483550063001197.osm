@@ -4,5 +4,5 @@
 <node id="-3" lat="27.816761937" lon="-97.391963022" visible="true"/>
 <node id="-4" lat="27.816835118" lon="-97.392090982" visible="true"/>
 <node id="-5" lat="27.816938893" lon="-97.392015904" visible="true"/>
-<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="11.8000000000"/></way>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="11.8"/></way>
 </osm>

@@ -13,6 +13,6 @@
 <node id="-13" lat="27.687302868" lon="-97.322597193" visible="true"/>
 <node id="-14" lat="27.687421825" lon="-97.32275212" visible="true"/>
 <node id="-15" lat="27.687507276" lon="-97.322669321" visible="true"/>
-<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-7"/><nd ref="-8"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="16.5600000000"/></way>
-<way id="-9" visible="true"><nd ref="-10"/><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-14"/><nd ref="-15"/><nd ref="-10"/><tag k="building" v="yes"/><tag k="height" v="11.2700000000"/></way>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-7"/><nd ref="-8"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="16.56"/></way>
+<way id="-9" visible="true"><nd ref="-10"/><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-14"/><nd ref="-15"/><nd ref="-10"/><tag k="building" v="yes"/><tag k="height" v="11.27"/></way>
 </osm>

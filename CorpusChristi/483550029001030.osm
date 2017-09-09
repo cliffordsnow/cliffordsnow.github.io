@@ -10,5 +10,5 @@
 <node id="-11" lat="27.693375256" lon="-97.277720869" visible="true"/>
 <way id="-2" visible="true"><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-3"/></way>
 <way id="-7" visible="true"><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-8"/></way>
-<relation id="-1" visible="true"><member ref="-2" role="outer" type="way"/><member ref="-7" role="inner" type="way"/><tag k="type" v="multipolygon"/><tag k="building" v="yes"/><tag k="height" v="16.3500000000"/></relation>
+<relation id="-1" visible="true"><member ref="-2" role="outer" type="way"/><member ref="-7" role="inner" type="way"/><tag k="type" v="multipolygon"/><tag k="building" v="yes"/><tag k="height" v="16.35"/></relation>
 </osm>

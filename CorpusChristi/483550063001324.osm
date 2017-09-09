@@ -11,6 +11,6 @@
 <node id="-11" lat="27.806064118" lon="-97.398455776" visible="true"/>
 <node id="-12" lat="27.80629681" lon="-97.398452363" visible="true"/>
 <node id="-13" lat="27.806296674" lon="-97.398350411" visible="true"/>
-<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="14.7800000000"/></way>
-<way id="-7" visible="true"><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-8"/><tag k="building" v="yes"/><tag k="height" v="9.9700000000"/></way>
+<way id="-1" visible="true"><nd ref="-2"/><nd ref="-3"/><nd ref="-4"/><nd ref="-5"/><nd ref="-6"/><nd ref="-2"/><tag k="building" v="yes"/><tag k="height" v="14.78"/></way>
+<way id="-7" visible="true"><nd ref="-8"/><nd ref="-9"/><nd ref="-10"/><nd ref="-11"/><nd ref="-12"/><nd ref="-13"/><nd ref="-8"/><tag k="building" v="yes"/><tag k="height" v="9.97"/></way>
 </osm>
