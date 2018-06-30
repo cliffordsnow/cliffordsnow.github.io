@@ -12,23 +12,23 @@ image:
 
 ## Upgrading your existing unpartition table to declarative partition available in Postgresql 10
 
-All my existing tables were built with postgresql 9.6 and before. One of those tables is XM rows. With the recent upgrade to Postgresql 10.4, it seem like a good time to make the switch to partitions.
+All my existing tables were built with postgresql 9.6 and before. One of those tables is over 60M rows. With the recent upgrade to Postgresql 10.4, it seem like a good time to make the switch to partitions.
 
 Declarative partition is easier to set up than inheritance based partitioning available in Postgresql 9. Inheritance required creating a trigger that calls the trigger function with every insert of a record. When the child tables changed, the triggers needed to be updated. With Declaritive partitioning those steps go away.
 
 My large table is a set of edits going back to 2005. Breaking the main table into years seemed like a reasonable approach to keep the partition size efficient. The first few years are group into one child partition with the remaining years in individual partitions. It looks like:
 ```
 -edits
---edits_2010
---edits_2011
---edits_2012
---edits_2013
---edits_2014
---edits_2015
---edits_2016
---edits_2017
---edits_2018
---edits_2019
+-+edits_2010
+-+edits_2011
+-+edits_2012
+-+edits_2013
+-+edits_2014
+-+edits_2015
+-+edits_2016
+-+edits_2017
+-+edits_2018
+-+edits_2019
 ```
 ## What to watch for
 My table also included a trigger that updated another smaller table when data was being inserted. I learned that triggers have be applied to the child tables not the parent.
