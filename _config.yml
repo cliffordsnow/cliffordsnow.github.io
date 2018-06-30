@@ -10,15 +10,14 @@ enforce_ssl:       osm_seattle.snowandsnow.us
 owner:
   name:           Clifford Snow
   avatar:         bio-photo.jpg
-  bio:            "Clifford is described as an Addicted Mapper for the past five years since he started contributing to OSM in May 2011.
- He is a member of OSM's Membership Workgoup, hosts OpenStreetMap-Seattle Meetup Group along with Chase Stephens and helped with the importing of Seattle building
- outlines and addresses into OSM. His prior endeavors include glassblowing, managing an art center facility and telecom management."
+  bio:            "Clifford is described as an OpenStreetMap Supper Mapper. He started contributing to OSM in May 2011.
+ Hosts OpenStreetMap-Central-Salish-Sea Meetup Group located in Mount Vernon, WA.  He help organize the 2016 State of the Map US in Seattle.
+ His prior endeavors include glassblowing, managing an art center facility and telecom management."
   email:          clifford@snowandsnow.us
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:        osm_seattle
-  facebook:       cliffordsnow
   github:         cliffordsnow
-  linkedin:       
+  linkedin:       osmseattle
   # For Google Authorship https://plus.google.com/authorship
   google_plus:   https://plus.google.com/101103612980566933205
 

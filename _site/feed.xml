@@ -5,13 +5,237 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2016-07-11T19:15:52-07:00</updated>
+<updated>2018-06-30T09:37:18-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
   <uri>http://localhost:4000/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Declarative Partition Postgresql 10]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Partitioning-Postgresql/" />
+  <id>http://localhost:4000/articles/Partitioning-Postgresql</id>
+  <published>2018-06-29T00:00:00-07:00</published>
+  <updated>2018-06-29T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://localhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;upgrading-your-existing-unpartition-table-to-declarative-partition-available-in-postgresql-10&quot;&gt;Upgrading your existing unpartition table to declarative partition available in Postgresql 10&lt;/h2&gt;
+
+&lt;p&gt;All my existing tables were built with postgresql 9.6 and before. One of those tables is XM rows. With the recent upgrade to Postgresql 10.4, it seem like a good time to make the switch to partitions.&lt;/p&gt;
+
+&lt;p&gt;Declarative partition is easier to set up than inheritance based partitioning available in Postgresql 9. Inheritance required creating a trigger that calls the trigger function with every insert of a record. When the child tables changed, the triggers needed to be updated. With Declaritive partitioning those steps go away.&lt;/p&gt;
+
+&lt;p&gt;My large table is a set of edits going back to 2005. Breaking the main table into years seemed like a reasonable approach to keep the partition size efficient. The first few years are group into one child partition with the remaining years in individual partitions. It looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-edits
+--edits_2010
+--edits_2011
+--edits_2012
+--edits_2013
+--edits_2014
+--edits_2015
+--edits_2016
+--edits_2017
+--edits_2018
+--edits_2019
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;what-to-watch-for&quot;&gt;What to watch for&lt;/h2&gt;
+&lt;p&gt;My table also included a trigger that updated another smaller table when data was being inserted. I learned that triggers have be applied to the child tables not the parent.&lt;/p&gt;
+
+&lt;p&gt;The parent table can not contain a primary key.&lt;/p&gt;
+
+&lt;h2 id=&quot;steps-to-move-to-declarative-partitioning&quot;&gt;Steps to move to declarative partitioning&lt;/h2&gt;
+
+&lt;h3 id=&quot;backup-your-table&quot;&gt;Backup your table&lt;/h3&gt;
+&lt;p&gt;Backup the database. Seem obvious, but my guess is you don’t want to rebuild your tables.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-new-parentchild-structure&quot;&gt;Create new parent/child Structure&lt;/h3&gt;
+&lt;p&gt;Create your new parent table and all of your child tables. I used a dummy name for the parent. I’ll change it once I copy the data to the new table. That way any scripts needing the original table will still work.  Below is a sample script that creates the parent table, the child tables and all of the index and triggers that update another table as data is inserted.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TABLE edit_1
+(
+  id bigint NOT NULL,
+  user_id bigint,
+  created timestamp without time zone,
+  closed timestamp without time zone,
+  user_name character varying(255),
+  geom geometry(Polygon,4326)
+) PARTITION BY RANGE(created);
+
+CREATE TABLE edit_2010
+PARTITION of edit_1
+FOR VALUES FROM ('2005-04-09 19:54:12') TO ('2010-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2010 ON edit_2010(id);
+CREATE INDEX edit_user_id_2010 on edit_2010(user_id);
+
+CREATE TABLE edit_2011
+PARTITION of edit_1
+FOR VALUES FROM ('2011-01-01 00:00:00') TO ('2011-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2011 ON edit_2011(id);
+CREATE INDEX edit_user_id_2011 on edit_2011(user_id);
+
+CREATE TABLE edit_2012
+PARTITION of edit_1
+FOR VALUES FROM ('2012-01-01 00:00:00') TO ('2012-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2012 ON edit_2012(id);
+CREATE INDEX edit_user_id_2012 on edit_2012(user_id);
+
+CREATE TABLE edit_2013
+PARTITION of edit_1
+FOR VALUES FROM ('2013-01-01 00:00:00') TO ('2013-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2013 ON edit_2013(id);
+CREATE INDEX edit_user_id_2013 on edit_2013(user_id);
+
+CREATE TABLE edit_2014
+PARTITION of edit_1
+FOR VALUES FROM ('2014-01-01 00:00:00') TO ('2014-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2014 ON edit_2014(id);
+CREATE INDEX edit_user_id_2014 on edit_2014(user_id);
+
+CREATE TABLE edit_2015
+PARTITION of edit_1
+FOR VALUES FROM ('2015-01-01 00:00:00') TO ('2015-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2015 ON edit_2015(id);
+CREATE INDEX edit_user_id_2015 on edit_2015(user_id);
+
+CREATE TABLE edit_2016
+PARTITION of edit_1
+FOR VALUES FROM ('2016-01-01 00:00:00') TO ('2016-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2016 ON edit_2016(id);
+CREATE INDEX edit_user_id_2016 on edit_2016(user_id);
+
+CREATE TABLE edit_2017
+PARTITION of edit_1
+FOR VALUES FROM ('2017-01-01 00:00:00') TO ('2017-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2017 ON edit_2017(id);
+CREATE INDEX edit_user_id_2017 on edit_2017(user_id);
+
+CREATE TABLE edit_2018
+PARTITION of edit_1
+FOR VALUES FROM ('2018-01-01 00:00:00') TO ('2018-12-31 23:59:59.999');
+
+CREATE INDEX edit_id_2018 ON edit_2018(id);
+CREATE INDEX edit_user_id_2018 on edit_2018(user_id);
+
+CREATE TABLE edit_2019
+PARTITION of edit_1
+FOR VALUES FROM ('2019-01-01 00:00:00') TO ('2019-12-31 23:59:59.999');
+CREATE TRIGGER add_new_user_trigger
+  BEFORE INSERT ON edit_2019
+  FOR EACH ROW
+  EXECUTE PROCEDURE add_new_user();
+
+CREATE INDEX edit_id_2019 ON edit_2019(id);
+CREATE INDEX edit_user_id_2019 on edit_2019(user_id);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;add-existing-data-to-the-new-partitions&quot;&gt;Add existing data to the new partitions.&lt;/h3&gt;
+&lt;p&gt;I moved the data over directly to the child tables. You could move it to the parent table and let the declarative partitioning do its thing.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;INSERT INTO edit_2010(id,
+  user_id,
+  created,
+  closed,
+  user_name,
+  geom
+) SELECT * from edit where date_part('year',created) &amp;lt; 2011;
+
+
+INSERT INTO edit_2011(id,
+  user_id,
+  created,
+  closed,
+  user_name,
+  geom
+) SELECT * from edit where date_part('year',created) = 2011;
+... do the same for all of the years
+INSERT INTO edit_2018(id,
+  user_id,
+  creat,
+  closed,
+  user_name,
+  geom
+) SELECT * from edit where date_part('year',created) = 2018;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;add-the-trigger-to&quot;&gt;Add the trigger to&lt;/h3&gt;
+&lt;p&gt;Now that the data has been imported into the new child table, we can now turn our triggers back on.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TRIGGER add_new_user_trigger
+  BEFORE INSERT ON edit_2018
+  FOR EACH ROW
+  EXECUTE PROCEDURE add_new_user();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;rename-new-parent-table&quot;&gt;Rename new Parent table&lt;/h3&gt;
+&lt;p&gt;After verifying that the new parent/child structure is complete, it’s time to drop the original table and rename the new Parent.&lt;/p&gt;
+
+&lt;p&gt;For this step, I used PGAdmin4. PGAdmin4 gives a good visual layout of the new structure. When you rename the parent, all of the child tables will changed to the new parent table. &lt;img src=&quot;/assets/pgadmin4.jpg&quot; alt=&quot;PGAdmin4&quot; /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Partitioning-Postgresql/&quot;&gt;Declarative Partition Postgresql 10&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on June 29, 2018.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Creating a USFS Roads Background Layer for JOSM in Mapbox]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/USFS-Roads-Background-Layer-for-JOSM/" />
+  <id>http://localhost:4000/articles/USFS-Roads-Background-Layer-for-JOSM</id>
+  <published>2018-03-23T00:00:00-07:00</published>
+  <updated>2018-03-23T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://localhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;uploading-large-geojson-to-mapbox&quot;&gt;Uploading large geojson to Mapbox&lt;/h2&gt;
+&lt;h3 id=&quot;convert-to-mbtiles-with-tippecanoe&quot;&gt;convert to mbtiles with Tippecanoe&lt;/h3&gt;
+&lt;p&gt;tippecanoe -o usfs_roads.mbtiles usfs_roads.geojson&lt;/p&gt;
+&lt;h3 id=&quot;upload-using-mapbox-cli&quot;&gt;upload using mapbox-cli&lt;/h3&gt;
+&lt;p&gt;mapbox upload –name USFS_ROADS glassman.tileset ~/ownCloud/OSM/usfs_roads.mbtiles&lt;/p&gt;
+&lt;h2 id=&quot;styling-with-mapbox-studio&quot;&gt;Styling with Mapbox Studio&lt;/h2&gt;
+&lt;h3 id=&quot;questions&quot;&gt;Questions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;how do create a transparent background?&lt;/li&gt;
+  &lt;li&gt;how to create casings on ways&lt;/li&gt;
+  &lt;li&gt;how to publish the tiles so JOSM can read them&lt;/li&gt;
+&lt;/ul&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/USFS-Roads-Background-Layer-for-JOSM/&quot;&gt;Creating a USFS Roads Background Layer for JOSM in Mapbox&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2018.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Rasar State Park]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Rasar-State-Park/" />
+  <id>http://localhost:4000/articles/Rasar-State-Park</id>
+  <published>2016-10-03T00:00:00-07:00</published>
+  <updated>2016-10-03T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://localhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;h1 id=&quot;rasar-state-park&quot;&gt;RASAR State Park&lt;/h1&gt;
+
+&lt;p&gt;Rasar State Park is located in Skagit County along the Skagit River, just west of Concrete, WA.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://www.juicytrails.com/embed/rasar-state-park&quot; style=&quot;width: 100%; height: 400px;&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Rasar-State-Park/&quot;&gt;Rasar State Park&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on October 03, 2016.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -222,8 +446,7 @@ of the world they know and frequent is the whole goal!”&lt;/p&gt;
 	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;do shell script&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cp /Users/macid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JOSM&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;activate&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;create-infoplist&quot;&gt;Create Info.plist&lt;/h2&gt;
@@ -231,8 +454,7 @@ of the world they know and frequent is the whole goal!”&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;-Djosm.home=/Users/macid/.josm_import&lt;span class=&quot;nt&quot;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;
 Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.&lt;/p&gt;
 
@@ -309,8 +531,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
   &amp;gt;;
   out skel qt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Export results as a geojson and open in QGIS. Filter the results to eliminate all sidewalks. “sidewalk” &lt;strong&gt;is null&lt;/strong&gt;. Use OSM as a bottom layer to easily see the missed roads.&lt;/p&gt;
@@ -5243,8 +5464,7 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
   		line-color:#00ff00;
   		line-cap: round;
  	*/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
  	::labels[zoom &amp;gt; 13]{
   		text-name: [fullname];
@@ -5255,8 +5475,7 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
    		text-size:14;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	}
   	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Tilestream was easy to install. My only hangup was to update Homebrew before starting.&lt;/p&gt;
 
@@ -5355,8 +5574,7 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &amp;lt;recurse type=&quot;down&quot;/&amp;gt;
 &amp;lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&amp;gt;
 &amp;lt;/osm-script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Remember, change the nominatim search area from “Skagit County” to your county.&lt;/p&gt;
 
@@ -5392,15 +5610,14 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
 FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
 WHERE o.gid IS NULL
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/missing.png&quot; alt=&quot;Missing&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As viewed in QGIS with the OpenStreetMap background from OpenLayers.The portion being shown is in Sedro-Woolley. The county has the streets spelled out, for example Fourth Street while OSM has 4th Street. (The street signs have it as 4th ST.)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/QGIS_Missing.png&quot; alt=&quot;Viewed in QGIS&quot; /&gt;
-##### Convert to .osm&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/QGIS_Missing.png&quot; alt=&quot;Viewed in QGIS&quot; /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;convert-to-osm&quot;&gt;Convert to .osm&lt;/h5&gt;
 
 &lt;p&gt;Finally to fix problems, either by correcting the road name or add in missing roads into OSM, the missing roads need to be converted into a format that JOSM can understand. The steps involved are:&lt;/p&gt;
 
@@ -5417,8 +5634,7 @@ WHERE o.gid IS NULL
 
 &lt;!-- language: lang-bash --&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;create-osm&quot;&gt;Create .OSM&lt;/h5&gt;
 
@@ -5518,7 +5734,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
@@ -5533,7 +5749,8 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 13
 14
 15
-16&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;json&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;900&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1073741824&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+16
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;json&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;900&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1073741824&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
@@ -5548,8 +5765,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;down&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;skeleton&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;quadtile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.&lt;/p&gt;
 
@@ -5577,7 +5793,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 
 &lt;p&gt;The overpass query run on overpass-turbo.eu&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
@@ -5592,7 +5808,8 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 13
 14
 15
-16&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;json&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;900&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1073741824&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+16
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;osm-script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;output=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;json&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;900&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element-limit=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1073741824&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;id-query&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{{nominatimArea:Seattle}}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;into=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- gather results --&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;union&amp;gt;&lt;/span&gt;
@@ -5607,8 +5824,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;recurse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;down&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
       &lt;span class=&quot;nt&quot;&gt;&amp;lt;print&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;skeleton&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;order=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;quadtile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/osm-script&amp;gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.&lt;/p&gt;
 

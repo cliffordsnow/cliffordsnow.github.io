@@ -98,7 +98,7 @@
   <div class="article-author-side">
     <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Clifford Snow bio photo"></a>
 <h3>Clifford Snow</h3>
-<p>Clifford is described as an Addicted Mapper for the past three years since he started contributing to OSM. He is a member of OSM's Future Work Group, hosts OpenStreetMap-Seattle Meetup Group and helped with the importing of Seattle building outlines and addresses into OSM. His prior endeavors include glassblowing, managing an art center facility and telecom management.</p>
+<p>Clifford is described as an Addicted Mapper for the past five years since he started contributing to OSM in May 2011. He is a member of OSM's Membership Workgoup, hosts OpenStreetMap-Seattle Meetup Group along with Chase Stephens and helped with the importing of Seattle building outlines and addresses into OSM. His prior endeavors include glassblowing, managing an art center facility and telecom management.</p>
 <a href="https://twitter.com/osm_seattle" class="author-social" target="_blank"><i class="icon-twitter"></i> Twitter</a>
 <a href="https://facebook.com/cliffordsnow" class="author-social" target="_blank"><i class="icon-facebook"></i> Facebook</a>
 <a href="https://plus.google.com/101103612980566933205" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>
@@ -119,7 +119,7 @@
 
 <p>The overpass query run on overpass-turbo.eu</p>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -134,7 +134,8 @@
 13
 14
 15
-16</pre></td><td class="code"><pre>    <span class="nt">&lt;osm-script</span> <span class="na">output=</span><span class="s">"json"</span> <span class="na">timeout=</span><span class="s">"900"</span> <span class="na">element-limit=</span><span class="s">"1073741824"</span><span class="nt">&gt;</span>
+16
+</pre></td><td class="code"><pre>    <span class="nt">&lt;osm-script</span> <span class="na">output=</span><span class="s">"json"</span> <span class="na">timeout=</span><span class="s">"900"</span> <span class="na">element-limit=</span><span class="s">"1073741824"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;id-query</span> <span class="err">{{nominatimArea:Seattle}}</span> <span class="na">into=</span><span class="s">"area"</span><span class="nt">/&gt;</span>
       <span class="c">&lt;!-- gather results --&gt;</span>
       <span class="nt">&lt;union&gt;</span>
@@ -149,8 +150,7 @@
       <span class="nt">&lt;print</span> <span class="na">mode=</span><span class="s">"body"</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;recurse</span> <span class="na">type=</span><span class="s">"down"</span><span class="nt">/&gt;</span>
       <span class="nt">&lt;print</span> <span class="na">mode=</span><span class="s">"skeleton"</span> <span class="na">order=</span><span class="s">"quadtile"</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;/osm-script&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+    <span class="nt">&lt;/osm-script&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.</p>
 
@@ -164,7 +164,7 @@
         <div class="article-author-bottom">
           <img src="http://localhost:4000/images/bio-photo.jpg" class="bio-photo" alt="Clifford Snow bio photo"></a>
 <h3>Clifford Snow</h3>
-<p>Clifford is described as an Addicted Mapper for the past three years since he started contributing to OSM. He is a member of OSM's Future Work Group, hosts OpenStreetMap-Seattle Meetup Group and helped with the importing of Seattle building outlines and addresses into OSM. His prior endeavors include glassblowing, managing an art center facility and telecom management.</p>
+<p>Clifford is described as an Addicted Mapper for the past five years since he started contributing to OSM in May 2011. He is a member of OSM's Membership Workgoup, hosts OpenStreetMap-Seattle Meetup Group along with Chase Stephens and helped with the importing of Seattle building outlines and addresses into OSM. His prior endeavors include glassblowing, managing an art center facility and telecom management.</p>
 <a href="https://twitter.com/osm_seattle" class="author-social" target="_blank"><i class="icon-twitter"></i> Twitter</a>
 <a href="https://facebook.com/cliffordsnow" class="author-social" target="_blank"><i class="icon-facebook"></i> Facebook</a>
 <a href="https://plus.google.com/101103612980566933205" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>
@@ -204,26 +204,26 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       
       
       
-      <li><a href="http://localhost:4000/articles/Mapathon/" title="Running Missing Maps Mapathons">Running Missing Maps Mapathons</a></li>
+      <li><a href="http://localhost:4000/articles/Partitioning-Postgresql/" title="Declarative Partition Postgresql 10">Declarative Partition Postgresql 10</a></li>
       
     
       
       
       
-      <li><a href="http://localhost:4000/articles/Washington-Counties-with-Open-GIS-Data/" title="Open GIS Data in Washington Counties">Open GIS Data in Washington Counties</a></li>
+      <li><a href="http://localhost:4000/articles/USFS-Roads-Background-Layer-for-JOSM/" title="Creating a USFS Roads Background Layer for JOSM in Mapbox">Creating a USFS Roads Background Layer for JOSM in Mapbox</a></li>
       
     
       
       
       
-      <li><a href="http://localhost:4000/articles/LinuxfestNW/" title="Why OpenStreetMap">Why OpenStreetMap</a></li>
+      <li><a href="http://localhost:4000/articles/Rasar-State-Park/" title="Rasar State Park">Rasar State Park</a></li>
       
     
     </ul>
     <hr />
   </div><!-- /.related-articles -->
   <footer>
-    <span>&copy; 2016 Clifford Snow. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">Minimal Mistakes</a> theme.</span>
+    <span>&copy; 2018 Clifford Snow. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/">Minimal Mistakes</a> theme.</span>
 
   </footer>
 </div><!-- /.footer-wrap -->
