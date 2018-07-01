@@ -38,10 +38,10 @@ The parent table can not contain a primary key.
 ## Steps to move to declarative partitioning
 
 ### Backup your table
-Backup the database. Seem obvious, but my guess is you don't want to rebuild your tables.
+Backup the database. Seem obvious, but my guess is you don't want to start from scratch if something goes wrong. Mine is a simple setup and only a suggestion on how to get started.
 
 ### Create new parent/child Structure
-Create your new parent table and all of your child tables. I used a dummy name for the parent. I'll change it once I copy the data to the new table. That way any scripts needing the original table will still work.  Below is a sample script that creates the parent table, the child tables and all of the index and triggers that update another table as data is inserted.
+Create your new parent table and all of your child tables. I used a dummy name for the parent. I'll change it once I copy the data to the new table. That way any scripts needing the original table will still work.  Below is a sample script that creates the parent table, the child tables and all of the index and triggers that update another table as data is inserted. (I've simplified the table structure for this article.) Note: Thanks to David Rowley on the pgsql-general mailing list for suggesting a simplier method of building the range instead of ```FOR VALUES FROM ('2017-01-01 00:00:00') TO ('2018-01-01 23:59:59.999');```  we use use ```FOR VALUES FROM ('2016-01-01') TO ('2017-01-01');```
 
 ```
 CREATE TABLE edit_1
@@ -56,70 +56,70 @@ CREATE TABLE edit_1
 
 CREATE TABLE edit_2010
 PARTITION of edit_1
-FOR VALUES FROM ('2005-04-09 19:54:12') TO ('2010-12-31 23:59:59.999');
+FOR VALUES FROM ('2005-01-01') TO ('2011-01-01');
 
 CREATE INDEX edit_id_2010 ON edit_2010(id);
 CREATE INDEX edit_user_id_2010 on edit_2010(user_id);
 
 CREATE TABLE edit_2011
 PARTITION of edit_1
-FOR VALUES FROM ('2011-01-01 00:00:00') TO ('2011-12-31 23:59:59.999');
+FOR VALUES FROM ('2011-01-01') TO ('2012-01-01');
 
 CREATE INDEX edit_id_2011 ON edit_2011(id);
 CREATE INDEX edit_user_id_2011 on edit_2011(user_id);
 
 CREATE TABLE edit_2012
 PARTITION of edit_1
-FOR VALUES FROM ('2012-01-01 00:00:00') TO ('2012-12-31 23:59:59.999');
+FOR VALUES FROM ('2012-01-01') TO ('2013-01-01');
 
 CREATE INDEX edit_id_2012 ON edit_2012(id);
 CREATE INDEX edit_user_id_2012 on edit_2012(user_id);
 
 CREATE TABLE edit_2013
 PARTITION of edit_1
-FOR VALUES FROM ('2013-01-01 00:00:00') TO ('2013-12-31 23:59:59.999');
+FOR VALUES FROM ('2013-01-01') TO ('2014-01-01');
 
 CREATE INDEX edit_id_2013 ON edit_2013(id);
 CREATE INDEX edit_user_id_2013 on edit_2013(user_id);
 
 CREATE TABLE edit_2014
 PARTITION of edit_1
-FOR VALUES FROM ('2014-01-01 00:00:00') TO ('2014-12-31 23:59:59.999');
+FOR VALUES FROM ('2014-01-01') TO ('2015-01-01');
 
 CREATE INDEX edit_id_2014 ON edit_2014(id);
 CREATE INDEX edit_user_id_2014 on edit_2014(user_id);
 
 CREATE TABLE edit_2015
 PARTITION of edit_1
-FOR VALUES FROM ('2015-01-01 00:00:00') TO ('2015-12-31 23:59:59.999');
+FOR VALUES FROM ('2015-01-01') TO ('2016-01-01');
 
 CREATE INDEX edit_id_2015 ON edit_2015(id);
 CREATE INDEX edit_user_id_2015 on edit_2015(user_id);
 
 CREATE TABLE edit_2016
 PARTITION of edit_1
-FOR VALUES FROM ('2016-01-01 00:00:00') TO ('2016-12-31 23:59:59.999');
+FOR VALUES FROM ('2016-01-01') TO ('2017-01-01');
 
 CREATE INDEX edit_id_2016 ON edit_2016(id);
 CREATE INDEX edit_user_id_2016 on edit_2016(user_id);
 
 CREATE TABLE edit_2017
 PARTITION of edit_1
-FOR VALUES FROM ('2017-01-01 00:00:00') TO ('2017-12-31 23:59:59.999');
+FOR VALUES FROM ('2017-01-01') TO ('2018-01-01');
 
 CREATE INDEX edit_id_2017 ON edit_2017(id);
 CREATE INDEX edit_user_id_2017 on edit_2017(user_id);
 
 CREATE TABLE edit_2018
 PARTITION of edit_1
-FOR VALUES FROM ('2018-01-01 00:00:00') TO ('2018-12-31 23:59:59.999');
+FOR VALUES FROM ('2018-01-01') TO ('2019-01-01');
 
 CREATE INDEX edit_id_2018 ON edit_2018(id);
 CREATE INDEX edit_user_id_2018 on edit_2018(user_id);
 
 CREATE TABLE edit_2019
 PARTITION of edit_1
-FOR VALUES FROM ('2019-01-01 00:00:00') TO ('2019-12-31 23:59:59.999');
+FOR VALUES FROM ('2019-01-01') TO ('2020-01-01');
 CREATE TRIGGER add_new_user_trigger
   BEFORE INSERT ON edit_2019
   FOR EACH ROW
