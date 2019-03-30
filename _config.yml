@@ -1,10 +1,10 @@
-title:            OSM Seattle
+title:            OSM Washington
 tagline:          OpenStreetMap
 description:      Playing with all things OSM
 disqus_shortname: wwwsnowandsnowus
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url:               https://osm_seattle.snowandsnow.us
-enforce_ssl:       osm_seattle.snowandsnow.us
+url:               https://osm_washington.snowandsnow.us
+enforce_ssl:       osm_washington.snowandsnow.us
 
 # Owner/author information
 owner:
@@ -15,7 +15,7 @@ owner:
  His prior endeavors include glassblowing, managing an art center facility and telecom management."
   email:          clifford@snowandsnow.us
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        osm_seattle
+  twitter:        osm_washington
   github:         cliffordsnow
   linkedin:       osmseattle
   # For Google Authorship https://plus.google.com/authorship

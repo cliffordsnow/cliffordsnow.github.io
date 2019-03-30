@@ -17,5 +17,5 @@ His interest in building community partically stem from his time creating glass 
 
 Clifford lead a team that held OpenStreetMap's 10th Anniversary celebration in Seattle. The event included talks on mapping, georectification and a demo of aerial photography from a kit.
 
-You can follow Clifford on Twitter @osm_seattle or on email clifford at snowandsnow dot us. 
+You can follow Clifford on Twitter @osm_washington or on email clifford at snowandsnow dot us. 
 
