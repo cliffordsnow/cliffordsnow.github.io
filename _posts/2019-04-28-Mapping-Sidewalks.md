@@ -51,7 +51,7 @@ A good place to start is to map sidewalks in city blocks around one intersection
 The next logical step would be to add curbs. This is where street side imagery is needed. Both [JOSM](https://josm.openstreetmap.de) and iD have integrated the three street side packages into their editors.
  
 ##### Curbs
-Determine if a curb ramp exists and if so, what type and is there a tactile pad. Adding the tactile pad is import for people with vision impairments. Adding a short footway between the curb with a ramp and the sidewalk would be a good idea. I don't, basically because marking a curb ramp in the footway doesn't impact routing for people with limited mobility.
+Determine if a curb ramp exists and if so, what type and is there a tactile pad. Adding the tactile pad is import for people with vision impairments. Adding a short footway between the curb with a ramp and the sidewalk would be a good idea. I don't, basically because marking a curb ramp in the footway doesn't impact routing for people with limited mobility and since most curb ramps extend into the way, it's a good signal to someone with vision impairments that they reached a curb ramp.
 
 ![Add Curb]({{site_url}}/assets/curb_ramp.png "Curb ramp")
 ![Raised Curb with Step]({{site_url}}/assets/raised_curb_steps.png "Raised curb - this one with steps")
@@ -64,7 +64,7 @@ Next add the crosswalks. Use ```crossing=marked``` when the intersection is mark
 ![Add Crosswalk]({{site_url}}/assets/add_crosswalk.png "Completed crosswalk mapping")
 ![Raised Curb]({{site_url}}/assets/raised_curbs.png "How to map raised curbs")
 #### Traffic Island
-If there is a island between lanes of traffic, add a node, ```crossing:island=yes```![Traffic Island]({{site_url}}/assets/mapped_traffic_island.png "Traffic island mapping - Notice the diamond node")
+If there is a island between lanes of traffic, add a way, ```crossing:island=yes```![Traffic Island]({{site_url}}/assets/mapped_traffic_island.png "Traffic island mapping")
 
 Mapping Tips
 ----
