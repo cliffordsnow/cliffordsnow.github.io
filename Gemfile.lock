@@ -55,9 +55,9 @@ PLATFORMS
 
 DEPENDENCIES
   coderay
-  jekyll
+  jekyll (>= 3.8.4)
   jekyll-minibundle
   rake
 
 BUNDLED WITH
-   1.16.1
+   1.17.2

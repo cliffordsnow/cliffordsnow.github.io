@@ -1,17 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">OSM Seattle</title>
+<title type="text">OSM Washington</title>
 <subtitle type="text">OpenStreetMap</subtitle>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2018-12-16T12:25:00-08:00</updated>
+<updated>2019-04-27T17:03:27-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
   <uri>http://localhost:4000/</uri>
   <email>clifford@snowandsnow.us</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Mapping Sidewalks a HowTo]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/articles/Mapping-Sidewalks/" />
+  <id>http://localhost:4000/articles/Mapping-Sidewalks</id>
+  <published>2019-04-28T00:00:00-07:00</published>
+  <updated>2019-04-28T00:00:00-07:00</updated>
+  <author>
+    <name>Clifford Snow</name>
+    <uri>http://localhost:4000</uri>
+    <email>clifford@snowandsnow.us</email>
+  </author>
+  <content type="html">&lt;h2 id=&quot;how-to-manually-map-sidewalks-as-separate-ways&quot;&gt;How to Manually Map Sidewalks as Separate Ways&lt;/h2&gt;
+&lt;p&gt;This guide will help you map your cities sidewalks as separate ways. The other method is mapping sidewalks is as an attribute to street centerlines. Without going into the pros and cons of the two methods, we are just going to focus on how to map sidewalks a separate ways.&lt;/p&gt;
+
+&lt;p&gt;The goal is to build a network of routable sidewalks, especially for people with limited mobility. &lt;a href=&quot;https://accessmap.io&quot;&gt;AccessMap.io&lt;/a&gt; show the power of OSM to help people navigate their city on foot or in a wheelchair.&lt;/p&gt;
+
+&lt;p&gt;While I have you here, I want to give a shoutout to the University of Washington’s &lt;a href=&quot;https://tcat.cs.washington.edu/&quot;&gt;Taskar Center for Accessible Technology&lt;/a&gt; . The director, Anat Caspi and project lead, Nick Bolton, were the ones that convinced me that we need to change how we map pedestrian ways. They developed the &lt;a href=&quot;httpd://opensidewalks.com&quot;&gt;OpenSidewalk Project&lt;/a&gt; and &lt;a href=&quot;https://accessmap.io&quot;&gt;AccessMap.io&lt;/a&gt;. They are the inspiration behind mapping sidewalks in OSM.&lt;/p&gt;
+
+&lt;h3 id=&quot;tools-youll-need&quot;&gt;Tools you’ll need&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;JOSM - Note iD is very well adapted to mapping sidewalks. I’m just more accustomed to using JOSM.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tasks.openstreetmap.us&quot;&gt;Tasking Manager&lt;/a&gt; to help break the area into manageable chunks.&lt;/li&gt;
+  &lt;li&gt;Good satellite imagery&lt;/li&gt;
+  &lt;li&gt;Street level imagery which can be Bing StreetSide, OpenStreetCam or Mapillary. The last two allow you to capture the street level imagery from your car, bike and even walking.&lt;/li&gt;
+  &lt;li&gt;JOSM &lt;a href=&quot;https://mycloud.snowandsnow.us/index.php/s/3BBJf6i6EofgZXR&quot;&gt;sidewalk mapcss&lt;/a&gt; file. Download the file and point to it in JOSM.&lt;/li&gt;
+  &lt;li&gt;Tasking Manager to break the collections into small chunks&lt;/li&gt;
+  &lt;li&gt;QGIS to find sidewalk islands&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;sidewalk-terms&quot;&gt;Sidewalk terms&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;footway&lt;/strong&gt;. What we call sidewalks in the US is called a footway in England where OSM got it start. A footway is a pedestrian path between any two points. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sidewalks&lt;/strong&gt;. A sidewalk is a footway that run parallel to a street. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway + footway=sidewalk&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;crossing&lt;/strong&gt;. A street crossing is either a marked or unmarked crossing of a street. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway + footway=crossing + crossing=marked|unmarked&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;crossing islands&lt;/strong&gt;. Crossing island are small places usually between two lanes of traffic. &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing:island=yes&lt;/code&gt;&lt;br /&gt;&lt;img src=&quot;/assets/traffic_island.png&quot; alt=&quot;Traffic Island&quot; title=&quot;Traffic Island&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;curbs&lt;/strong&gt;. In British English its kerb. There are many flavors of kerbs. Here are some of the common ones you’ll likely see:
+    &lt;ol&gt;
+      &lt;li&gt;&lt;strong&gt;Lowered&lt;/strong&gt;. A lowered curb cut should be wide enough for a wheelchair to use. There should be no more than a 1 inch difference between the street and the curb. also referred to as a sloped curb or curb ramp. &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=lowered&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Flush&lt;/strong&gt;. A flush curb is level with the pavement.&lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=flush&lt;/code&gt; Very common in older parts of cities.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Raised&lt;/strong&gt;. A curb with more than a 1 inch difference with the street. &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=raised&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;None&lt;/strong&gt;. If there is no curb, tagging the end of the footway with &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=no&lt;/code&gt; is a good reminder that there is no curb.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Rolled&lt;/strong&gt;. Rolled curbs still provide a gutter for water while being traversable by large wheeled vehicles, such as cars and bicycles, but not wheelchairs. &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=rolled&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;mapping&quot;&gt;Mapping&lt;/h2&gt;
+&lt;h5 id=&quot;sidewalks&quot;&gt;Sidewalks&lt;/h5&gt;
+&lt;p&gt;A good place to start is to map sidewalks in city blocks around one intersection before adding the crossings. If the imagery is sufficiently sharp you should be able to easily add the sidewalks. Occasionally you’ll need to consult street level imagery to see below tree and other blocked views.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/add_sidewalk.png&quot; alt=&quot;Add Sidewalks&quot; title=&quot;Just sidewalks mapped&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next logical step would be to add curbs. This is where street side imagery is needed. Both &lt;a href=&quot;https://josm.openstreetmap.de&quot;&gt;JOSM&lt;/a&gt; and iD have integrated the three street side packages into their editors.&lt;/p&gt;
+
+&lt;h5 id=&quot;curbs&quot;&gt;Curbs&lt;/h5&gt;
+&lt;p&gt;Determine if a curb ramp exists and if so, what type and is there a tactile pad. Adding the tactile pad is import for people with vision impairments. Adding a short footway between the curb with a ramp and the sidewalk would be a good idea. I don’t, basically because marking a curb ramp in the footway doesn’t impact routing for people with limited mobility.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/curb_ramp.png&quot; alt=&quot;Add Curb&quot; title=&quot;Curb ramp&quot; /&gt;
+&lt;img src=&quot;/assets/raised_curb_steps.png&quot; alt=&quot;Raised Curb with Step&quot; title=&quot;Raised curb - this one with steps&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/tactile_pad.png&quot; alt=&quot;Tactile Pad&quot; title=&quot;Tactile Pad&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;crosswalk&quot;&gt;Crosswalk&lt;/h5&gt;
+&lt;p&gt;Next add the crosswalks. Use &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing=marked&lt;/code&gt; when the intersection is marked for pedestrians. Include a pedestrian crossing node where the street intersects with the crosswalk. It’s purpose is to notify vehicles of the crosswalk. While you are there, check for stop signs and traffic lights to add to OSM.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/add_crosswalk.png&quot; alt=&quot;Add Crosswalk&quot; title=&quot;Completed crosswalk mapping&quot; /&gt;
+&lt;img src=&quot;/assets/raised_curbs.png&quot; alt=&quot;Raised Curb&quot; title=&quot;How to map raised curbs&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;traffic-island&quot;&gt;Traffic Island&lt;/h4&gt;
+&lt;p&gt;If there is a island between lanes of traffic, add a node, &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing:island=yes&lt;/code&gt;&lt;img src=&quot;/assets/mapped_traffic_island.png&quot; alt=&quot;Traffic Island&quot; title=&quot;Traffic island mapping - Notice the diamond node&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mapping-tips&quot;&gt;Mapping Tips&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mark sidewalks that end without access to the street as &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=no&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Mark sidewalks that end in the yard with &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=no&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;If the sidewalk has a raised curb, add an extension to the sidewalk otherwise the router will thing their is a raised curb preventing wheelchair routing. &lt;img src=&quot;/assets/improper_raised_curb.png&quot; alt=&quot;Improper Raised Curb&quot; title=&quot;Don't do this&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Remove any existing footway that connects directly to the road without a crossing. Remember, we are trying to keep pedestrians on the sidewalk.&lt;/li&gt;
+  &lt;li&gt;Include steps and ramps&lt;/li&gt;
+  &lt;li&gt;Indicate obstruction areas that block wheelchair access with &lt;code class=&quot;highlighter-rouge&quot;&gt;wheelchair=no&lt;/code&gt; &lt;img src=&quot;/assets/Obstruction.png&quot; alt=&quot;Obstructions&quot; title=&quot;Obstruction in footway&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Add surface=* especially if the surface is gravel or other material that would impair or prohibit wheelchair access.&lt;/li&gt;
+  &lt;li&gt;If working from Tasking Manager, pick a strategy, such as working blocks from south to north and east to west. This will help you not miss intersections.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;finding-islands&quot;&gt;Finding Islands&lt;/h2&gt;
+
+&lt;p&gt;No not that kind of island. We are looking for sidewalks that don’t connect to the pedestrian sidewalk network. For this you’ll need &lt;a href=&quot;https://qgis.org&quot;&gt;QGIS&lt;/a&gt;. Install QGIS using the directions provided on the website. In QGIS, using the Plugin manager, install the Disconnected Island plugin. The python module NetworkX is also required. It can be installed with &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install networkx --user&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To get the data needed to find islands, run the following &lt;a href=&quot;overpass-turbo.eu&quot;&gt;overpass-turbo&lt;/a&gt; script. Replace your_area with either the city or bounding box of your sidewalk network. The script collects curbs and traffic signs and signals in addition to footways. Having this additional information allows view the entire pedestrian network in QGIS.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[out:json][timeout:25];
+// fetch area “your area” to search in
+-&amp;gt;.searchArea;
+// gather results
+(
+
+  node[&quot;kerb&quot;](area.searchArea);
+  node[&quot;highway&quot;=&quot;stop&quot;](area.searchArea);
+  node[&quot;highway&quot;=&quot;traffic_signal&quot;](area.searchArea);
+  way[&quot;highway&quot;=&quot;footway&quot;](area.searchArea);
+
+);
+// print results
+out body;
+&amp;gt;;
+out skel qt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Export the results to a geojson and load into QGIS. Run Vector-&amp;gt;Disconnected Island-&amp;gt;Check for Disconnected Islands
+&lt;img src=&quot;/assets/disconnected_islands.png&quot; alt=&quot;Disconnect Islands Plugin&quot; title=&quot;Disconnect Islands Plugin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The result should look like&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/mv_disconnected_islands.png&quot; alt=&quot;Disconnect Islands&quot; title=&quot;All footways&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unchecking just the most common footway results in&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/mv_disconnected_islands2.png&quot; alt=&quot;Disconnect Islands&quot; title=&quot;Just disconnected islands&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Check each island to verify that no connections were missed.&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Mapping-Sidewalks/&quot;&gt;Mapping Sidewalks a HowTo&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on April 28, 2019.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -183,7 +309,7 @@ INSERT INTO edit_2018(id,
 
 &lt;p&gt;For this step, I used PGAdmin4. PGAdmin4 gives a good visual layout of the new structure. When you rename the parent, all of the child tables will changed to the new parent table. &lt;img src=&quot;/assets/pgadmin4.jpg&quot; alt=&quot;PGAdmin4&quot; /&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Partitioning-Postgresql/&quot;&gt;Declarative Partition Postgresql 10&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on June 29, 2018.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Partitioning-Postgresql/&quot;&gt;Declarative Partition Postgresql 10&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on June 29, 2018.&lt;/p&gt;</content>
 </entry>
 
 
@@ -212,7 +338,7 @@ INSERT INTO edit_2018(id,
 &lt;/ul&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/USFS-Roads-Background-Layer-for-JOSM/&quot;&gt;Creating a USFS Roads Background Layer for JOSM in Mapbox&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2018.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/USFS-Roads-Background-Layer-for-JOSM/&quot;&gt;Creating a USFS Roads Background Layer for JOSM in Mapbox&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on March 23, 2018.&lt;/p&gt;</content>
 </entry>
 
 
@@ -234,7 +360,7 @@ INSERT INTO edit_2018(id,
 &lt;iframe src=&quot;https://www.juicytrails.com/embed/rasar-state-park&quot; style=&quot;width: 100%; height: 400px;&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Rasar-State-Park/&quot;&gt;Rasar State Park&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on October 03, 2016.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Rasar-State-Park/&quot;&gt;Rasar State Park&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on October 03, 2016.&lt;/p&gt;</content>
 </entry>
 
 
@@ -298,7 +424,7 @@ INSERT INTO edit_2018(id,
   &lt;li&gt;The concept of adding more instruction after people have gotten started is how we taught glassblowing. We’d spend the first 15 to 30 minutes talking safety then have people actually gather glass from the furnace. (Sounds easy, but when you open the furnace door and feel the heat of a 2000° pot of glass all you can think of is how to get away!) Once they have become comfortable they we introduce new concepts. Not only is it safer, but it’s more fun because you doing something right away. The same can apply to mapping.&lt;/li&gt;
 &lt;/ol&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Mapathon/&quot;&gt;Running Missing Maps Mapathons&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on July 09, 2016.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Mapathon/&quot;&gt;Running Missing Maps Mapathons&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on July 09, 2016.&lt;/p&gt;</content>
 </entry>
 
 
@@ -329,7 +455,7 @@ had most of the counties data.&lt;/p&gt;
 &lt;p&gt;Graphically this is the results of my inquiry. Click on the image to open to the interactive webmap. 
 &lt;a href=&quot;http://cdb.io/1jwgzRB&quot;&gt;&lt;img src=&quot;/assets/opendata.png&quot; alt=&quot;Open Data&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Washington-Counties-with-Open-GIS-Data/&quot;&gt;Open GIS Data in Washington Counties&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on December 01, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Washington-Counties-with-Open-GIS-Data/&quot;&gt;Open GIS Data in Washington Counties&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on December 01, 2015.&lt;/p&gt;</content>
 </entry>
 
 
@@ -418,7 +544,7 @@ of the world they know and frequent is the whole goal!”&lt;/p&gt;
 
 &lt;p&gt;David Wisbey “How enjoyable and rewarding it can be to contribute to Openstreetmap.”&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/LinuxfestNW/&quot;&gt;Why OpenStreetMap&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on April 20, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/LinuxfestNW/&quot;&gt;Why OpenStreetMap&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on April 20, 2015.&lt;/p&gt;</content>
 </entry>
 
 
@@ -461,7 +587,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
 &lt;p&gt;&lt;img src=&quot;/assets/applescript.png&quot; alt=&quot;Applescript&quot; title=&quot;Create Script Application&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-Prompt/&quot;&gt;Prompt for OSM User ID in JOSM:Using a Mac&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 02, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-Prompt/&quot;&gt;Prompt for OSM User ID in JOSM:Using a Mac&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on February 02, 2015.&lt;/p&gt;</content>
 </entry>
 
 
@@ -540,7 +666,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
 &lt;p&gt;Once all of the streets have been tagged it is time to display the results. We will look at that in Part 2. See you then.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/MV_Sidewalks/&quot;&gt;Sidewalks of Mount Vernon Washington&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on January 04, 2015.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/MV_Sidewalks/&quot;&gt;Sidewalks of Mount Vernon Washington&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on January 04, 2015.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5357,7 +5483,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
   &lt;li&gt;&lt;a href=&quot;http://127.0.0.1:8111/load_and_zoom?left=-122.326540&amp;amp;right=-122.322540&amp;amp;top=47.65152&amp;amp;bottom=47.64752&amp;amp;select=node=217598717&quot;&gt;3105 Fairview Avenue East&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Seattle-Duplicate-Address/&quot;&gt;More Seattle Duplicate Address&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Seattle-Duplicate-Address/&quot;&gt;More Seattle Duplicate Address&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5423,7 +5549,7 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
 &lt;p&gt;More Pictures to follow&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/10th-Anniversary-Celebration/&quot;&gt;OpenStreetMap 10th Anniversary&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/10th-Anniversary-Celebration/&quot;&gt;OpenStreetMap 10th Anniversary&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on August 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5496,7 +5622,7 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/josm_add_tms.png&quot; alt=&quot;JOSM add TMS&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/TileStream/&quot;&gt;JOSM Background Layer&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/TileStream/&quot;&gt;JOSM Background Layer&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on May 25, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5517,7 +5643,7 @@ we have a bunch of sites that the FCC considers an airport. My representation is
 &lt;p&gt;&lt;a href=&quot;https://gist.github.com/cliffordsnow/7d3a514f164f17b50fa7&quot;&gt;&lt;img src=&quot;/assets/noflyzone.png&quot; alt=&quot;No Fly Zones&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Too-Many-Airports/&quot;&gt;Too Many Airports&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on May 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Too-Many-Airports/&quot;&gt;Too Many Airports&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on May 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5651,7 +5777,7 @@ WHERE o.gid IS NULL
 &lt;p&gt;The next logical step would be to build tiles from the counties data to use as background images in JOSM. Similar to the TIGER 2012/13 background images. Look for a future article on how to create the tiles and use GeoServer as a WMS server.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Finding-Errors/&quot;&gt;Finding Differences in Roads&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on March 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5678,7 +5804,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/josm_https.png&quot; alt=&quot;HTTPS&quot; title=&quot;HTTPS in JOSM&quot; /&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/JOSM-HTTPS-Feature/&quot;&gt;JSOM Allows HTTPS&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on March 16, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5715,7 +5841,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;The latest King County address from 2/9/14 had 8,570 (2) duplicates. We believe that E911 might have unit numbers which would fix a number of problems. Other problems include bad data which OSM is well suited to fix.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/Duplicate-Address-Cause/&quot;&gt;Fixing Duplicates in OSM&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on February 23, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5774,7 +5900,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;h3 id=&quot;duplicate-addresses&quot;&gt;Duplicate addresses&lt;/h3&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -5829,7 +5955,7 @@ https://api.openstreetmap.org/api&lt;/p&gt;
 &lt;p&gt;Some duplicates can easily be fixed by removing the duplicate. However, King County lables many buildings with the same address, such as mobile home parks. These need a add:unit tag added.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Seattle&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/articles/duplicate-addresses-in-seattle/&quot;&gt;Duplicate addresses in Seattle&lt;/a&gt; was originally published by Clifford Snow at &lt;a href=&quot;http://localhost:4000&quot;&gt;OSM Washington&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
