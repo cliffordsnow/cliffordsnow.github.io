@@ -11,7 +11,7 @@ image:
 ---
 How to Manually Map Sidewalks as Separate Ways
 ---
-This guide will help you map your cities sidewalks as separate ways. The other method is mapping sidewalks is as an attribute to street centerlines. Without going into the pros and cons of the two methods, we are just going to focus on how to map sidewalks a separate ways.
+This guide will help you map your cities sidewalks as separate ways. The other method is mapping sidewalks is as an attribute to street centerlines. Without going into the pros and cons of the two methods, we are just going to focus on how to map sidewalks a separate ways. This was update on May 31, 2019 to include more images, features you'll run into while mapping, and links to the OSM wiki.
 
 The goal is to build a network of routable sidewalks, especially for people with limited mobility. [AccessMap.io](https://accessmap.io) show the power of OSM to help people navigate their city on foot or in a wheelchair.
 
@@ -29,16 +29,20 @@ While I have you here, I want to give a shoutout to the University of Washington
 
 ### Sidewalk terms
 
-1. **footway**. What we call sidewalks in the US is called a footway in England where OSM got it start. A footway is a pedestrian path between any two points. ```highway=footway```
-2. **sidewalks**. A sidewalk is a footway that run parallel to a street. ```highway=footway + footway=sidewalk```
-3. **crossing**. A street crossing is either a marked or unmarked crossing of a street. ```highway=footway + footway=crossing + crossing=marked|unmarked``` 
-4. **crossing islands**. Crossing island are small places usually between two lanes of traffic. ```crossing:island=yes```<br>![Traffic Island]({{site_url}}/assets/traffic_island.png "Traffic Island")
-4. **curbs**. In British English its kerb. There are many flavors of kerbs. Here are some of the common ones you'll likely see:
-	1. **Lowered**. A lowered curb cut should be wide enough for a wheelchair to use. There should be no more than a 1 inch difference between the street and the curb. also referred to as a sloped curb or curb ramp. ```kerb=lowered```
-	2. **Flush**. A flush curb is level with the pavement.```kerb=flush``` Very common in older parts of cities.
-	3. **Raised**. A curb with more than a 1 inch difference with the street. ```kerb=raised```
-	4. **None**. If there is no curb, tagging the end of the footway with ```kerb=no``` is a good reminder that there is no curb.
-	5. **Rolled**. Rolled curbs still provide a gutter for water while being traversable by large wheeled vehicles, such as cars and bicycles, but not wheelchairs. ```kerb=rolled```
+1. **footway**. What we call sidewalks in the US is called a [footway](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway) in England where OSM got it start. A footway is a pedestrian path between any two points. `highway=footway`
+2. **sidewalks**. A [sidewalk](https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk) is a footway that run parallel to a street. `highway=footway + footway=sidewalk`
+3. **crossing**. A street [crossing](https://wiki.openstreetmap.org/wiki/Key:crossing) is either a marked or unmarked crossing of a street. `highway=footway + footway=crossing + crossing=marked|unmarked` 
+4. **Marked/Unmarked** Any crossing that is marked on the street should be tagged as `crossing=marked`. The marking can be just two parallel lines, stripping, or even intricate patterns. This interreptation differs from the wiki which is confusing.
+5. **crossing islands**. Crossing island are small places usually between two lanes of traffic. Tag the short way as `crossing:island=yes`<br>![Traffic Island]({{site_url}}/assets/traffic_island.png "Traffic Island")
+6. **curbs**. In British English its [kerb](https://wiki.openstreetmap.org/wiki/Key:kerb). There are many flavors of kerbs. Here are some of the common ones you'll likely see:
+
+*  **Lowered**   	 A lowered curb cut should be wide enough for a wheelchair to use. There should be no more than a 1 inch difference between the street and the curb. also referred to as a sloped curb or curb ramp.  	 `kerb=raised`  	 ![lowered curb]({{site_url}}/assets/Lowered_curb.png "Example of a lowered curb") 
+*  **Incline** An attempt to create a lowered curb. Using JOSM to measure the length and estimate the height of the curb to determine [incline](https://wiki.openstreetmap.org/wiki/Key:incline). Most curbs are 6" high but not all. Split the way at the end of the regular sidewalk. Draw the way to indicate movement upward. `highway=footway` + `footway=sidewalk` + `incline=8%` ![asphalt lowered curb]({{site_url}}/assets/Asphalt_lowered_curb.png "Example of a ashpalt lowered curb")  
+*  **Flushed**   	  A flush curb is level with the pavement  	  `kerb=flush`  	 ![flush curb]({{site_url}}/assets/Flush_curb.png "Example of a flush curb") 	 
+*  **None**  	  If there is no curb, tagging the end of the footway with   	 `kerb=no` 
+*  **Raised** A curb with more than a 1 inch difference with the street. `kerb=raised` ![raised curb]({{site_url}}/assets/Raised_curb.png "Example of a raised curb")  
+*  **Rolled** Rolled curbs still provide a gutter for water while being traversable by large wheeled vehicles, such as cars and bicycles, but not wheelchairs  `kerb=rolled` No image available
+
 
 
 Mapping
@@ -65,6 +69,11 @@ Next add the crosswalks. Use ```crossing=marked``` when the intersection is mark
 ![Raised Curb]({{site_url}}/assets/raised_curbs.png "How to map raised curbs")
 #### Traffic Island
 If there is a island between lanes of traffic, add a way, ```crossing:island=yes```![Traffic Island]({{site_url}}/assets/mapped_traffic_island.png "Traffic island mapping")
+
+##### Wheelchair Ramps
+This is a special case where there is a wheelchair ramp, usually to a business. It should be mapped as `highway=footway` + `incline=x%`. Use JOSM to measure the length of the way and estimate the height to calculate the percent incline.
+![Wheelchair_ramp.jpg]({{site_url}}/assets/Wheelchair_ramp.jpg "By Lionel Allorge - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27859568")
+
 
 Mapping Tips
 ----
@@ -116,5 +125,4 @@ Unchecking just the most common footway results in
 ![Disconnect Islands]({{site_url}}/assets/mv_disconnected_islands2.png "Just disconnected islands")
 
 Check each island to verify that no connections were missed.
-
 
