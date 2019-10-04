@@ -194,7 +194,7 @@
 
 <h3 id="_configyml">_config.yml</h3>
 
-<p>Most of the variables found here are used in the .html files found in <code class="highlighter-rouge">_includes</code> if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. When working locally comment out <code class="highlighter-rouge">url</code> or else you will get a bunch of broken links because they are absolute and prefixed with <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">site.url</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> in the various <code class="highlighter-rouge">_includes</code> and <code class="highlighter-rouge">_layouts</code>. Just remember to uncomment <code class="highlighter-rouge">url</code> when building for deployment or pushing to <strong>gh-pages</strong>…</p>
+<p>Most of the variables found here are used in the .html files found in <code class="highlighter-rouge">_includes</code> if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. When working locally comment out <code class="highlighter-rouge">url</code> or else you will get a bunch of broken links because they are absolute and prefixed with <code class="highlighter-rouge">{{ site.url }}</code><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> in the various <code class="highlighter-rouge">_includes</code> and <code class="highlighter-rouge">_layouts</code>. Just remember to uncomment <code class="highlighter-rouge">url</code> when building for deployment or pushing to <strong>gh-pages</strong>…</p>
 
 <h4 id="ownerauthor-information">Owner/Author Information</h4>
 
@@ -211,16 +211,16 @@
 <p>Edit page/post titles and URLs to include in the site’s navigation. For external links add <code class="highlighter-rouge">external: true</code>.</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># sample top navigation links</span>
-<span class="s">links</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">About Page</span>
-    <span class="s">url</span><span class="pi">:</span> <span class="s">/about/</span>
-  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Posts</span>
-    <span class="s">url</span><span class="pi">:</span> <span class="s">/posts/</span>
-  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Other Page</span>
-    <span class="s">url</span><span class="pi">:</span> <span class="s">/other-page/</span>
-  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">External Page</span>
-    <span class="s">url</span><span class="pi">:</span> <span class="s">https://mademistakes.com</span>
-    <span class="s">external</span><span class="pi">:</span> <span class="s">true</span></code></pre></figure>
+<span class="na">links</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">About Page</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/about/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Posts</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/posts/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Other Page</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/other-page/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">External Page</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">https://mademistakes.com</span>
+    <span class="na">external</span><span class="pi">:</span> <span class="no">true</span></code></pre></figure>
 
 <h3 id="adding-posts-and-pages">Adding Posts and Pages</h3>
 
@@ -232,16 +232,16 @@
 
 <p>The two layouts make the assumption that the feature images live in the <code class="highlighter-rouge">images/</code> folder. To add a feature image to a post or page just include the filename in the front matter like so.</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
-  <span class="s">feature</span><span class="pi">:</span> <span class="s">feature-image-filename.jpg</span>
-  <span class="s">thumb</span><span class="pi">:</span> <span class="s">thumbnail-image.jpg</span> <span class="c1">#keep it square 200x200 px is good</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">image</span><span class="pi">:</span>
+  <span class="na">feature</span><span class="pi">:</span> <span class="s">feature-image-filename.jpg</span>
+  <span class="na">thumb</span><span class="pi">:</span> <span class="s">thumbnail-image.jpg</span> <span class="c1">#keep it square 200x200 px is good</span></code></pre></figure>
 
 <p>If you want to apply attribution to a feature image use the following YAML front matter on posts or pages. Image credits appear directly below the feature image with a link back to the original source.</p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
-  <span class="s">feature</span><span class="pi">:</span> <span class="s">feature-image-filename.jpg</span>
-  <span class="s">credit</span><span class="pi">:</span> <span class="s">Michael Rose</span> <span class="c1">#name of the person or site you want to credit</span>
-  <span class="s">creditlink</span><span class="pi">:</span> <span class="s">http://mademistakes.com</span> <span class="c1">#url to their site or licensing</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">image</span><span class="pi">:</span>
+  <span class="na">feature</span><span class="pi">:</span> <span class="s">feature-image-filename.jpg</span>
+  <span class="na">credit</span><span class="pi">:</span> <span class="s">Michael Rose</span> <span class="c1">#name of the person or site you want to credit</span>
+  <span class="na">creditlink</span><span class="pi">:</span> <span class="s">http://mademistakes.com</span> <span class="c1">#url to their site or licensing</span></code></pre></figure>
 
 <h4 id="post-index-page">Post Index Page</h4>
 
@@ -251,9 +251,9 @@
   <li>In <code class="highlighter-rouge">_config.yml</code> under <code class="highlighter-rouge">links:</code> rename the title and URL to the following:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="s">links</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Writing</span>
-    <span class="s">url</span><span class="pi">:</span> <span class="s">/writing/</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="na">links</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Writing</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/writing/</span></code></pre></figure>
 
 <ul>
   <li>Rename <code class="highlighter-rouge">posts.md</code> to <code class="highlighter-rouge">writing.md</code> and update the YAML front matter to match the title and URL set in <code class="highlighter-rouge">_config.yml</code></li>
@@ -294,7 +294,7 @@
 
 <p>If you want to easily skin the themes’ colors and fonts, take a look at <code class="highlighter-rouge">variables.less</code> in <code class="highlighter-rouge">assets/less/</code> and make the necessary changes to the color and font variables. To make development easier I setup a Grunt build script to compile/minify the LESS files into <code class="highlighter-rouge">main.min.css</code> and lint/concatenate/minify all scripts into <code class="highlighter-rouge">scripts.min.js</code>. <a href="http://nodejs.org/">Install Node.js</a>, then <a href="http://gruntjs.com/getting-started">install Grunt</a>, and then finally install the dependencies for the theme contained in <code class="highlighter-rouge">package.json</code>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">install</span></code></pre></figure>
 
 <p>From the theme’s root, use <code class="highlighter-rouge">grunt</code> to rebuild the CSS, concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the <code class="highlighter-rouge">images/</code> folder. You can also use <code class="highlighter-rouge">grunt watch</code> in combination with <code class="highlighter-rouge">jekyll build --watch</code> to watch for updates to your LESS and JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.</p>
 

@@ -122,7 +122,7 @@
       <h2 id="mac-osc-prompt-for-my-user-id-in-josm">Mac OSC Prompt for My User ID in JOSM</h2>
 <p>I’m doing an import of Kirkland Buildings and Addresses into OSM. I wanted an easy way to remember to use the correct. Thanks to ToeBee for the suggestion of using unique home directory for each id. With linux a simple shell script tied to the menu item is all that is required. But Apple gives another option. Create an application script to chose the best id. Below is the script I created. Just substitute your id and directories for mine.</p>
 
-<div class="language-applescript highlighter-rouge"><pre class="highlight"><code><span class="k">set</span><span class="w"> </span><span class="nv">pList</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="p">(</span><span class="nb">choose from list</span><span class="w"> </span><span class="p">{</span><span class="s2">"UserID"</span><span class="p">,</span><span class="w"> </span><span class="s2">"UserID_Import"</span><span class="p">}</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="na">title</span><span class="w"> </span><span class="s2">"Which UserId?"</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="na">prompt</span><span class="w"> </span><span class="s2">"Select User ID"</span><span class="p">)</span><span class="w">
+<div class="language-applescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">set</span><span class="w"> </span><span class="nv">pList</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="p">(</span><span class="nb">choose from list</span><span class="w"> </span><span class="p">{</span><span class="s2">"UserID"</span><span class="p">,</span><span class="w"> </span><span class="s2">"UserID_Import"</span><span class="p">}</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="na">title</span><span class="w"> </span><span class="s2">"Which UserId?"</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="na">prompt</span><span class="w"> </span><span class="s2">"Select User ID"</span><span class="p">)</span><span class="w">
 </span><span class="k">if</span><span class="w"> </span><span class="nv">pList</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="nv">false</span><span class="w"> </span><span class="k">then</span><span class="w">
 	</span><span class="nb">display dialog</span><span class="w"> </span><span class="s2">"Canceled"</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">icon</span><span class="w"> </span><span class="nb">stop</span><span class="w">
 </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">pList</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s2">"UserID"</span><span class="w"> </span><span class="k">then</span><span class="w">
@@ -132,15 +132,15 @@
 	</span><span class="nb">do shell script</span><span class="w"> </span><span class="s2">"cp /Users/macid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist"</span><span class="w">
 	</span><span class="k">tell</span><span class="w"> </span><span class="nb">application</span><span class="w"> </span><span class="s2">"JOSM"</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nb">activate</span><span class="w">
 </span><span class="k">end</span><span class="w"> </span><span class="k">if</span><span class="w">
-</span></code></pre></div>
+</span></code></pre></div></div>
 <p><br /></p>
 
 <h2 id="create-infoplist">Create Info.plist</h2>
 <p>Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. The only addition needed is one line of code to add a default hidden folder for settings and plugins. This line goes in the JVMOptions key.</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;string&gt;</span>-Djosm.home=/Users/macid/.josm_import<span class="nt">&lt;/string&gt;</span>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;string&gt;</span>-Djosm.home=/Users/macid/.josm_import<span class="nt">&lt;/string&gt;</span>
 
-</code></pre></div>
+</code></pre></div></div>
 <p><br />
 Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.</p>
 

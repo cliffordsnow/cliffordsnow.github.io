@@ -5,7 +5,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2019-04-27T17:03:27-07:00</updated>
+<updated>2019-05-31T10:37:59-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Clifford Snow</name>
@@ -26,7 +26,7 @@
     <email>clifford@snowandsnow.us</email>
   </author>
   <content type="html">&lt;h2 id=&quot;how-to-manually-map-sidewalks-as-separate-ways&quot;&gt;How to Manually Map Sidewalks as Separate Ways&lt;/h2&gt;
-&lt;p&gt;This guide will help you map your cities sidewalks as separate ways. The other method is mapping sidewalks is as an attribute to street centerlines. Without going into the pros and cons of the two methods, we are just going to focus on how to map sidewalks a separate ways.&lt;/p&gt;
+&lt;p&gt;This guide will help you map your cities sidewalks as separate ways. The other method is mapping sidewalks is as an attribute to street centerlines. Without going into the pros and cons of the two methods, we are just going to focus on how to map sidewalks a separate ways. This was update on May 31, 2019 to include more images, features you’ll run into while mapping, and links to the OSM wiki.&lt;/p&gt;
 
 &lt;p&gt;The goal is to build a network of routable sidewalks, especially for people with limited mobility. &lt;a href=&quot;https://accessmap.io&quot;&gt;AccessMap.io&lt;/a&gt; show the power of OSM to help people navigate their city on foot or in a wheelchair.&lt;/p&gt;
 
@@ -47,20 +47,22 @@
 &lt;h3 id=&quot;sidewalk-terms&quot;&gt;Sidewalk terms&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;footway&lt;/strong&gt;. What we call sidewalks in the US is called a footway in England where OSM got it start. A footway is a pedestrian path between any two points. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;sidewalks&lt;/strong&gt;. A sidewalk is a footway that run parallel to a street. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway + footway=sidewalk&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;crossing&lt;/strong&gt;. A street crossing is either a marked or unmarked crossing of a street. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway + footway=crossing + crossing=marked|unmarked&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;crossing islands&lt;/strong&gt;. Crossing island are small places usually between two lanes of traffic. &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing:island=yes&lt;/code&gt;&lt;br /&gt;&lt;img src=&quot;/assets/traffic_island.png&quot; alt=&quot;Traffic Island&quot; title=&quot;Traffic Island&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;curbs&lt;/strong&gt;. In British English its kerb. There are many flavors of kerbs. Here are some of the common ones you’ll likely see:
-    &lt;ol&gt;
-      &lt;li&gt;&lt;strong&gt;Lowered&lt;/strong&gt;. A lowered curb cut should be wide enough for a wheelchair to use. There should be no more than a 1 inch difference between the street and the curb. also referred to as a sloped curb or curb ramp. &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=lowered&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Flush&lt;/strong&gt;. A flush curb is level with the pavement.&lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=flush&lt;/code&gt; Very common in older parts of cities.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Raised&lt;/strong&gt;. A curb with more than a 1 inch difference with the street. &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=raised&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;None&lt;/strong&gt;. If there is no curb, tagging the end of the footway with &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=no&lt;/code&gt; is a good reminder that there is no curb.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Rolled&lt;/strong&gt;. Rolled curbs still provide a gutter for water while being traversable by large wheeled vehicles, such as cars and bicycles, but not wheelchairs. &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=rolled&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;footway&lt;/strong&gt;. What we call sidewalks in the US is called a &lt;a href=&quot;https://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway&quot;&gt;footway&lt;/a&gt; in England where OSM got it start. A footway is a pedestrian path between any two points. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sidewalks&lt;/strong&gt;. A &lt;a href=&quot;https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk&quot;&gt;sidewalk&lt;/a&gt; is a footway that run parallel to a street. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway + footway=sidewalk&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;crossing&lt;/strong&gt;. A street &lt;a href=&quot;https://wiki.openstreetmap.org/wiki/Key:crossing&quot;&gt;crossing&lt;/a&gt; is either a marked or unmarked crossing of a street. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway + footway=crossing + crossing=marked|unmarked&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Marked/Unmarked&lt;/strong&gt; Any crossing that is marked on the street should be tagged as &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing=marked&lt;/code&gt;. The marking can be just two parallel lines, stripping, or even intricate patterns. This interreptation differs from the wiki which is confusing.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;crossing islands&lt;/strong&gt;. Crossing island are small places usually between two lanes of traffic. Tag the short way as &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing:island=yes&lt;/code&gt;&lt;br /&gt;&lt;img src=&quot;/assets/traffic_island.png&quot; alt=&quot;Traffic Island&quot; title=&quot;Traffic Island&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;curbs&lt;/strong&gt;. In British English its &lt;a href=&quot;https://wiki.openstreetmap.org/wiki/Key:kerb&quot;&gt;kerb&lt;/a&gt;. There are many flavors of kerbs. Here are some of the common ones you’ll likely see:&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Lowered&lt;/strong&gt;   	 A lowered curb cut should be wide enough for a wheelchair to use. There should be no more than a 1 inch difference between the street and the curb. also referred to as a sloped curb or curb ramp.  	 &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=raised&lt;/code&gt;  	 &lt;img src=&quot;/assets/Lowered_curb.png&quot; alt=&quot;lowered curb&quot; title=&quot;Example of a lowered curb&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Incline&lt;/strong&gt; An attempt to create a lowered curb. Using JOSM to measure the length and estimate the height of the curb to determine &lt;a href=&quot;https://wiki.openstreetmap.org/wiki/Key:incline&quot;&gt;incline&lt;/a&gt;. Most curbs are 6” high but not all. Split the way at the end of the regular sidewalk. Draw the way to indicate movement upward. &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;footway=sidewalk&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;incline=8%&lt;/code&gt; &lt;img src=&quot;/assets/Asphalt_lowered_curb.png&quot; alt=&quot;asphalt lowered curb&quot; title=&quot;Example of a ashpalt lowered curb&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Flushed&lt;/strong&gt;   	  A flush curb is level with the pavement  	  &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=flush&lt;/code&gt;  	 &lt;img src=&quot;/assets/Flush_curb.png&quot; alt=&quot;flush curb&quot; title=&quot;Example of a flush curb&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;None&lt;/strong&gt;  	  If there is no curb, tagging the end of the footway with   	 &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=no&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Raised&lt;/strong&gt; A curb with more than a 1 inch difference with the street. &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=raised&lt;/code&gt; &lt;img src=&quot;/assets/Raised_curb.png&quot; alt=&quot;raised curb&quot; title=&quot;Example of a raised curb&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Rolled&lt;/strong&gt; Rolled curbs still provide a gutter for water while being traversable by large wheeled vehicles, such as cars and bicycles, but not wheelchairs  &lt;code class=&quot;highlighter-rouge&quot;&gt;kerb=rolled&lt;/code&gt; No image available&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;mapping&quot;&gt;Mapping&lt;/h2&gt;
 &lt;h5 id=&quot;sidewalks&quot;&gt;Sidewalks&lt;/h5&gt;
@@ -71,7 +73,7 @@
 &lt;p&gt;The next logical step would be to add curbs. This is where street side imagery is needed. Both &lt;a href=&quot;https://josm.openstreetmap.de&quot;&gt;JOSM&lt;/a&gt; and iD have integrated the three street side packages into their editors.&lt;/p&gt;
 
 &lt;h5 id=&quot;curbs&quot;&gt;Curbs&lt;/h5&gt;
-&lt;p&gt;Determine if a curb ramp exists and if so, what type and is there a tactile pad. Adding the tactile pad is import for people with vision impairments. Adding a short footway between the curb with a ramp and the sidewalk would be a good idea. I don’t, basically because marking a curb ramp in the footway doesn’t impact routing for people with limited mobility.&lt;/p&gt;
+&lt;p&gt;Determine if a curb ramp exists and if so, what type and is there a tactile pad. Adding the tactile pad is import for people with vision impairments. Adding a short footway between the curb with a ramp and the sidewalk would be a good idea. I don’t, basically because marking a curb ramp in the footway doesn’t impact routing for people with limited mobility and since most curb ramps extend into the way, it’s a good signal to someone with vision impairments that they reached a curb ramp.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/curb_ramp.png&quot; alt=&quot;Add Curb&quot; title=&quot;Curb ramp&quot; /&gt;
 &lt;img src=&quot;/assets/raised_curb_steps.png&quot; alt=&quot;Raised Curb with Step&quot; title=&quot;Raised curb - this one with steps&quot; /&gt;&lt;/p&gt;
@@ -84,7 +86,11 @@
 &lt;p&gt;&lt;img src=&quot;/assets/add_crosswalk.png&quot; alt=&quot;Add Crosswalk&quot; title=&quot;Completed crosswalk mapping&quot; /&gt;
 &lt;img src=&quot;/assets/raised_curbs.png&quot; alt=&quot;Raised Curb&quot; title=&quot;How to map raised curbs&quot; /&gt;&lt;/p&gt;
 &lt;h4 id=&quot;traffic-island&quot;&gt;Traffic Island&lt;/h4&gt;
-&lt;p&gt;If there is a island between lanes of traffic, add a node, &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing:island=yes&lt;/code&gt;&lt;img src=&quot;/assets/mapped_traffic_island.png&quot; alt=&quot;Traffic Island&quot; title=&quot;Traffic island mapping - Notice the diamond node&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;If there is a island between lanes of traffic, add a way, &lt;code class=&quot;highlighter-rouge&quot;&gt;crossing:island=yes&lt;/code&gt;&lt;img src=&quot;/assets/mapped_traffic_island.png&quot; alt=&quot;Traffic Island&quot; title=&quot;Traffic island mapping&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;wheelchair-ramps&quot;&gt;Wheelchair Ramps&lt;/h5&gt;
+&lt;p&gt;This is a special case where there is a wheelchair ramp, usually to a business. It should be mapped as &lt;code class=&quot;highlighter-rouge&quot;&gt;highway=footway&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;incline=x%&lt;/code&gt;. Use JOSM to measure the length of the way and estimate the height to calculate the percent incline.
+&lt;img src=&quot;/assets/Wheelchair_ramp.jpg&quot; alt=&quot;Wheelchair_ramp.jpg&quot; title=&quot;By Lionel Allorge - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27859568&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;mapping-tips&quot;&gt;Mapping Tips&lt;/h2&gt;
 
@@ -105,7 +111,7 @@
 
 &lt;p&gt;To get the data needed to find islands, run the following &lt;a href=&quot;overpass-turbo.eu&quot;&gt;overpass-turbo&lt;/a&gt; script. Replace your_area with either the city or bounding box of your sidewalk network. The script collects curbs and traffic signs and signals in addition to footways. Having this additional information allows view the entire pedestrian network in QGIS.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[out:json][timeout:25];
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[out:json][timeout:25];
 // fetch area “your area” to search in
 -&amp;gt;.searchArea;
 // gather results
@@ -121,7 +127,7 @@
 out body;
 &amp;gt;;
 out skel qt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Export the results to a geojson and load into QGIS. Run Vector-&amp;gt;Disconnected Island-&amp;gt;Check for Disconnected Islands
 &lt;img src=&quot;/assets/disconnected_islands.png&quot; alt=&quot;Disconnect Islands Plugin&quot; title=&quot;Disconnect Islands Plugin&quot; /&gt;&lt;/p&gt;
 
@@ -158,7 +164,7 @@ out skel qt;
 &lt;p&gt;Declarative partition is easier to set up than inheritance based partitioning available in Postgresql 9. Inheritance required creating a trigger that calls the trigger function with every insert of a record. When the child tables changed, the triggers needed to be updated. With Declaritive partitioning those steps go away.&lt;/p&gt;
 
 &lt;p&gt;My large table is a set of edits going back to 2005. Breaking the main table into years seemed like a reasonable approach to keep the partition size efficient. The first few years are group into one child partition with the remaining years in individual partitions. It looks like:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-edits
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-edits
 -+edits_2010
 -+edits_2011
 -+edits_2012
@@ -169,7 +175,7 @@ out skel qt;
 -+edits_2017
 -+edits_2018
 -+edits_2019
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id=&quot;what-to-watch-for&quot;&gt;What to watch for&lt;/h2&gt;
 &lt;p&gt;My table also included a trigger that updated another smaller table when data was being inserted. I learned that triggers have be applied to the child tables not the parent.&lt;/p&gt;
 
@@ -183,7 +189,7 @@ out skel qt;
 &lt;h3 id=&quot;create-new-parentchild-structure&quot;&gt;Create new parent/child Structure&lt;/h3&gt;
 &lt;p&gt;Create your new parent table and all of your child tables. I used a dummy name for the parent. I’ll change it once I copy the data to the new table. That way any scripts needing the original table will still work.  Below is a sample script that creates the parent table, the child tables and all of the index and triggers that update another table as data is inserted. (I’ve simplified the table structure for this article.) Note: Thanks to David Rowley on the pgsql-general mailing list for suggesting a simplier method of building the range instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;FOR VALUES FROM ('2017-01-01 00:00:00') TO ('2018-01-01 23:59:59.999');&lt;/code&gt;  we use use &lt;code class=&quot;highlighter-rouge&quot;&gt;FOR VALUES FROM ('2016-01-01') TO ('2017-01-01');&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TABLE edit_1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TABLE edit_1
 (
   id bigint NOT NULL,
   user_id bigint,
@@ -266,12 +272,12 @@ CREATE TRIGGER add_new_user_trigger
 
 CREATE INDEX edit_id_2019 ON edit_2019(id);
 CREATE INDEX edit_user_id_2019 on edit_2019(user_id);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;add-existing-data-to-the-new-partitions&quot;&gt;Add existing data to the new partitions.&lt;/h3&gt;
 &lt;p&gt;I moved the data over directly to the child tables. You could move it to the parent table and let the declarative partitioning do its thing.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;INSERT INTO edit_2010(id,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;INSERT INTO edit_2010(id,
   user_id,
   created,
   closed,
@@ -295,15 +301,15 @@ INSERT INTO edit_2018(id,
   user_name,
   geom
 ) SELECT * from edit where date_part('year',created) = 2018;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;add-the-trigger-to&quot;&gt;Add the trigger to&lt;/h3&gt;
 &lt;p&gt;Now that the data has been imported into the new child table, we can now turn our triggers back on.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TRIGGER add_new_user_trigger
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CREATE TRIGGER add_new_user_trigger
   BEFORE INSERT ON edit_2018
   FOR EACH ROW
   EXECUTE PROCEDURE add_new_user();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;rename-new-parent-table&quot;&gt;Rename new Parent table&lt;/h3&gt;
 &lt;p&gt;After verifying that the new parent/child structure is complete, it’s time to drop the original table and rename the new Parent.&lt;/p&gt;
 
@@ -562,7 +568,7 @@ of the world they know and frequent is the whole goal!”&lt;/p&gt;
   <content type="html">&lt;h2 id=&quot;mac-osc-prompt-for-my-user-id-in-josm&quot;&gt;Mac OSC Prompt for My User ID in JOSM&lt;/h2&gt;
 &lt;p&gt;I’m doing an import of Kirkland Buildings and Addresses into OSM. I wanted an easy way to remember to use the correct. Thanks to ToeBee for the suggestion of using unique home directory for each id. With linux a simple shell script tied to the menu item is all that is required. But Apple gives another option. Create an application script to chose the best id. Below is the script I created. Just substitute your id and directories for mine.&lt;/p&gt;
 
-&lt;div class=&quot;language-applescript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;choose from list&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID_Import&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Which UserId?&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Select User ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-applescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;choose from list&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID_Import&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Which UserId?&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Select User ID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;display dialog&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Canceled&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pList&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;ow&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UserID&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -572,15 +578,15 @@ of the world they know and frequent is the whole goal!”&lt;/p&gt;
 	&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;do shell script&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cp /Users/macid/Development/Info.plist.import /Applications/JOSM.app/contents/Info.plist&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 	&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;JOSM&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;activate&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;create-infoplist&quot;&gt;Create Info.plist&lt;/h2&gt;
 &lt;p&gt;Create a Info.plist for each id you want to use. The easiest way is to run JOSM using the desired id. Close JOSM and copy the file /Applications/JOSM.app/Contents/Info.plist to your desired location. I picked my Developement folder. The only addition needed is one line of code to add a default hidden folder for settings and plugins. This line goes in the JVMOptions key.&lt;/p&gt;
 
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;-Djosm.home=/Users/macid/.josm_import&lt;span class=&quot;nt&quot;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;-Djosm.home=/Users/macid/.josm_import&lt;span class=&quot;nt&quot;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;
 Compile the applescript into a new application. Using the Applescript Editor, export the script as an Application. I called my new JOSM script, MyJOSM.&lt;/p&gt;
 
@@ -632,7 +638,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
 &lt;h2 id=&quot;oops&quot;&gt;Oops&lt;/h2&gt;
 &lt;p&gt;It is easy to miss editing every street. Some are small and hard to spot. Others are lost in areas with streets tagged sidewalk=none. Once the all the tasks in the Tasking Manager are complete, use &lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass&lt;/a&gt; and QGIS to find missed roads.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  /*
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  /*
   This has been generated by the overpass-turbo wizard.
   The original search was:
   “highway=residential in &quot;Mount Vernon, Skagit County&quot;”
@@ -657,7 +663,7 @@ Compile the applescript into a new application. Using the Applescript Editor, ex
   &amp;gt;;
   out skel qt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Export results as a geojson and open in QGIS. Filter the results to eliminate all sidewalks. “sidewalk” &lt;strong&gt;is null&lt;/strong&gt;. Use OSM as a bottom layer to easily see the missed roads.&lt;/p&gt;
@@ -5585,12 +5591,12 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
 &lt;p&gt;Check out TileMill &lt;a href=&quot;https://www.mapbox.com/tilemill/docs/manual/&quot;&gt;documentation&lt;/a&gt; for help installing and creating tiles.&lt;/p&gt;
 
 &lt;!-- language: lang-js --&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#skagitroads {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#skagitroads {
   		line-width:5;
   		line-color:#00ff00;
   		line-cap: round;
  	*/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
  	::labels[zoom &amp;gt; 13]{
   		text-name: [fullname];
@@ -5599,9 +5605,9 @@ Sam Mathews &lt;em&gt;Creating Web Maps with OSM Data&lt;/em&gt;&lt;br /&gt;
   		text-placement: line;
   		text-dy: 12;
    		text-size:14;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	}
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	}
   	}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Tilestream was easy to install. My only hangup was to update Homebrew before starting.&lt;/p&gt;
 
@@ -5677,7 +5683,7 @@ This tutorial will provide you with one means of finding differences. The follow
 &lt;p&gt;&lt;a href=&quot;http://overpass-turbo.eu&quot;&gt;Overpass-Turbo&lt;/a&gt; has an easy method to obtain current data. Modify and run the following script:&lt;/p&gt;
 
 &lt;!-- language: lang-js --&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;osm-script output=&quot;json&quot; timeout=&quot;900&quot; 
 element-limit=&quot;1073741824&quot;&amp;gt;
 &amp;lt;id-query              into=&quot;area&quot;/&amp;gt;
 &amp;lt;!-- gather results --&amp;gt;
@@ -5700,7 +5706,7 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &amp;lt;recurse type=&quot;down&quot;/&amp;gt;
 &amp;lt;print mode=&quot;skeleton&quot; order=&quot;quadtile&quot;/&amp;gt;
 &amp;lt;/osm-script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Remember, change the nominatim search area from “Skagit County” to your county.&lt;/p&gt;
 
@@ -5733,10 +5739,10 @@ element-limit=&quot;1073741824&quot;&amp;gt;
 &lt;p&gt;Time for some good old sql right joins to find missing roads.&lt;/p&gt;
 
 &lt;!-- language: lang-sql --&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot;
 FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
 WHERE o.gid IS NULL
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/missing.png&quot; alt=&quot;Missing&quot; /&gt;&lt;/p&gt;
 
@@ -5759,8 +5765,8 @@ WHERE o.gid IS NULL
 &lt;p&gt;The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:&lt;/p&gt;
 
 &lt;!-- language: lang-bash --&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pgsql2shp -f missing mygis &quot;SELECT s.gid, s.geom, s.fullname AS &quot;Name&quot; FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;create-osm&quot;&gt;Create .OSM&lt;/h5&gt;
 

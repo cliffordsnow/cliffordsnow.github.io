@@ -138,7 +138,7 @@ This tutorial will provide you with one means of finding differences. The follow
 <p><a href="http://overpass-turbo.eu">Overpass-Turbo</a> has an easy method to obtain current data. Modify and run the following script:</p>
 
 <!-- language: lang-js -->
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;osm-script output="json" timeout="900" 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;osm-script output="json" timeout="900" 
 element-limit="1073741824"&gt;
 &lt;id-query              into="area"/&gt;
 &lt;!-- gather results --&gt;
@@ -161,7 +161,7 @@ element-limit="1073741824"&gt;
 &lt;recurse type="down"/&gt;
 &lt;print mode="skeleton" order="quadtile"/&gt;
 &lt;/osm-script&gt;
-</code></pre></div>
+</code></pre></div></div>
 
 <p>Remember, change the nominatim search area from “Skagit County” to your county.</p>
 
@@ -194,10 +194,10 @@ element-limit="1073741824"&gt;
 <p>Time for some good old sql right joins to find missing roads.</p>
 
 <!-- language: lang-sql -->
-<div class="highlighter-rouge"><pre class="highlight"><code>SELECT s.gid, s.geom, s.fullname AS "Name"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT s.gid, s.geom, s.fullname AS "Name"
 FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname
 WHERE o.gid IS NULL
-</code></pre></div>
+</code></pre></div></div>
 
 <p><img src="/assets/missing.png" alt="Missing" /></p>
 
@@ -220,8 +220,8 @@ WHERE o.gid IS NULL
 <p>The second is to use a utility program to convert the data directly from PostGIS to a shapefile. The command line is:</p>
 
 <!-- language: lang-bash -->
-<div class="highlighter-rouge"><pre class="highlight"><code>pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pgsql2shp -f missing mygis "SELECT s.gid, s.geom, s.fullname AS "Name" FROM skagit_osm o RIGHT JOIN skagit_roads s ON o.name = s.fullname WHERE o.gid IS NULL"
+</code></pre></div></div>
 
 <h5 id="create-osm">Create .OSM</h5>
 
