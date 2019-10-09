@@ -32,7 +32,7 @@ While I have you here, I want to give a shoutout to the University of Washington
 1. **footway**. What we call sidewalks in the US is called a [footway](https://wiki.openstreetmap.org/wiki/Tag:highway%3Dfootway) in England where OSM got it start. A footway is a pedestrian path between any two points. `highway=footway`
 2. **sidewalks**. A [sidewalk](https://wiki.openstreetmap.org/wiki/Tag:footway%3Dsidewalk) is a footway that run parallel to a street. `highway=footway + footway=sidewalk`
 3. **crossing**. A street [crossing](https://wiki.openstreetmap.org/wiki/Key:crossing) is either a marked or unmarked crossing of a street. `highway=footway + footway=crossing + crossing=marked|unmarked` 
-4. **Marked/Unmarked** Any crossing that is marked on the street should be tagged as `crossing=marked`. The marking can be just two parallel lines, stripping, or even intricate patterns. This interreptation differs from the wiki which is confusing.
+4. **Marked/Unmarked** Any crossing that is marked on the street should be tagged as `crossing=marked`. The marking can be just two parallel lines, stripping, or even intricate patterns. This interpretation differs from the wiki which is confusing.
 5. **crossing islands**. Crossing island are small places usually between two lanes of traffic. Tag the short way as `crossing:island=yes`<br>![Traffic Island]({{site_url}}/assets/traffic_island.png "Traffic Island")
 6. **curbs**. In British English its [kerb](https://wiki.openstreetmap.org/wiki/Key:kerb). There are many flavors of kerbs. Here are some of the common ones you'll likely see:
 
@@ -55,7 +55,7 @@ A good place to start is to map sidewalks in city blocks around one intersection
 The next logical step would be to add curbs. This is where street side imagery is needed. Both [JOSM](https://josm.openstreetmap.de) and iD have integrated the three street side packages into their editors.
  
 ##### Curbs
-Determine if a curb ramp exists and if so, what type and is there a tactile pad. Adding the tactile pad is import for people with vision impairments. Adding a short footway between the curb with a ramp and the sidewalk would be a good idea. I don't, basically because marking a curb ramp in the footway doesn't impact routing for people with limited mobility and since most curb ramps extend into the way, it's a good signal to someone with vision impairments that they reached a curb ramp.
+Determine if a curb ramp exists and if so, what type and is there a tactile pad. Adding the tactile pad is important for people with vision impairments. Adding a short footway between the curb with a ramp and the sidewalk would be a good idea. I don't, basically because marking a curb ramp in the footway doesn't impact routing for people with limited mobility and since most curb ramps extend into the way, it's a good signal to someone with vision impairments that they reached a curb ramp.
 
 ![Add Curb]({{site_url}}/assets/curb_ramp.png "Curb ramp")
 ![Raised Curb with Step]({{site_url}}/assets/raised_curb_steps.png "Raised curb - this one with steps")
