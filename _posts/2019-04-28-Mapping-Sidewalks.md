@@ -63,7 +63,7 @@ Determine if a curb ramp exists and if so, what type and is there a tactile pad.
 ![Tactile Pad]({{site_url}}/assets/tactile_pad.png "Tactile Pad")
 
 ##### Crosswalk
-Next add the crosswalks. Use ```crossing=marked``` when the intersection is marked for pedestrians. Include a pedestrian crossing node where the street intersects with the crosswalk. It's purpose is to notify vehicles of the crosswalk. While you are there, check for stop signs and traffic lights to add to OSM.
+Next add the crosswalks. Use `highway=footway` + `footway=crossing` + `crossing=marked` when the intersection is marked for pedestrians or `crossing=unmarked` when the crossing isn't marked. Include a pedestrian crossing node where the street intersects with the crosswalk. It's purpose is to notify vehicles of the crosswalk. While you are there, check for stop signs and traffic lights to add to OSM.
 
 ![Add Crosswalk]({{site_url}}/assets/add_crosswalk.png "Completed crosswalk mapping")
 ![Raised Curb]({{site_url}}/assets/raised_curbs.png "How to map raised curbs")
