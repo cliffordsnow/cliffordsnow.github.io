@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mapping Sidewalks a HowTo"
+title: "Mapping Sidewalks with iD a HowTo"
 #tagline: "iD;footways;OSM"
 description: "Detailed instructions on how to map sidewalks, curbs, crosswalks, etc. in iD for pedestrian routing"
 category: articles

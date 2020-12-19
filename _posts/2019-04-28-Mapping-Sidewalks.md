@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mapping Sidewalks a HowTo"
+title: "Mapping Sidewalks with JOSM a HowTo"
 #tagline: "JOSM;footways;OSM"
 description: "Detailed instructions on how to map sidewalks, curbs, crosswalks, etc. for pedestrian routing"
 category: articles
