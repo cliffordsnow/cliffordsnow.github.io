@@ -15,7 +15,7 @@ This guide will help you map your cities sidewalks as separate ways. The other m
 
 The goal is to build a network of routable sidewalks, especially for people with limited mobility. [AccessMap.io](https://accessmap.io) show the power of OSM to help people navigate their city on foot or in a wheelchair.
 
-While I have you here, I want to give a shoutout to the University of Washington's [Taskar Center for Accessible Technology](https://tcat.cs.washington.edu/) . The director, Anat Caspi and project lead, Nick Bolton, were the ones that convinced me that we need to change how we map pedestrian ways. They developed the [OpenSidewalk Project](httpd://opensidewalks.com) and [AccessMap.io](https://accessmap.io). They are the inspiration behind mapping sidewalks in OSM. 
+While I have you here, I want to give a shoutout to the University of Washington's [Taskar Center for Accessible Technology](https://tcat.cs.washington.edu/) . The director, Anat Caspi and project lead, Nick Bolton, were the ones that convinced me that we need to change how we map pedestrian ways. They developed the [OpenSidewalk Project](https://opensidewalks.com) and [AccessMap.io](https://accessmap.io). They are the inspiration behind mapping sidewalks in OSM. 
 
 ### Tools you'll need 
 
