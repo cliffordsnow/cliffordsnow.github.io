@@ -7,6 +7,7 @@
 * Easy blogging
 * Place to stick thoughts and some code. 
 * Place to track long term projects. 
+* Welcoming new mappers to OSM
 
 ## License
 
