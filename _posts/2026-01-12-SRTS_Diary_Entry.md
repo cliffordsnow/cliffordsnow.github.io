@@ -21,7 +21,7 @@ OSM has some great routing engines. The user interface will likely need to be im
 
 ## Walking and biking Isochrones
 
-Good open-source isochrone maps are available. One of my favorites is Valhalla. Below is an example of an isochrone map of a local elementary school created using Valhalla in QGIS. It shows 5, 10, and 15 walk areas. However, there are two major problems with the isochrone. First, it uses streets with no sidewalks. It also crosses the Division Street Bridge, which the school district doesn't feel is safe for children to cross. If we add an isochrones feature to our pedestrian and bike map, it needs to be able to restrict the isochrones to only safe walking and biking routes.
+Good open-source isochrone maps are available. One of my favorites is Valhalla. Below is an example of an isochrone map of a local elementary school created using Valhalla in QGIS. It shows 5, 10, and 15 minute walk areas. However, there are two major problems with the isochrone. First, it uses streets with no sidewalks. It also crosses the Division Street Bridge, which the school district doesn't feel is safe for children to cross. If we add an isochrones feature to our pedestrian and bike map, it needs to be able to restrict the isochrones to only safe walking and biking routes.
 
 ![Walkshed](https://mycloud.snowandsnow.us/index.php/apps/files_sharing/publicpreview/AgWSx4aRJxFE355?file=/&fileId=126722&x=2560&y=1440&a=true&etag=04171e8cdfba758dd67fd4ee6ca65806)
 
@@ -29,7 +29,7 @@ Good open-source isochrone maps are available. One of my favorites is Valhalla. 
 
 Four main features need to be mapped: schools, pedestrian ways, cycleways, and traffic calming features. A how-to page, along with video tutorials are needed to help new mappers get started.
 
-Schools’ buildings, parking, bus drop off areas, main entrance, and bike rakes need to be mapped. Emphasis needs to be placed on adding accessibility features for kids with disabilities. See <https://wiki.openstreetmap.org/wiki/Disabilities>
+Schools’ buildings, parking, bus drop off areas, main entrance, and bike racks need to be mapped. Emphasis needs to be placed on adding accessibility features for kids with disabilities. See <https://wiki.openstreetmap.org/wiki/Disabilities>
 
 The OSM US Pedestrian Working Group has developed a
 schema for mapping pedestrian ways. Footways, curb ramps, tactile pads, crossings, surface, width, and other features need to be mapped. I should note that the schema focuses on mapping sidewalks as separate ways, which is not universally accepted. My experience is that mapping sidewalks as a separate way produces better routing.
