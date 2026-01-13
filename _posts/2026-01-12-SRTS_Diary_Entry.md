@@ -23,7 +23,7 @@ OSM has some great routing engines. The user interface will likely need to be im
 
 Good open-source isochrone maps are available. One of my favorites is Valhalla. Below is an example of an isochrone map of a local elementary school created using Valhalla in QGIS. It shows 5, 10, and 15 walk areas. However, there are two major problems with the isochrone. First, it uses streets with no sidewalks. It also crosses the Division Street Bridge, which the school district doesn't feel is safe for children to cross. If we add an isochrones feature to our pedestrian and bike map, it needs to be able to restrict the isochrones to only safe walking and biking routes.
 
-![Walkshed](https://mycloud.snowandsnow.us/index.php/apps/maps/s/JR2LiJTRQkofDCw)
+![Walkshed](https://mycloud.snowandsnow.us/index.php/s/AgWSx4aRJxFE355)
 
 ## Instructions on how to map for pedestrians and cyclists
 
